@@ -1,0 +1,86 @@
+
+body {
+    padding: 0;
+}
+
+div.page-header {
+    margin: 0;
+    padding: 5px;
+}
+
+div.page-header h1 {
+    margin: 0;
+    font-family: 'Ubuntu Mono';
+}
+
+div.page-header h1 small {
+    font-family: 'Sofadi One', cursive;
+}
+
+div.proyecto {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Arial, Verdana;
+    font-size: 11pt;
+}
+
+div.proyecto td {
+    vertical-align: middle;
+}
+
+div.proyecto td.first {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 5px;
+}
+
+div.proyecto > div {
+    line-height: 25px;
+}
+
+div.proyecto td.second {
+}
+
+div.descripcion {
+}
+
+div.icono {
+    float: left;
+    margin-right: 10px;
+}
+
+div.contact {
+    float: right;
+    text-align: center;
+    font-size: 11pt;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+span.foto_no_diponible {
+    width: 96px;
+    height: 96px;
+    border: 1px solid gray;
+    display: block;
+}
+
+img.iconito {
+    position: relative;
+    bottom: 1px;
+}
+
+div.proyecto div.panel-heading{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+div.proyecto div.panel-heading a {
+    color: black;
+    text-decoration: none;
+    padding-top: 3px;
+}
+
+span.label.label-info a {
+    color: white;
+    text-decoration: none;
+}
