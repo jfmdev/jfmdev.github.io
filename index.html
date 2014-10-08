@@ -25,12 +25,12 @@
         <link rel="stylesheet" href="css/bootstrap-theme-3.1.1.min.css">
         <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
-        <script type="text/javascript" src="js/jqscrollanim-1.01.min.js"></script>
+        <script type="text/javascript" src="js/jqscrollanim-1.1.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$('div.proyecto').jqScrollAnim({
-					rep_s: 75,
-					rep_e: 150,
+					rep: {start: 50, end: 150},
+					rew: {start: -150, end: -50},
 					animation: {type:'fade'} 				
 				});
 			});
