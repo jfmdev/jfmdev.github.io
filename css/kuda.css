@@ -13,8 +13,19 @@ div.page-header h1 {
     font-family: 'Ubuntu Mono';
 }
 
+h2.nice,
 div.page-header h1 small {
     font-family: 'Sofadi One', cursive;
+}
+
+h2.nice {
+	margin-left: 20px;
+}
+
+p.nice {
+	margin-left: 40px;
+    font-family: Arial, Verdana;
+    font-size: 11pt;
 }
 
 div.proyecto {
@@ -22,6 +33,7 @@ div.proyecto {
     margin-right: 20px;
     font-family: Arial, Verdana;
     font-size: 11pt;
+	position: relative;
 }
 
 div.proyecto td {

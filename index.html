@@ -25,6 +25,16 @@
         <link rel="stylesheet" href="css/bootstrap-theme-3.1.1.min.css">
         <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/jqscrollanim-1.01.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('div.proyecto').jqScrollAnim({
+					rep_s: 75,
+					rep_e: 150,
+					animation: {type:'fade'} 				
+				});
+			});
+		</script>
     </head>
     <body>
         <div class="page-header">
@@ -38,6 +48,19 @@
             <h1>KudaLab <br/><small>A modest software laboratory</small></h1>
         </div>
 
+		<br/>
+		
+		<h2 class="nice">About</h2>
+
+		<p class="nice"><strong>KudaLab</strong> is an small software laboratory, for the development of
+		web, mobile and open source software.<p/>
+		<p class="nice">If you have any doubt about a project or you need a developer, do not hesitate in 
+		<a href="https://kudalab.wufoo.com/forms/kudalabs-contact-form/" title="Contact">send a message.</a><p/>
+		
+		<br/>
+		
+		<h2 class="nice">List of projects</h2>
+		
         <br/>
         
         <div class="proyecto">
