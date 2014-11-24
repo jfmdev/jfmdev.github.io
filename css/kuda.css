@@ -3,41 +3,124 @@ body {
     padding: 0;
 }
 
-div.page-header {
-    margin: 0;
-    padding: 5px;
+#intro {
+    height: 700px;
+    background: url(background.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    text-align: center;
 }
 
-div.page-header h1 {
-    margin: 0;
+#intro div.logo {
+    text-align: left;
+    position: absolute;    
+}
+
+#intro h1 a {
+    color: white;
+    text-decoration: none;
     font-family: 'Ubuntu Mono';
+    font-size: 36pt;
 }
 
-h2.nice,
-div.page-header h1 small {
+#slogan {
+    font-size: 36pt;
+    color: white;
+    width: 50%;
+    position: relative;
+    margin: 0 auto;
+    top: 30%;
     font-family: 'Sofadi One', cursive;
 }
 
-h2.nice {
-	margin-left: 20px;
+#perfiles {
+    text-align: center;
+}
+
+#contacto {
+    color: #fff;
+    text-align: center;
+    background-color: #080;
+    background: url(muffet-green.jpg) repeat top center;     
+}
+
+#contacto iframe {
+    width: 600px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-bottom: 15px;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);    
+}
+
+div.border_top {
+    height: 13px;				
+    width: 100%;
+    position: relative;
+    background: url(border_top.png) repeat top center; 
+}
+
+div.border_bottom {
+    height: 13px;
+    width: 100%;
+    position: relative;
+    background: url(border_bottom.png) repeat top center; 
+}
+
+#menu_container {
+    position: relative;
+    top: -52px;
+}
+ 
+#cssmenu {
+    position: absolute;
+    width: 390px;
+    right: 0;
+}
+
+div.moving {
+    opacity: 0.9;
+}
+
+div.moving #cssmenu {
+    border-bottom-left-radius: 15px;
+    -moz-border-radius-bottomleft: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+}
+
+h2 a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Sofadi One', cursive;
+    margin-left: 20px;
 }
 
 p.nice {
-	margin-left: 40px;
+    margin-left: 40px;
     font-family: Arial, Verdana;
     font-size: 11pt;
+}
+div.row {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 div.proyecto {
-    margin-left: 20px;
-    margin-right: 20px;
     font-family: Arial, Verdana;
     font-size: 11pt;
-	position: relative;
+    position: relative;
 }
 
 div.proyecto td {
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 div.proyecto td.first {
