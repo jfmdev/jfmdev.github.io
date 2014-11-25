@@ -142,6 +142,13 @@ div.descripcion {
 div.icono {
     float: left;
     margin-right: 10px;
+	position: relative;
+}
+
+div.icono img.sticker {
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
 
 div.contact {
