@@ -32,8 +32,9 @@ body {
     width: 50%;
     position: relative;
     margin: 0 auto;
-    top: 30%;
     font-family: 'Sofadi One', cursive;
+    top: 100px;
+	padding-bottom: 60px;
 }
 
 #perfiles {
@@ -84,6 +85,12 @@ div.border_bottom {
     position: absolute;
     width: 390px;
     right: 0;
+}
+
+@media (max-width: 390px) {
+	#cssmenu {
+		width: 100%;
+	}
 }
 
 div.moving {

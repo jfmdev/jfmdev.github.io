@@ -32,9 +32,9 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 $(window).resize( function(event) {
-                    $("#intro").height( $(window).height() );
+                    $("#intro").height( MyIntroHeight() );
                 });			
-                $("#intro").height( $(window).height() );
+                $("#intro").height( MyIntroHeight() );
 
                 $('#menu_container').scrollFix({fixClass: 'moving'});
 
@@ -50,6 +50,13 @@
                     animation: {type:'fade'} 				
                 });
             });
+			
+			function MyIntroHeight() {
+				var winH = $(window).height();
+				var sloH = $("#slogan").outerHeight();
+				var sloT = $("#slogan").offset().top;
+				return winH > (sloH + sloT)? winH : (sloH + sloT);
+			}
         </script>
     </head>
     <body>
