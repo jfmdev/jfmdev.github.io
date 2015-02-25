@@ -34,18 +34,37 @@ body {
     margin: 0 auto;
     font-family: 'Sofadi One', cursive;
     top: 100px;
-	padding-bottom: 60px;
+    padding-bottom: 60px;
 }
 
 #perfiles {
-    text-align: center;
-}
-
-#contacto {
     color: #fff;
     text-align: center;
     background-color: #080;
     background: url(muffet-green.jpg) repeat top center;     
+}
+
+#perfiles div.content {
+    width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);    
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);    
+}
+
+#perfiles h2 {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#contacto {
+    text-align: center;
 }
 
 #contacto iframe {
@@ -56,10 +75,10 @@ body {
     border: 1px solid lightgray;
     border-radius: 15px;
     -moz-border-radius: 15px;
-    -webkit-border-bottom: 15px;
+    -webkit-border-radius: 15px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);    
     -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);    
 }
 
 div.border_top {
