@@ -81,6 +81,13 @@ body {
     -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
+
+@media (max-width: 600px) {
+    #contacto iframe {
+        width: 100%;
+    }
+}
+
 div.border_top {
     height: 13px;				
     width: 100%;
