@@ -45,8 +45,6 @@ body {
 }
 
 #perfiles div.content {
-    width: 300px;
-    margin: 0 auto;
     padding: 10px;
     margin-top: 20px;
     background-color: white;
@@ -106,7 +104,7 @@ div.border_bottom {
 
 #menu_container {
     position: relative;
-    top: -41px;
+    top: -42px;
 }
  
 #main_menu {
@@ -120,7 +118,7 @@ div.border_bottom {
 
 .menu_simple {
     width: 100%;
-    background-color: #aaffaa;
+    background: #080 url(muffet-dark-green.jpg) repeat top center; 
 }
  
 .menu_simple ul {
@@ -136,7 +134,7 @@ div.border_bottom {
  
 .menu_simple ul li a {
     float: left; 
-    color: #060;
+    color: white;
     font-weight: bold;
     padding: 11px 20px;
     text-decoration: none;
@@ -148,8 +146,8 @@ div.border_bottom {
 }
  
 .menu_simple ul li a:hover, .menu_simple ul li .current {
-    color: white;
-    background-color: #5FD367;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    background: #080 url(muffet-green.jpg) repeat top center; 
 }
 
 @media (max-width: 390px) {
