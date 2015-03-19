@@ -104,7 +104,7 @@ div.border_bottom {
 
 #menu_container {
     position: relative;
-    top: -42px;
+    top: -44px;
 }
  
 #main_menu {
@@ -114,6 +114,8 @@ div.border_bottom {
     border-top-left-radius: 15px;
     -moz-top-radius-bottomleft: 15px;
     -webkit-top-bottom-left-radius: 15px;
+	border-left: 2px solid #8f8;
+	border-top: 2px solid #8f8;
 }
 
 .menu_simple {
@@ -156,9 +158,11 @@ div.border_bottom {
         border-top-left-radius: 0;
         -moz-top-radius-bottomleft: 0;
         -webkit-top-bottom-left-radius: 0;
+		border-left-width: 0;
     }
 
     div.moving #main_menu {
+		border-top-width: 0;
         border-bottom-right-radius: 15px;
         -moz-border-radius-bottomright: 15px;
         -webkit-border-bottom-right-radius: 15px;
@@ -180,6 +184,8 @@ div.moving #main_menu {
     border-bottom-left-radius: 15px;
     -moz-border-radius-bottomleft: 15px;
     -webkit-border-bottom-left-radius: 15px;
+	border-left-width: 0;
+	border-top-width: 0;
 }
 
 /* ----- Miscellaneous ----- */
