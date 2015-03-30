@@ -29,13 +29,16 @@
         <script type="text/javascript" src="js/jqscrollfix.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
+				// Resize intro section to window's height or to her minimum height..
                 $(window).resize( function(event) {
                     $("#intro").height( MyIntroHeight() );
                 });			
                 $("#intro").height( MyIntroHeight() );
 
+				// Add behavior of posiition:fixed to navigation bar.
                 $('#menu_container').scrollFix({fixClass: 'moving'});
 
+				// Add fade animation, triggered by the scroll, to the list of projects and to the contact form.
                 $('div.proyecto').jqScrollAnim({
                     rep: {start: 50, end: 150},
                     rew: {start: -150, end: -50},
@@ -47,8 +50,14 @@
                     rew: {start: -150, end: -50},
                     animation: {type:'fade'} 				
                 });
+				
+				// Track the click's events (to links) in Google Analytics.
+				$("a").click(function() {
+					_gaq.push(['_trackEvent', 'click', 'href', $(this).attr("href")]);
+				});
             });
 			
+			// Calculate the best height for the intro section.
             function MyIntroHeight() {
                     var winH = $(window).height();
                     var sloH = $("#slogan").outerHeight();
@@ -359,6 +368,8 @@
                                             <td class="first">Links</td>
                                             <td class="second">
                                                 <span class="label label-info"><a href="https://chrome.google.com/webstore/detail/flappy-clone/epmgkgpllfpninngnlbhccijogfaihgm"><img src="img/chrome_web_store_16.png" class="iconito" alt=""/> Chrome Web Store</a></span>
+												<span class="label label-info"><a href="https://marketplace.firefox.com/app/flappy-clone/
+"><img src="img/firefox_marketplace_16.png" class="iconito" alt=""/> Firefox Marketplace</a></span>
                                                 <span class="label label-info"><a href="https://googledrive.com/host/0B4_1sNUgxqKBM3llLTJPblQ3WlU/flappyclone.html"><img src="img/mobile_phone.png" class="iconito" alt=""/> Demo (mobile)</a></span>
                                                 <span class="label label-info"><a href="https://googledrive.com/host/0B4_1sNUgxqKBM3llLTJPblQ3WlU/flappyclone-landscape.html"><img src="img/desktop_computer.png" class="iconito" alt=""/> Demo (desktop)</a></span>
                                             </td>
@@ -441,6 +452,8 @@
                                             <td class="first">Links</td>
                                             <td class="second">
                                                 <span class="label label-info"><a href="https://chrome.google.com/webstore/detail/landscape-sliding-puzzles/beifpgdjlnpfinmngokhdjmpokbeacfi"><img src="img/chrome_web_store_16.png" class="iconito" alt=""/> Chrome Web Store</a></span>
+												<span class="label label-info"><a href="https://marketplace.firefox.com/app/landscape-sliding-puzzles/
+"><img src="img/firefox_marketplace_16.png" class="iconito" alt=""/> Firefox Marketplace</a></span>
                                             </td>
                                     </tr></table>
                                 </div>
