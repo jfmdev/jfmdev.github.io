@@ -29,16 +29,16 @@
         <script type="text/javascript" src="js/jqscrollfix.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
-				// Resize intro section to window's height or to her minimum height..
+                // Resize intro section to window's height or to her minimum height..
                 $(window).resize( function(event) {
                     $("#intro").height( MyIntroHeight() );
                 });			
                 $("#intro").height( MyIntroHeight() );
 
-				// Add behavior of posiition:fixed to navigation bar.
+                // Add behavior of posiition:fixed to navigation bar.
                 $('#menu_container').scrollFix({fixClass: 'moving'});
 
-				// Add fade animation, triggered by the scroll, to the list of projects and to the contact form.
+                // Add fade animation, triggered by the scroll, to the list of projects and to the contact form.
                 $('div.proyecto').jqScrollAnim({
                     rep: {start: 50, end: 150},
                     rew: {start: -150, end: -50},
@@ -51,13 +51,13 @@
                     animation: {type:'fade'} 				
                 });
 				
-				// Track the click's events (to links) in Google Analytics.
-				$("a").click(function() {
-					_gaq.push(['_trackEvent', 'click', 'href', $(this).attr("href")]);
-				});
+                // Track the click's events (to links) in Google Analytics.
+                $("a").click(function() {
+                    ga('send', 'event', 'link', 'click', $(this).attr("href"), 1);
+                });
             });
 			
-			// Calculate the best height for the intro section.
+            // Calculate the best height for the intro section.
             function MyIntroHeight() {
                     var winH = $(window).height();
                     var sloH = $("#slogan").outerHeight();
@@ -72,9 +72,8 @@
         <div id="intro">
             <div class="logo">
                 <h1><a name="top">
-                    <img src="img/kuda.png" alt="" title="KudaLab - A modest software laboratory"/>
-                    JFMDev
-                </a></h1>
+                    <img src="img/kuda.png" alt="" title="JFMDev - Portfolio of personal software projects"/>
+                    JFMDev                </a></h1>
             </div>
             <div id="slogan">Portfolio of personal software projects</div>
         </div>
@@ -83,7 +82,7 @@
             <div id="main_menu" class="menu_simple">
                 <ul>
                    <li><a href='#top'>Top</a></li>
-                   <li><a href='#portfolio'>Portfolio</a></li>
+                   <li><a href='#portfolio'>Projects</a></li>
                    <li><a href='#perfiles'>Profiles</a></li>
                    <li><a href='#contacto'>Contact</a></li>
                 </ul>
@@ -97,8 +96,40 @@
             
 			<br/>
 			
-			<div class="row">
-				<div class="col-md-6">
+			<div class="row">				<div class="col-md-6">
+                    <div class="proyecto">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a name="TelemarketingLogs"><strong>NeonCamera</strong><small> - A camera app that allows to take photos with a neon lights effect</small></a>
+                            </div>
+                            <div class="panel-body">
+                                <div class="icono">
+                                    <img src="img/neon_camera.png" alt=""/>
+									                                </div>
+                                <div class="descripcion">
+                                    <table><tr>
+                                            <td class="first">Category</td>
+                                            <td class="second">Application</td>
+                                        </tr><tr>
+                                            <td class="first">Platform</td>
+                                            <td class="second">Android</td>
+                                        </tr><tr>
+                                            <td class="first">Tags</td>
+                                            <td class="second">
+											<span class="label label-primary">Java</span> <span class="label label-primary">Android</span> <span class="label label-primary">BoofCV</span>                                             </td>
+                                        </tr><tr>
+                                            <td class="first">Links</td>
+                                            <td class="second">
+																							<span class="label label-info"><a href="https://play.google.com/store/apps/details?id=ar.com.jfmdev.neoncamera" target="_blank"><img src="img/google_play_16.png" class="iconito" alt=""/> Google Play</a></span>  
+																								<span class="label label-info"><a href="http://www.amazon.com/KudaLab-NeonCamera/dp/B00UXKG8WG/ref=sr_1_1?ie=UTF8&qid=1426841509&sr=8-1&keywords=neoncamera" target="_blank"><img src="img/amazon_16.png" class="iconito" alt=""/> Amazon</a></span>  
+												                                            </td>
+                                    </tr></table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+								<div class="col-md-6">
                     <div class="proyecto">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -107,7 +138,7 @@
                             <div class="panel-body">
                                 <div class="icono">
                                     <img src="img/call_logs.png" alt=""/>
-                                </div>
+									                                </div>
                                 <div class="descripcion">
                                     <table><tr>
                                             <td class="first">Category</td>
@@ -118,161 +149,29 @@
                                         </tr><tr>
                                             <td class="first">Tags</td>
                                             <td class="second">
-                                                <span class="label label-primary">JavaScript</span>
-                                                <span class="label label-primary">AngularJS</span>
-                                                <span class="label label-primary">TaffyDB</span>
-                                                <span class="label label-primary">Foundation</span>
-                                                <span class="label label-primary">Open Source</span>
-                                            </td>
+											<span class="label label-primary">JavaScript</span> <span class="label label-primary">AngularJS</span> <span class="label label-primary">TaffyDB</span> <span class="label label-primary">Foundation</span> <span class="label label-primary">Open Source</span>                                             </td>
                                         </tr><tr>
                                             <td class="first">Links</td>
                                             <td class="second">
-                                                <span class="label label-info"><a href="https://github.com/jfmdev/TelemarketingLogs"><img src="img/github_16.png" class="iconito" alt=""/> GitHub</a></span>
-                                                <span class="label label-info"><a href="http://jfmdev.github.io/TelemarketingLogs/"><img src="img/web.png" class="iconito" alt=""/> Demo</a></span>
-                                            </td>
+																							<span class="label label-info"><a href="https://github.com/jfmdev/TelemarketingLogs" target="_blank"><img src="img/github_16.png" class="iconito" alt=""/> GitHub</a></span>  
+																								<span class="label label-info"><a href="http://jfmdev.github.io/TelemarketingLogs/" target="_blank"><img src="img/web.png" class="iconito" alt=""/> Demo</a></span>  
+												                                            </td>
                                     </tr></table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-							<div class="col-md-6">
+				</div><div class="row">				<div class="col-md-6">
                     <div class="proyecto">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a name="ngaddressbook"><strong>ngAddressBook</strong><small> - A HTML5 sample app for learning AngularJS, Bootstrap and PouchDB</small></a>
-                            </div>
-                            <div class="panel-body">
-                                <div class="icono">
-                                    <img src="img/address_book.png" alt=""/>
-                                </div>
-                                <div class="descripcion">
-                                    <table><tr>
-                                            <td class="first">Category</td>
-                                            <td class="second">Application</td>
-                                        </tr><tr>
-                                            <td class="first">Platform</td>
-                                            <td class="second">Web</td>
-                                        </tr><tr>
-                                            <td class="first">Tags</td>
-                                            <td class="second">
-                                                <span class="label label-primary">JavaScript</span>
-                                                <span class="label label-primary">AngularJS</span>
-                                                <span class="label label-primary">PouchDB</span>
-                                                <span class="label label-primary">Bootstrap</span>
-                                                <span class="label label-primary">QUnit</span>
-                                                <span class="label label-primary">Selenium</span>
-                                                <span class="label label-primary">HTML5</span>
-                                                <span class="label label-primary">Open Source</span>
-                                            </td>
-                                        </tr><tr>
-                                            <td class="first">Links</td>
-                                            <td class="second">
-                                                <span class="label label-info"><a href="https://github.com/jfmdev/ngAddressBook"><img src="img/github_16.png" class="iconito" alt=""/> GitHub</a></span>
-                                                <span class="label label-info"><a href="http://jfmdev.github.io/ngAddressBook/"><img src="img/web.png" class="iconito" alt=""/> Demo</a></span>
-                                            </td>
-                                    </tr></table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-			</div> <!-- end row -->
-			
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="proyecto">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <a name="neoncamera"><strong>NeonCamera</strong><small> - A camera app that allows to take photos with a neon lights effect</small></a>
-                            </div>
-                            <div class="panel-body">
-                                <div class="icono">
-                                    <img src="img/neon_camera.png" alt=""/>
-                                </div>
-                                <div class="descripcion">
-                                    <table><tr>
-                                            <td class="first">Category</td>
-                                            <td class="second">Application</td>
-                                        </tr><tr>
-                                            <td class="first">Platform</td>
-                                            <td class="second">Android</td>
-                                        </tr><tr>
-                                            <td class="first">Tags</td>
-                                            <td class="second">
-                                                <span class="label label-primary">Java</span>
-                                                <span class="label label-primary">Android</span>
-                                                <span class="label label-primary">BoofCV</span>
-                                            </td>
-                                        </tr><tr>
-                                            <td class="first">Links</td>
-                                            <td class="second">
-                                                <span class="label label-info"><a href="https://play.google.com/store/apps/details?id=ar.com.jfmdev.neoncamera"><img src="img/google_play_16.png" class="iconito" alt=""/> Google Play</a></span>
-                                                <span class="label label-info"><a href="http://www.amazon.com/KudaLab-NeonCamera/dp/B00UXKG8WG/ref=sr_1_1?ie=UTF8&qid=1426841509&sr=8-1&keywords=neoncamera"><img src="img/amazon_16.png" class="iconito" alt=""/> Amazon</a></span>
-                                            </td>
-                                    </tr></table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="proyecto">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <a name="histrix"><strong>Histrix Calculator</strong><small> - A JavaScript calculator with the same functionalities that the classic calculator from Windows XP / Vista</small></a>
-                            </div>
-                            <div class="panel-body">
-                                <div class="icono">
-                                    <img src="img/histrix_calculator.png" alt=""/>
-                                </div>
-                                <div class="descripcion">
-                                    <table><tr>
-                                            <td class="first">Category</td>
-                                            <td class="second">Application</td>
-                                        </tr><tr>
-                                            <td class="first">Platform</td>
-                                            <td class="second">Web & Mobile</td>
-                                        </tr><tr>
-                                            <td class="first">Tags</td>
-                                            <td class="second">
-                                                <span class="label label-primary">HTML5</span>
-                                                <span class="label label-primary">JavaScript</span>
-                                                <span class="label label-primary">jQuery</span>
-                                                <span class="label label-primary">jQuery Mobile</span>
-                                                <span class="label label-primary">Apache Cordova</span>
-                                                <span class="label label-primary">Open Source</span>
-                                            </td>
-                                        </tr><tr>
-                                            <td class="first">Links</td>
-                                            <td class="second">
-                                                <span class="label label-info"><a href="http://code.google.com/p/histrix-calculator/"><img src="img/google_code_16.png" class="iconito" alt=""/> Google Code</a></span>
-                                                <span class="label label-info"><a href="https://play.google.com/store/apps/details?id=ar.com.daidalos.histrix"><img src="img/google_play_16.png" class="iconito" alt=""/> Google Play</a></span>
-                                                <span class="label label-info"><a href="https://chrome.google.com/webstore/detail/histrix-calculator/lgdfflejppjaglpjmkigldlpmkhfppcc"><img src="img/chrome_web_store_16.png" class="iconito" alt=""/> Chrome Web Store</a></span>
-                                                <span class="label label-info"><a href="https://googledrive.com/host/0B4_1sNUgxqKBbFlXOEVfQi11bFE/index.html"><img src="img/mobile_phone.png" class="iconito" alt=""/> Demo (mobile)</a></span>
-                                                <span class="label label-info"><a href="https://googledrive.com/host/0B4_1sNUgxqKBZkVOWTkyTWJaUHM/index.html"><img src="img/desktop_computer.png" class="iconito" alt=""/> Demo (desktop)</a></span>
-                                            </td>
-                                    </tr></table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end row -->
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="proyecto">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <a name="justodo"><strong>Just To Do</strong><small> - An application for manage to-do lists</small></a>
+                                <a name="TelemarketingLogs"><strong>Just To Do</strong><small> - An application for manage to-do lists</small></a>
                             </div>
                             <div class="panel-body">
                                 <div class="icono">
                                     <img src="img/just_to_do.png" alt=""/>
-                                </div>
+									                                </div>
                                 <div class="descripcion">
                                     <table><tr>
                                             <td class="first">Category</td>
@@ -283,113 +182,95 @@
                                         </tr><tr>
                                             <td class="first">Tags</td>
                                             <td class="second">
-                                                <span class="label label-primary">Java</span>
-                                                <span class="label label-primary">Android</span>
-                                                <span class="label label-primary">XML</span>
-                                                <span class="label label-primary">CouchBase</span>
-                                            </td>
+											<span class="label label-primary">Java</span> <span class="label label-primary">Android</span> <span class="label label-primary">XML</span> <span class="label label-primary">CouchBase</span>                                             </td>
                                         </tr><tr>
                                             <td class="first">Links</td>
                                             <td class="second">
-                                                <span class="label label-info"><a href="https://play.google.com/store/apps/details?id=ar.com.jfmdev.justtodo"><img src="img/google_play_16.png" class="iconito" alt=""/> Google Play</a></span>
-												<span class="label label-info"><a href="http://www.amazon.com/KudaLab-Just-To-Do/dp/B00UXL1GCW/ref=sr_1_1?ie=UTF8&qid=1426841575&sr=8-1&keywords=justtodo"><img src="img/amazon_16.png" class="iconito" alt=""/> Amazon</a></span>
-                                            </td>
+																							<span class="label label-info"><a href="https://play.google.com/store/apps/details?id=ar.com.jfmdev.justtodo" target="_blank"><img src="img/google_play_16.png" class="iconito" alt=""/> Google Play</a></span>  
+																								<span class="label label-info"><a href="http://www.amazon.com/KudaLab-Just-To-Do/dp/B00UXL1GCW/ref=sr_1_1?ie=UTF8&qid=1426841575&sr=8-1&keywords=justtodo" target="_blank"><img src="img/amazon_16.png" class="iconito" alt=""/> Amazon</a></span>  
+												                                            </td>
                                     </tr></table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-6">
+								<div class="col-md-6">
                     <div class="proyecto">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a name="afiledialog"><strong>aFileDialog</strong><small> - A library that implements a simple and easy to use file chooser</small></a>
+                                <a name="TelemarketingLogs"><strong>ngAddressBook</strong><small> - A HTML5 sample app for learning AngularJS, Bootstrap and PouchDB</small></a>
                             </div>
                             <div class="panel-body">
                                 <div class="icono">
-                                    <img src="img/afiledialog.png" alt=""/>
-                                </div>
+                                    <img src="img/address_book.png" alt=""/>
+									                                </div>
                                 <div class="descripcion">
                                     <table><tr>
                                             <td class="first">Category</td>
-                                            <td class="second">Library</td>
-                                        </tr><tr>
-                                            <td class="first">Platform</td>
-                                            <td class="second">Android</td>
-                                        </tr><tr>
-                                            <td class="first">Tags</td>
-                                            <td class="second">
-                                                <span class="label label-primary">Java</span>
-                                                <span class="label label-primary">Android</span>
-                                                <span class="label label-primary">Open Source</span>
-                                            </td>
-                                        </tr><tr>
-                                            <td class="first">Links</td>
-                                            <td class="second">
-                                                <span class="label label-info"><a href="http://code.google.com/p/afiledialog/"><img src="img/google_code_16.png" class="iconito" alt=""/> Google Code</a></span>
-                                                <span class="label label-info"><a href="https://play.google.com/store/apps/details?id=ar.com.daidalos.afiledialog.test"><img src="img/google_play_16.png" class="iconito" alt=""/> Google Play</a></span>
-                                            </td>
-                                    </tr></table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end row -->
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="proyecto">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <a name="flappyclone"><strong>Flappy Clone</strong><small> - A HTML5 game, clone of Flappy Bird, developed for test the "Phaser" framework</small></a>
-                            </div>
-                            <div class="panel-body">
-                                <div class="icono">
-                                    <img src="img/flappy_clone.png" alt=""/>
-                                </div>
-                                <div class="descripcion">
-                                    <table><tr>
-                                            <td class="first">Category</td>
-                                            <td class="second">Game</td>
+                                            <td class="second">Application</td>
                                         </tr><tr>
                                             <td class="first">Platform</td>
                                             <td class="second">Web</td>
                                         </tr><tr>
                                             <td class="first">Tags</td>
                                             <td class="second">
-                                                <span class="label label-primary">HTML5</span>
-                                                <span class="label label-primary">JavaScript</span>
-                                                <span class="label label-primary">Phaser</span>
-                                            </td>
+											<span class="label label-primary">JavaScript</span> <span class="label label-primary">AngularJS</span> <span class="label label-primary">PouchDB</span> <span class="label label-primary">Bootstrap</span> <span class="label label-primary">QUnit</span> <span class="label label-primary">Selenium</span> <span class="label label-primary">HTML5</span> <span class="label label-primary">Open Source</span>                                             </td>
                                         </tr><tr>
                                             <td class="first">Links</td>
                                             <td class="second">
-                                                <span class="label label-info"><a href="https://chrome.google.com/webstore/detail/flappy-clone/epmgkgpllfpninngnlbhccijogfaihgm"><img src="img/chrome_web_store_16.png" class="iconito" alt=""/> Chrome Web Store</a></span>
-                                                <span class="label label-info"><a href="https://marketplace.firefox.com/app/flappy-clone/
-"><img src="img/firefox_marketplace_16.png" class="iconito" alt=""/> Firefox Marketplace</a></span>
-                                                <span class="label label-info"><a href="https://googledrive.com/host/0B4_1sNUgxqKBM3llLTJPblQ3WlU/flappyclone.html"><img src="img/mobile_phone.png" class="iconito" alt=""/> Demo (mobile)</a></span>
-                                                <span class="label label-info"><a href="https://googledrive.com/host/0B4_1sNUgxqKBM3llLTJPblQ3WlU/flappyclone-landscape.html"><img src="img/desktop_computer.png" class="iconito" alt=""/> Demo (desktop)</a></span>
-                                            </td>
+																							<span class="label label-info"><a href="https://github.com/jfmdev/ngAddressBook" target="_blank"><img src="img/github_16.png" class="iconito" alt=""/> GitHub</a></span>  
+																								<span class="label label-info"><a href="http://jfmdev.github.io/ngAddressBook/" target="_blank"><img src="img/web.png" class="iconito" alt=""/> Demo</a></span>  
+												                                            </td>
                                     </tr></table>
                                 </div>
                             </div>
                         </div>
-                    </div>        
+                    </div>
                 </div>
-
-                <div class="col-md-6">
+				</div><div class="row">				<div class="col-md-6">
                     <div class="proyecto">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a name="ustopwatch"><strong>&mu;Stopwatch</strong><small> - A HTML5 stopwatch designed as a sample app for Firefox OS</small></a>
+                                <a name="TelemarketingLogs"><strong>SaVaGe</strong><small> - A library of web widgets implemented with SVG</small></a>
                             </div>
                             <div class="panel-body">
                                 <div class="icono">
-                                    <img src="img/ustopwatch.png" alt=""/>
+                                    <img src="img/savage.png" alt=""/>
+									                                </div>
+                                <div class="descripcion">
+                                    <table><tr>
+                                            <td class="first">Category</td>
+                                            <td class="second">Library</td>
+                                        </tr><tr>
+                                            <td class="first">Platform</td>
+                                            <td class="second">Web</td>
+                                        </tr><tr>
+                                            <td class="first">Tags</td>
+                                            <td class="second">
+											<span class="label label-primary">SVG</span> <span class="label label-primary">JavaScript</span> <span class="label label-primary">D3.js</span> <span class="label label-primary">Open Source</span>                                             </td>
+                                        </tr><tr>
+                                            <td class="first">Links</td>
+                                            <td class="second">
+																							<span class="label label-info"><a href="https://github.com/jfmdev/SaVaGe" target="_blank"><img src="img/github_16.png" class="iconito" alt=""/> GitHub</a></span>  
+																								<span class="label label-info"><a href="http://jfmdev.github.io/SaVaGe/" target="_blank"><img src="img/web.png" class="iconito" alt=""/> Demo</a></span>  
+												                                            </td>
+                                    </tr></table>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+								<div class="col-md-6">
+                    <div class="proyecto">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a name="TelemarketingLogs"><strong>Histrix Calculator</strong><small> - A JavaScript calculator with the same functionalities that the classic calculator from Windows XP / Vista</small></a>
+                            </div>
+                            <div class="panel-body">
+                                <div class="icono">
+                                    <img src="img/histrix_calculator.png" alt=""/>
+									                                </div>
                                 <div class="descripcion">
                                     <table><tr>
                                             <td class="first">Category</td>
@@ -400,40 +281,134 @@
                                         </tr><tr>
                                             <td class="first">Tags</td>
                                             <td class="second">
-                                                <span class="label label-primary">HTML5</span>
-                                                <span class="label label-primary">JavaScript</span>
-                                                <span class="label label-primary">OnsenUI</span>
-                                                <span class="label label-primary">AngularJS</span>
-                                            </td>
+											<span class="label label-primary">HTML5</span> <span class="label label-primary">JavaScript</span> <span class="label label-primary">jQuery</span> <span class="label label-primary">jQuery Mobile</span> <span class="label label-primary">Apache Cordova</span> <span class="label label-primary">Open Source</span>                                             </td>
                                         </tr><tr>
                                             <td class="first">Links</td>
                                             <td class="second">
-                                                <span class="label label-info"><a href="https://github.com/jfmdev/uStopwatch
-"><img src="img/github_16.png" class="iconito" alt=""/> GitHub</a></span>
-                                                <span class="label label-info"><a href="https://marketplace.firefox.com/app/%C2%B5stopwatch/
-"><img src="img/firefox_marketplace_16.png" class="iconito" alt=""/> Firefox Marketplace</a></span>
-                                                <span class="label label-info"><a href="http://jfmdev.github.io/uStopwatch/
-"><img src="img/mobile_phone.png" class="iconito" alt=""/> Demo (mobile)</a></span>
-                                            </td>
+																							<span class="label label-info"><a href="http://code.google.com/p/histrix-calculator/" target="_blank"><img src="img/google_code_16.png" class="iconito" alt=""/> Google Code</a></span>  
+																								<span class="label label-info"><a href="https://play.google.com/store/apps/details?id=ar.com.daidalos.histrix" target="_blank"><img src="img/google_play_16.png" class="iconito" alt=""/> Google Play</a></span>  
+																								<span class="label label-info"><a href="https://chrome.google.com/webstore/detail/histrix-calculator/lgdfflejppjaglpjmkigldlpmkhfppcc" target="_blank"><img src="img/chrome_web_store_16.png" class="iconito" alt=""/> Chrome Web Store</a></span>  
+																								<span class="label label-info"><a href="https://googledrive.com/host/0B4_1sNUgxqKBbFlXOEVfQi11bFE/index.html" target="_blank"><img src="img/mobile_phone.png" class="iconito" alt=""/> Demo (mobile)</a></span>  
+																								<span class="label label-info"><a href="https://googledrive.com/host/0B4_1sNUgxqKBZkVOWTkyTWJaUHM/index.html" target="_blank"><img src="img/desktop_computer.png" class="iconito" alt=""/> Demo (desktop)</a></span>  
+												                                            </td>
                                     </tr></table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> <!-- end row -->
-
-            <div class="row">
-                <div class="col-md-6">
+				</div><div class="row">				<div class="col-md-6">
                     <div class="proyecto">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a name="slidingpuzzles"><strong>Landscape Sliding Puzzles</strong><small> - A HTML5 puzzle game</small></a>
+                                <a name="TelemarketingLogs"><strong>aFileDialog</strong><small> - A library that implements a simple and easy to use file chooser</small></a>
+                            </div>
+                            <div class="panel-body">
+                                <div class="icono">
+                                    <img src="img/afiledialog.png" alt=""/>
+									                                </div>
+                                <div class="descripcion">
+                                    <table><tr>
+                                            <td class="first">Category</td>
+                                            <td class="second">Library</td>
+                                        </tr><tr>
+                                            <td class="first">Platform</td>
+                                            <td class="second">Android</td>
+                                        </tr><tr>
+                                            <td class="first">Tags</td>
+                                            <td class="second">
+											<span class="label label-primary">Java</span> <span class="label label-primary">Android</span> <span class="label label-primary">Open Source</span>                                             </td>
+                                        </tr><tr>
+                                            <td class="first">Links</td>
+                                            <td class="second">
+																							<span class="label label-info"><a href="http://code.google.com/p/afiledialog/" target="_blank"><img src="img/google_code_16.png" class="iconito" alt=""/> Google Code</a></span>  
+																								<span class="label label-info"><a href="https://play.google.com/store/apps/details?id=ar.com.daidalos.afiledialog.test" target="_blank"><img src="img/google_play_16.png" class="iconito" alt=""/> Google Play</a></span>  
+												                                            </td>
+                                    </tr></table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+								<div class="col-md-6">
+                    <div class="proyecto">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a name="TelemarketingLogs"><strong>Flappy Clone</strong><small> - A HTML5 game, clone of Flappy Bird, developed for test the "Phaser" framework</small></a>
+                            </div>
+                            <div class="panel-body">
+                                <div class="icono">
+                                    <img src="img/flappy_clone.png" alt=""/>
+									                                </div>
+                                <div class="descripcion">
+                                    <table><tr>
+                                            <td class="first">Category</td>
+                                            <td class="second">Game</td>
+                                        </tr><tr>
+                                            <td class="first">Platform</td>
+                                            <td class="second">Web</td>
+                                        </tr><tr>
+                                            <td class="first">Tags</td>
+                                            <td class="second">
+											<span class="label label-primary">HTML5</span> <span class="label label-primary">JavaScript</span> <span class="label label-primary">Phaser</span>                                             </td>
+                                        </tr><tr>
+                                            <td class="first">Links</td>
+                                            <td class="second">
+																							<span class="label label-info"><a href="https://chrome.google.com/webstore/detail/flappy-clone/epmgkgpllfpninngnlbhccijogfaihgm" target="_blank"><img src="img/chrome_web_store_16.png" class="iconito" alt=""/> Chrome Web Store</a></span>  
+																								<span class="label label-info"><a href="https://marketplace.firefox.com/app/flappy-clone/" target="_blank"><img src="img/firefox_marketplace_16.png" class="iconito" alt=""/> Firefox Marketplace</a></span>  
+																								<span class="label label-info"><a href="https://googledrive.com/host/0B4_1sNUgxqKBM3llLTJPblQ3WlU/flappyclone.html" target="_blank"><img src="img/mobile_phone.png" class="iconito" alt=""/> Demo (mobile)</a></span>  
+																								<span class="label label-info"><a href="https://googledrive.com/host/0B4_1sNUgxqKBM3llLTJPblQ3WlU/flappyclone-landscape.html" target="_blank"><img src="img/desktop_computer.png" class="iconito" alt=""/> Demo (desktop)</a></span>  
+												                                            </td>
+                                    </tr></table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				</div><div class="row">				<div class="col-md-6">
+                    <div class="proyecto">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a name="TelemarketingLogs"><strong>&mu;Stopwatch</strong><small> - A HTML5 stopwatch designed as a sample app for Firefox OS</small></a>
+                            </div>
+                            <div class="panel-body">
+                                <div class="icono">
+                                    <img src="img/ustopwatch.png" alt=""/>
+									                                </div>
+                                <div class="descripcion">
+                                    <table><tr>
+                                            <td class="first">Category</td>
+                                            <td class="second">Application</td>
+                                        </tr><tr>
+                                            <td class="first">Platform</td>
+                                            <td class="second">Web & Mobile</td>
+                                        </tr><tr>
+                                            <td class="first">Tags</td>
+                                            <td class="second">
+											<span class="label label-primary">HTML5</span> <span class="label label-primary">JavaScript</span> <span class="label label-primary">OnsenUI</span> <span class="label label-primary">AngularJS</span> <span class="label label-primary">Open Source</span>                                             </td>
+                                        </tr><tr>
+                                            <td class="first">Links</td>
+                                            <td class="second">
+																							<span class="label label-info"><a href="https://github.com/jfmdev/uStopwatch" target="_blank"><img src="img/github_16.png" class="iconito" alt=""/> GitHub</a></span>  
+																								<span class="label label-info"><a href="https://marketplace.firefox.com/app/%C2%B5stopwatch/" target="_blank"><img src="img/firefox_marketplace_16.png" class="iconito" alt=""/> Firefox Marketplace</a></span>  
+																								<span class="label label-info"><a href="http://jfmdev.github.io/uStopwatch/" target="_blank"><img src="img/mobile_phone.png" class="iconito" alt=""/> Demo (mobile)</a></span>  
+												                                            </td>
+                                    </tr></table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+								<div class="col-md-6">
+                    <div class="proyecto">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a name="TelemarketingLogs"><strong>Landscape Sliding Puzzles</strong><small> - A HTML5 puzzle game</small></a>
                             </div>
                             <div class="panel-body">
                                 <div class="icono">
                                     <img src="img/sliding_puzzles.png" alt=""/>
-                                </div>
+									                                </div>
                                 <div class="descripcion">
                                     <table><tr>
                                             <td class="first">Category</td>
@@ -444,34 +419,29 @@
                                         </tr><tr>
                                             <td class="first">Tags</td>
                                             <td class="second">
-                                                <span class="label label-primary">JavaScript</span>
-                                                <span class="label label-primary">jQuery</span>
-                                                <span class="label label-primary">HTML5</span>
-                                            </td>
+											<span class="label label-primary">HTML5</span> <span class="label label-primary">JavaScript</span> <span class="label label-primary">jQuery</span>                                             </td>
                                         </tr><tr>
                                             <td class="first">Links</td>
                                             <td class="second">
-                                                <span class="label label-info"><a href="https://chrome.google.com/webstore/detail/landscape-sliding-puzzles/beifpgdjlnpfinmngokhdjmpokbeacfi"><img src="img/chrome_web_store_16.png" class="iconito" alt=""/> Chrome Web Store</a></span>
-												<span class="label label-info"><a href="https://marketplace.firefox.com/app/landscape-sliding-puzzles/
-"><img src="img/firefox_marketplace_16.png" class="iconito" alt=""/> Firefox Marketplace</a></span>
-                                            </td>
+																							<span class="label label-info"><a href="https://chrome.google.com/webstore/detail/landscape-sliding-puzzles/beifpgdjlnpfinmngokhdjmpokbeacfi" target="_blank"><img src="img/chrome_web_store_16.png" class="iconito" alt=""/> Chrome Web Store</a></span>  
+																								<span class="label label-info"><a href="https://marketplace.firefox.com/app/landscape-sliding-puzzles/" target="_blank"><img src="img/firefox_marketplace_16.png" class="iconito" alt=""/> Firefox Marketplace</a></span>  
+												                                            </td>
                                     </tr></table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-md-6">
+				</div><div class="row">				<div class="col-md-6">
                     <div class="proyecto">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a name="jigsawpuzzles"><strong>Landscape Jigsaw Puzzles</strong><small> - A HTML5 puzzle game</small></a>
+                                <a name="TelemarketingLogs"><strong>Landscape Jigsaw Puzzles</strong><small> - A HTML5 puzzle game</small></a>
                             </div>
                             <div class="panel-body">
                                 <div class="icono">
                                     <img src="img/jigsaw_puzzles.png" alt=""/>
-                                </div>
+									                                </div>
                                 <div class="descripcion">
                                     <table><tr>
                                             <td class="first">Category</td>
@@ -482,35 +452,28 @@
                                         </tr><tr>
                                             <td class="first">Tags</td>
                                             <td class="second">
-                                                <span class="label label-primary">JavaScript</span>
-                                                <span class="label label-primary">jQuery</span>
-                                                <span class="label label-primary">HTML5</span>
-                                            </td>
+											<span class="label label-primary">HTML5</span> <span class="label label-primary">JavaScript</span> <span class="label label-primary">jQuery</span>                                             </td>
                                         </tr><tr>
                                             <td class="first">Links</td>
                                             <td class="second">
-                                                <span class="label label-info"><a href="https://chrome.google.com/webstore/detail/landscape-jigsaw-puzzles/lpkjfbacnmennednnkmlfahhoiefeaif"><img src="img/chrome_web_store_16.png" class="iconito" alt=""/> Chrome Web Store</a></span>
-                                            </td>
+																							<span class="label label-info"><a href="https://chrome.google.com/webstore/detail/landscape-jigsaw-puzzles/lpkjfbacnmennednnkmlfahhoiefeaif" target="_blank"><img src="img/chrome_web_store_16.png" class="iconito" alt=""/> Chrome Web Store</a></span>  
+												                                            </td>
                                     </tr></table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> <!-- end row -->
-
-            <div class="row">
-                <div class="col-md-6">
+								<div class="col-md-6">
                     <div class="proyecto">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a name="jqjigsaw"><strong>jqJigsawPuzzle</strong><small> - A library that lets to create jigsaw puzzles in web pages</small></a>
+                                <a name="TelemarketingLogs"><strong>jqJigsawPuzzle</strong><small> - A library that lets to create jigsaw puzzles in web pages</small></a>
                             </div>
                             <div class="panel-body">
                                 <div class="icono">
                                     <img src="img/library.png" alt=""/>
-									<img src="img/jquery_80.png" class="sticker" alt=""/>
-                                </div>
+									<img src="img/jquery_80.png" class="sticker" alt=""/>                                </div>
                                 <div class="descripcion">
                                     <table><tr>
                                             <td class="first">Category</td>
@@ -521,34 +484,28 @@
                                         </tr><tr>
                                             <td class="first">Tags</td>
                                             <td class="second">
-                                                <span class="label label-primary">JavaScript</span>
-                                                <span class="label label-primary">jQuery</span>
-                                                <span class="label label-primary">HTML5</span>
-                                                <span class="label label-primary">Open Source</span>
-                                            </td>
+											<span class="label label-primary">HTML5</span> <span class="label label-primary">JavaScript</span> <span class="label label-primary">jQuery</span> <span class="label label-primary">Open Source</span>                                             </td>
                                         </tr><tr>
                                             <td class="first">Links</td>
                                             <td class="second">
-                                                <span class="label label-info"><a href="http://code.google.com/p/jq-jigsaw-puzzle/"><img src="img/google_code_16.png" class="iconito" alt=""/> Google Code</a></span>
-                                            </td>
+																							<span class="label label-info"><a href="http://code.google.com/p/jq-jigsaw-puzzle/" target="_blank"><img src="img/google_code_16.png" class="iconito" alt=""/> Google Code</a></span>  
+												                                            </td>
                                     </tr></table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-6">
+				</div><div class="row">				<div class="col-md-6">
                     <div class="proyecto">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a name="jqeye"><strong>jqEye</strong><small> - A library which allows to create eyes that follow the mouse</small></a>
+                                <a name="TelemarketingLogs"><strong>jqEye</strong><small> - A library which allows to create eyes that follow the mouse</small></a>
                             </div>
                             <div class="panel-body">
                                 <div class="icono">
                                     <img src="img/library.png" alt=""/>
-									<img src="img/jquery_80.png" class="sticker" alt=""/>
-                                </div>
+									<img src="img/jquery_80.png" class="sticker" alt=""/>                                </div>
                                 <div class="descripcion">
                                     <table><tr>
                                             <td class="first">Category</td>
@@ -559,36 +516,28 @@
                                         </tr><tr>
                                             <td class="first">Tags</td>
                                             <td class="second">
-                                                <span class="label label-primary">JavaScript</span>
-                                                <span class="label label-primary">jQuery</span>
-                                                <span class="label label-primary">HTML</span>
-                                                <span class="label label-primary">Open Source</span>
-                                            </td>
+											<span class="label label-primary">HTML5</span> <span class="label label-primary">JavaScript</span> <span class="label label-primary">jQuery</span> <span class="label label-primary">Open Source</span>                                             </td>
                                         </tr><tr>
                                             <td class="first">Links</td>
                                             <td class="second">
-                                                <span class="label label-info"><a href="https://github.com/jfmdev/jqEye"><img src="img/github_16.png" class="iconito" alt=""/> GitHub</a></span>
-                                            </td>
+																							<span class="label label-info"><a href="https://github.com/jfmdev/jqEye" target="_blank"><img src="img/github_16.png" class="iconito" alt=""/> GitHub</a></span>  
+												                                            </td>
                                     </tr></table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> <!-- end row -->
-
-            <div class="row">
-                <div class="col-md-6">
+								<div class="col-md-6">
                     <div class="proyecto">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a name="jqscrollanim"><strong>jqScrollAnim</strong><small> - A library that allows to define animations that triggers with the vertical scroll.</small></a>
+                                <a name="TelemarketingLogs"><strong>jqScrollAnim</strong><small> - A library that allows to define animations that triggers with the vertical scroll</small></a>
                             </div>
                             <div class="panel-body">
                                 <div class="icono">
                                     <img src="img/library.png" alt=""/>
-									<img src="img/jquery_80.png" class="sticker" alt=""/>
-                                </div>
+									<img src="img/jquery_80.png" class="sticker" alt=""/>                                </div>
                                 <div class="descripcion">
                                     <table><tr>
                                             <td class="first">Category</td>
@@ -599,34 +548,28 @@
                                         </tr><tr>
                                             <td class="first">Tags</td>
                                             <td class="second">
-                                                <span class="label label-primary">JavaScript</span>
-                                                <span class="label label-primary">jQuery</span>
-                                                <span class="label label-primary">HTML</span>
-                                                <span class="label label-primary">Open Source</span>
-                                            </td>
+											<span class="label label-primary">HTML5</span> <span class="label label-primary">JavaScript</span> <span class="label label-primary">jQuery</span> <span class="label label-primary">Open Source</span>                                             </td>
                                         </tr><tr>
                                             <td class="first">Links</td>
                                             <td class="second">
-                                                <span class="label label-info"><a href="https://github.com/jfmdev/jqScrollAnim"><img src="img/github_16.png" class="iconito" alt=""/> GitHub</a></span>
-                                            </td>
+																							<span class="label label-info"><a href="https://github.com/jfmdev/jqScrollAnim" target="_blank"><img src="img/github_16.png" class="iconito" alt=""/> GitHub</a></span>  
+												                                            </td>
                                     </tr></table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-6">
+				</div><div class="row">				<div class="col-md-6">
                     <div class="proyecto">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a name="jqsimple"><strong>jqSimpleConnect</strong><small> - A lightweight library which allows to visually connect elements in a web page</small></a>
+                                <a name="TelemarketingLogs"><strong>jqSimpleConnect</strong><small> - A lightweight library which allows to visually connect elements in a web page</small></a>
                             </div>
                             <div class="panel-body">
                                 <div class="icono">
                                     <img src="img/library.png" alt=""/>
-									<img src="img/jquery_80.png" class="sticker" alt=""/>
-                                </div>
+									<img src="img/jquery_80.png" class="sticker" alt=""/>                                </div>
                                 <div class="descripcion">
                                     <table><tr>
                                             <td class="first">Category</td>
@@ -637,36 +580,28 @@
                                         </tr><tr>
                                             <td class="first">Tags</td>
                                             <td class="second">
-                                                <span class="label label-primary">JavaScript</span>
-                                                <span class="label label-primary">jQuery</span>
-                                                <span class="label label-primary">HTML</span>
-                                                <span class="label label-primary">Open Source</span>
-                                            </td>
+											<span class="label label-primary">HTML5</span> <span class="label label-primary">JavaScript</span> <span class="label label-primary">jQuery</span> <span class="label label-primary">Open Source</span>                                             </td>
                                         </tr><tr>
                                             <td class="first">Links</td>
                                             <td class="second">
-                                                <span class="label label-info"><a href="http://code.google.com/p/jq-simple-connect/"><img src="img/google_code_16.png" class="iconito" alt=""/> Google Code</a></span>
-                                            </td>
+																							<span class="label label-info"><a href="http://code.google.com/p/jq-simple-connect/" target="_blank"><img src="img/google_code_16.png" class="iconito" alt=""/> Google Code</a></span>  
+												                                            </td>
                                     </tr></table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> <!-- end row -->
-
-            <div class="row">
-                <div class="col-md-6">
+								<div class="col-md-6">
                     <div class="proyecto">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a name="lobo"><strong>Lobo plugins</strong><small> - A collections of plugins for the content management system WolfCMS</small></a>
+                                <a name="TelemarketingLogs"><strong>Lobo plugins</strong><small> - A collections of plugins for the content management system WolfCMS</small></a>
                             </div>
                             <div class="panel-body">
                                 <div class="icono">
                                     <img src="img/plugin.png" alt=""/>
-									<img src="img/wolfcms_48.png" class="sticker" alt=""/>
-                                </div>
+									<img src="img/wolfcms_48.png" class="sticker" alt=""/>                                </div>
                                 <div class="descripcion">
                                     <table><tr>
                                             <td class="first">Category</td>
@@ -677,36 +612,28 @@
                                         </tr><tr>
                                             <td class="first">Tags</td>
                                             <td class="second">
-                                                <span class="label label-primary">HTML</span>
-                                                <span class="label label-primary">PHP</span>
-                                                <span class="label label-primary">XML</span>
-                                                <span class="label label-primary">NicEdit</span>
-                                                <span class="label label-primary">Wolf CMS</span>
-                                                <span class="label label-primary">Open Source</span>
-                                            </td>
+											<span class="label label-primary">HTML</span> <span class="label label-primary">PHP</span> <span class="label label-primary">XML</span> <span class="label label-primary">NicEdit</span> <span class="label label-primary">Wolf CMS</span> <span class="label label-primary">Open Source</span>                                             </td>
                                         </tr><tr>
                                             <td class="first">Links</td>
                                             <td class="second">
-                                                <span class="label label-info"><a href="http://code.google.com/p/loboplugins/"><img src="img/google_code_16.png" class="iconito" alt=""/> Google Code</a></span>
-                                            </td>
+																							<span class="label label-info"><a href="http://code.google.com/p/loboplugins/" target="_blank"><img src="img/google_code_16.png" class="iconito" alt=""/> Google Code</a></span>  
+												                                            </td>
                                     </tr></table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-				
-                <div class="col-md-6">
+				</div><div class="row">				<div class="col-md-6">
                     <div class="proyecto">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <a name="pythonfu"><strong>Python-Fu samples</strong><small> - A group of scripts whose objective is to serve as templates and code samples for scripting in GIMP</small></a>
+                                <a name="TelemarketingLogs"><strong>Python-Fu samples</strong><small> - A group of scripts whose objective is to serve as templates and code samples for scripting in GIMP</small></a>
                             </div>
                             <div class="panel-body">
                                 <div class="icono">
                                     <img src="img/plugin.png" alt=""/>
-									<img src="img/gimp_48.png" class="sticker" alt=""/>
-                                </div>
+									<img src="img/gimp_48.png" class="sticker" alt=""/>                                </div>
                                 <div class="descripcion">
                                     <table><tr>
                                             <td class="first">Category</td>
@@ -717,24 +644,20 @@
                                         </tr><tr>
                                             <td class="first">Tags</td>
                                             <td class="second">
-                                                <span class="label label-primary">Python</span>
-                                                <span class="label label-primary">GIMP</span>
-                                                <span class="label label-primary">Open Source</span>
-                                            </td>
+											<span class="label label-primary">Python</span> <span class="label label-primary">GIMP</span> <span class="label label-primary">Open Source</span>                                             </td>
                                         </tr><tr>
                                             <td class="first">Links</td>
                                             <td class="second">
-                                                <span class="label label-info"><a href="http://code.google.com/p/python-fu-samples/"><img src="img/google_code_16.png" class="iconito" alt=""/> Google Code</a></span>
-                                                <span class="label label-info"><a href="http://registry.gimp.org/node/28124"><img src="img/gimp_16.png" class="iconito" alt=""/> GIMP Plugin Registry</a></span>
-                                            </td>
+																							<span class="label label-info"><a href="http://code.google.com/p/python-fu-samples/" target="_blank"><img src="img/google_code_16.png" class="iconito" alt=""/> Google Code</a></span>  
+																								<span class="label label-info"><a href="http://registry.gimp.org/node/28124" target="_blank"><img src="img/gimp_16.png" class="iconito" alt=""/> GIMP Plugin Registry</a></span>  
+												                                            </td>
                                     </tr></table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> <!-- end row -->
-        </div> <!-- end proyectos -->
+				</div>        </div> <!-- end proyectos -->
             
         <br/>
 
