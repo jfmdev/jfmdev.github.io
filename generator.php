@@ -194,6 +194,7 @@ $linkIcons = array(
 						"Google Code" => "http://code.google.com/p/histrix-calculator/",
 						"Google Play" => "https://play.google.com/store/apps/details?id=ar.com.daidalos.histrix",
 						"Chrome Web Store" => "https://chrome.google.com/webstore/detail/histrix-calculator/lgdfflejppjaglpjmkigldlpmkhfppcc",
+						"Firefox Marketplace" => "https://marketplace.firefox.com/app/histrix-calculator/",
 						"Demo (mobile)" => "https://googledrive.com/host/0B4_1sNUgxqKBbFlXOEVfQi11bFE/index.html",
 						"Demo (desktop)" => "https://googledrive.com/host/0B4_1sNUgxqKBZkVOWTkyTWJaUHM/index.html"
 					)
