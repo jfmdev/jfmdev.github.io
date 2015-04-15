@@ -5,10 +5,17 @@ if($kuda) {
 	$title = "KudaLab";
 	$subtitle = "Development of web, mobile and open source software";
 	$googleAnalyticsCode = "UA-49400910-2";
+	$projectLabel = "Projects";
+	$showPortfolio = false;
 } else {
 	$title = "JFMDev";
-	$subtitle = "Portfolio of personal software projects";
+	//$subtitle = "Personal portfolio";
+$subtitle = "Portfolio of personal software projects";
 	$googleAnalyticsCode = "UA-49400910-3";
+	//$projectLabel = "Code lab";
+$projectLabel = "Projects";
+	//$showPortfolio = true;
+$showPortfolio = false;
 }
 $linkIcons = array(
 	"GitHub" => "img/github_16.png",
@@ -107,22 +114,56 @@ $linkIcons = array(
             <div id="main_menu" class="menu_simple">
                 <ul>
                    <li><a href='#top'>Top</a></li>
-                   <li><a href='#portfolio'>Projects</a></li>
+                   <?php if($showPortfolio) { ?><li><a href='#portfolio'>Portfolio</a></li><?php } ?>
+                   <li><a href='#project'><?php echo $projectLabel; ?></a></li>
                    <li><a href='#perfiles'>Profiles</a></li>
                    <li><a href='#contacto'>Contact</a></li>
                 </ul>
             </div>
         </div>
         
+		<?php if($showPortfolio) { ?>
+		<br/>
+        
+        <div id="portfolio">
+            <h2><a name="portfolio">Portfolio</a></h2>
+			
+		</div>
+		<?php } ?>
+		
         <br/>
         
         <div id="proyectos">
-            <h2><a name="portfolio">List of projects</a></h2>
+            <h2><a name="project">List of projects</a></h2>
             
 			<br/>
 			
 			<?php
 			$projects = array(
+				array(
+					"name" => "TuringFonts",
+					"caption" => "A way to publish uncrawable and uncopiable texts to the web",
+					"icon" => "img/turingfonts.png",
+					"category" => "Resources",
+					"platform" => "Web",
+					"tags" => array("Fonts", "Encryption", "Substitution", "Creative Commons"),
+					"links" => array (
+						"GitHub" => "https://github.com/jfmdev/TuringFonts",
+						"Demo" => "http://jfmdev.github.io/TuringFonts/"
+					)
+				),
+				array(
+					"name" => "SaVaGe",
+					"caption" => "A library of web widgets implemented with SVG",
+					"icon" => "img/savage.png",
+					"category" => "Library",
+					"platform" => "Web",
+					"tags" => array("SVG", "JavaScript", "D3.js", "Open Source"),
+					"links" => array (
+						"GitHub" => "https://github.com/jfmdev/SaVaGe",
+						"Demo" => "http://jfmdev.github.io/SaVaGe/"
+					)
+				),
 				array(
 					"name" => "NeonCamera",
 					"caption" => "A camera app that allows to take photos with a neon lights effect",
@@ -169,18 +210,6 @@ $linkIcons = array(
 					"links" => array (
 						"GitHub" => "https://github.com/jfmdev/ngAddressBook",
 						"Demo" => "http://jfmdev.github.io/ngAddressBook/"
-					)
-				),
-				array(
-					"name" => "SaVaGe",
-					"caption" => "A library of web widgets implemented with SVG",
-					"icon" => "img/savage.png",
-					"category" => "Library",
-					"platform" => "Web",
-					"tags" => array("SVG", "JavaScript", "D3.js", "Open Source"),
-					"links" => array (
-						"GitHub" => "https://github.com/jfmdev/SaVaGe",
-						"Demo" => "http://jfmdev.github.io/SaVaGe/"
 					)
 				),
 				array(
