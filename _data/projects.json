@@ -1,0 +1,243 @@
+[
+    {
+        "name" : "TuringFonts",
+        "caption" : "A way to publish uncrawable and uncopiable texts to the web",
+		"type": "app",
+        "icon" : "img/turingfonts.png",
+        "category" : "Resources",
+        "platform" : "Web | Office",
+        "tags" : ["Fonts", "Encryption", "Substitution", "Docs", "Creative Commons"],
+        "links" : {
+            "GitHub" : "https://github.com/jfmdev/TuringFonts",
+            "Demo" : "http://jfmdev.github.io/TuringFonts/"
+        }
+    },
+    {
+        "name" : "SaVaGe",
+        "caption" : "A library of web widgets implemented with SVG",
+		"type": "other",
+        "icon" : "img/savage.png",
+        "category" : "Library",
+        "platform" : "Web",
+        "tags" : ["SVG", "JavaScript", "D3.js", "Open Source"],
+        "links" : {
+            "GitHub" : "https://github.com/jfmdev/SaVaGe",
+            "Demo" : "http://jfmdev.github.io/SaVaGe/"
+        }
+    },
+    {
+        "name" : "NeonCamera",
+        "caption" : "A camera app that allows to take photos with a neon lights effect",
+		"type": "app",
+        "icon" : "img/neon_camera.png",
+        "category" : "Application",
+        "platform" : "Android",
+        "tags" : ["Java", "Android", "BoofCV"],
+        "links" : {
+            "Google Play" : "https://play.google.com/store/apps/details?id=ar.com.jfmdev.neoncamera",
+            "Amazon" : "http://www.amazon.com/KudaLab-NeonCamera/dp/B00UXKG8WG/ref=sr_1_1?ie=UTF8&qid=1426841509&sr=8-1&keywords=neoncamera"
+        }
+    },
+    {
+        "name" : "TelemarketingLogs",
+        "caption" : "A HTML5 app for track marketing calls",
+		"type": "app",
+        "icon" : "img/call_logs.png",
+        "category" : "Application",
+        "platform" : "Web",
+        "tags" : ["JavaScript", "AngularJS", "TaffyDB", "Foundation", "Open Source"],
+        "links" : {
+            "GitHub" : "https://github.com/jfmdev/TelemarketingLogs",
+            "Demo" : "http://jfmdev.github.io/TelemarketingLogs/"
+        }
+    },
+    {
+        "name" : "Just To Do",
+        "caption" : "An application for manage to-do lists",
+		"type": "app",
+        "icon" : "img/just_to_do.png",
+        "category" : "Application",
+        "platform" : "Android",
+        "tags" : ["Java", "Android", "XML", "CouchBase"],
+        "links" : {
+            "Google Play" : "https://play.google.com/store/apps/details?id=ar.com.jfmdev.justtodo",
+            "Amazon" : "http://www.amazon.com/KudaLab-Just-To-Do/dp/B00UXL1GCW/ref=sr_1_1?ie=UTF8&qid=1426841575&sr=8-1&keywords=justtodo"
+        }
+    },
+    {
+        "name" : "ngAddressBook",
+        "caption" : "A HTML5 sample app for learning AngularJS, Bootstrap and PouchDB",
+		"type": "app",
+        "icon" : "img/address_book.png",
+        "category" : "Application",
+        "platform" : "Web",
+        "tags" : ["JavaScript", "AngularJS", "PouchDB", "Bootstrap", "QUnit", "Selenium", "HTML5", "Open Source"],
+        "links" : {
+            "GitHub" : "https://github.com/jfmdev/ngAddressBook",
+            "Demo" : "http://jfmdev.github.io/ngAddressBook/"
+        }
+    },
+    {
+        "name" : "Histrix Calculator",
+        "caption" : "A JavaScript calculator with the same functionalities that the classic calculator from Windows XP / Vista",
+		"type": "app",
+        "icon" : "img/histrix_calculator.png",
+        "category" : "Application",
+        "platform" : "Web & Mobile",
+        "tags" : ["HTML5", "JavaScript", "jQuery", "jQuery Mobile", "Apache Cordova", "Open Source"],
+        "links" : {
+            "Google Code" : "http://code.google.com/p/histrix-calculator/",
+            "Google Play" : "https://play.google.com/store/apps/details?id=ar.com.daidalos.histrix",
+            "Chrome Web Store" : "https://chrome.google.com/webstore/detail/histrix-calculator/lgdfflejppjaglpjmkigldlpmkhfppcc",
+            "Firefox Marketplace" : "https://marketplace.firefox.com/app/histrix-calculator/",
+            "Demo (mobile)" : "https://googledrive.com/host/0B4_1sNUgxqKBbFlXOEVfQi11bFE/index.html",
+            "Demo (desktop)" : "https://googledrive.com/host/0B4_1sNUgxqKBZkVOWTkyTWJaUHM/index.html"
+        }
+    },
+    {
+        "name" : "aFileDialog",
+        "caption" : "A library that implements a simple and easy to use file chooser",
+		"type": "other",
+        "icon" : "img/afiledialog.png",
+        "category" : "Library",
+        "platform" : "Android",
+        "tags" : ["Java", "Android", "Open Source"],
+        "links" : {
+            "Google Code" : "http://code.google.com/p/afiledialog/",
+            "Google Play" : "https://play.google.com/store/apps/details?id=ar.com.daidalos.afiledialog.test"
+        }
+    },
+    {
+        "name" : "Flappy Clone",
+        "caption" : "A HTML5 game, clone of Flappy Bird, developed for test the \"Phaser\" framework",
+		"type": "game",
+        "icon" : "img/flappy_clone.png",
+        "category" : "Game",
+        "platform" : "Web",
+        "tags" : ["HTML5", "JavaScript", "Phaser"],
+        "links" : {
+            "Chrome Web Store" : "https://chrome.google.com/webstore/detail/flappy-clone/epmgkgpllfpninngnlbhccijogfaihgm",
+            "Firefox Marketplace" : "https://marketplace.firefox.com/app/flappy-clone/",
+            "Demo (mobile)" : "https://googledrive.com/host/0B4_1sNUgxqKBM3llLTJPblQ3WlU/flappyclone.html",
+            "Demo (desktop)" : "https://googledrive.com/host/0B4_1sNUgxqKBM3llLTJPblQ3WlU/flappyclone-landscape.html"
+        }
+    },
+    {
+        "name" : "&mu;Stopwatch",
+        "caption" : "A HTML5 stopwatch designed as a sample app for Firefox OS",
+		"type": "app",
+        "icon" : "img/ustopwatch.png",
+        "category" : "Application",
+        "platform" : "Web & Mobile",
+        "tags" : ["HTML5", "JavaScript", "OnsenUI", "AngularJS", "Open Source"],
+        "links" : {
+            "GitHub" : "https://github.com/jfmdev/uStopwatch",
+            "Firefox Marketplace" : "https://marketplace.firefox.com/app/%C2%B5stopwatch/",
+            "Demo (mobile)" : "http://jfmdev.github.io/uStopwatch/"
+        }
+    },
+    {
+        "name" : "Landscape Sliding Puzzles",
+        "caption" : "A HTML5 puzzle game",
+		"type": "game",
+        "icon" : "img/sliding_puzzles.png",
+        "category" : "Game",
+        "platform" : "Web",
+        "tags" : ["HTML5", "JavaScript", "jQuery"],
+        "links" : {
+            "Chrome Web Store" : "https://chrome.google.com/webstore/detail/landscape-sliding-puzzles/beifpgdjlnpfinmngokhdjmpokbeacfi",
+            "Firefox Marketplace" : "https://marketplace.firefox.com/app/landscape-sliding-puzzles/"
+        }
+    },
+    {
+        "name" : "Landscape Jigsaw Puzzles",
+        "caption" : "A HTML5 puzzle game",
+		"type": "game",
+        "icon" : "img/jigsaw_puzzles.png",
+        "category" : "Game",
+        "platform" : "Web",
+        "tags" : ["HTML5", "JavaScript", "jQuery"],
+        "links" : {
+            "Chrome Web Store" : "https://chrome.google.com/webstore/detail/landscape-jigsaw-puzzles/lpkjfbacnmennednnkmlfahhoiefeaif"
+        }
+    },
+    {
+        "name" : "jqJigsawPuzzle",
+        "caption" : "A library that lets to create jigsaw puzzles in web pages",
+		"type": "other",
+        "icon" : "img/library.png",
+        "sticker" : "img/jquery_80.png",
+        "category" : "Library",
+        "platform" : "Web",
+        "tags" : ["HTML5", "JavaScript", "jQuery", "Open Source"],
+        "links" : {
+            "Google Code" : "http://code.google.com/p/jq-jigsaw-puzzle/"
+        }
+    },
+    {
+        "name" : "jqEye",
+        "caption" : "A library which allows to create eyes that follow the mouse",
+		"type": "other",
+        "icon" : "img/library.png",
+        "sticker" : "img/jquery_80.png",
+        "category" : "Library",
+        "platform" : "Web",
+        "tags" : ["HTML5", "JavaScript", "jQuery", "Open Source"],
+        "links" : {
+            "GitHub" : "https://github.com/jfmdev/jqEye"
+        }
+    },
+    {
+        "name" : "jqScrollAnim",
+        "caption" : "A library that allows to define animations that triggers with the vertical scroll",
+		"type": "other",
+        "icon" : "img/library.png",
+        "sticker" : "img/jquery_80.png",
+        "category" : "Library",
+        "platform" : "Web",
+        "tags" : ["HTML5", "JavaScript", "jQuery", "Open Source"],
+        "links" : {
+            "GitHub" : "https://github.com/jfmdev/jqScrollAnim"
+        }
+    },
+    {
+        "name" : "jqSimpleConnect",
+        "caption" : "A lightweight library which allows to visually connect elements in a web page",
+		"type": "other",
+        "icon" : "img/library.png",
+        "sticker" : "img/jquery_80.png",
+        "category" : "Library",
+        "platform" : "Web",
+        "tags" : ["HTML5", "JavaScript", "jQuery", "Open Source"],
+        "links" : {
+            "Google Code" : "http://code.google.com/p/jq-simple-connect/"
+        }
+    },
+    {
+        "name" : "Lobo plugins",
+        "caption" : "A collections of plugins for the content management system WolfCMS",
+		"type": "other",
+        "icon" : "img/plugin.png",
+        "sticker" : "img/wolfcms_48.png",
+        "category" : "Plugin",
+        "platform" : "Web",
+        "tags" : ["HTML", "PHP", "XML", "NicEdit", "Wolf CMS", "Open Source"],
+        "links" : {
+            "Google Code" : "http://code.google.com/p/loboplugins/"
+        }
+    },
+    {
+        "name" : "Python-Fu samples",
+        "caption" : "A group of scripts whose objective is to serve as templates and code samples for scripting in GIMP",
+		"type": "other",
+        "icon" : "img/plugin.png",
+        "sticker" : "img/gimp_48.png",
+        "category" : "Plugin",
+        "platform" : "PC",
+        "tags" : ["Python", "GIMP", "Open Source"],
+        "links" : {
+            "Google Code" : "http://code.google.com/p/python-fu-samples/",
+            "GIMP Plugin Registry" : "http://registry.gimp.org/node/28124"
+        }
+    }
+]
