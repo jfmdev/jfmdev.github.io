@@ -121,7 +121,7 @@ categories:
 			{% endfor %}
 			
 			<!-- Fix bug when the projects in a category are odd -->
-			{% if category.type != 'other' %}
+			{% if category.type != 'app' %}
 				{% cycle nil, '</div><div class="row">' %}
 			{% endif %}
 		</div>

@@ -2,7 +2,7 @@
     {
         "name" : "TuringFonts",
         "caption" : "A way to publish uncrawable and uncopiable texts to the web",
-		"type": "app",
+		"type": "other",
         "icon" : "img/turingfonts.png",
         "category" : "Resources",
         "platform" : "Web | Office",

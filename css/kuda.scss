@@ -22,7 +22,6 @@ body {
 
 		h1 {
 			margin-top: 0;
-			padding-top: 5px;
 		}
 
 		h1 a {
@@ -60,24 +59,54 @@ body {
 	}
 }
 
-div.green_back {
-    color: #fff;
-    background-color: #080;
-    background: url(muffet-green.jpg) repeat top center;   
+#portfolio {
+	h2 {
+		padding-top: 15px;
+		margin-top: 0;
+	}
 	
-	div.border_top {
-		height: 13px;				
-		width: 100%;
-		position: relative;
-		background: url(border_top.png) repeat top center; 
+	div.frame {
+		width: 300px;
+		height: 250px;
+		border: 1px solid #888;
+		padding: 10px;
+		margin: 10px auto;
+		-moz-box-shadow: 0px 0px 3px 0px #555; 
+		-webkit-box-shadow: 0px 0px 3px 0px #555; 
+		box-shadow: 0px 0px 3px 0px #555; 	
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;		
+		
+		background-color: white;
+		-webkit-transition: background 0.7s linear;
+        -moz-transition: background 0.7s linear;
+        -ms-transition: background 0.7s linear;
+        -o-transition: background 0.7s linear;
+        transition: background 0.7s linear;
 	}
 
-	div.border_bottom {
-		height: 13px;
+	div.frame:hover {
+		background-color: #0f0;
+	}
+	
+	div.content {
 		width: 100%;
+		height: 100%;
+		border: 1px solid black;
+		background-color: #030;
+		text-align: center;
 		position: relative;
-		background: url(border_bottom.png) repeat top center; 
-	}	
+		
+		img {
+		    position: absolute;
+			margin: auto;
+			top: 0;  
+			bottom: 0; 
+			left: 0;  
+			right: 0; 
+		}
+	}
 }
 
 #perfiles {
@@ -125,6 +154,33 @@ div.green_back {
     }
 }
 
+/* ----- Backgrounds ----- */
+
+div.green_back {
+    color: #fff;
+    background-color: #080;
+    background: url(muffet-green.jpg) repeat top center;   
+}
+
+div.light_back {
+    color: #000;
+    background-color: #e4ffe4;
+}
+
+div.border_top {
+	height: 13px;				
+	width: 100%;
+	position: relative;
+	background: url(border_top.png) repeat top center; 
+}
+
+div.border_bottom {
+	height: 13px;
+	width: 100%;
+	position: relative;
+	background: url(border_bottom.png) repeat top center; 
+}	
+
 /* ----- Navigation menu ----- */
 
 #menu_container {
@@ -135,6 +191,8 @@ div.green_back {
 #main_menu {
     position: absolute;
     right: 0;
+	width: 430px;
+	text-align: center;
     border-top-left-radius: 15px;
     -moz-top-radius-bottomleft: 15px;
     -webkit-top-bottom-left-radius: 15px;
@@ -176,7 +234,7 @@ div.green_back {
 	}	
 }
  
-@media (max-width: 390px) {
+@media (max-width: 430px) {
     #main_menu {
         width: 100%;
         border-top-left-radius: 0;
@@ -214,11 +272,23 @@ div.moving {
 
 /* ----- Miscellaneous ----- */
 
-h2 a {
+h2 a,
+h3 a {
     color: black;
     text-decoration: none;
     font-family: 'Sofadi One', cursive;
     margin-left: 20px;
+}
+
+h2 a:hover,
+h3 a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+h3 {
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
 p.nice {
@@ -294,7 +364,26 @@ img.iconito {
     bottom: 1px;
 }
 
+span.label.label-primary a,
 span.label.label-info a {
     color: white;
     text-decoration: none;
+}
+
+div.panel.panel-success {
+	span.label.label-primary {
+		background-color: green;
+	}
+	span.label.label-info {
+		background-color: #5BCE5B;
+	}
+}
+
+div.panel.panel-warning {
+	span.label.label-primary {
+		background-color: #a8a800;
+	}
+	span.label.label-info {
+		background-color: #cc5;
+	}
 }

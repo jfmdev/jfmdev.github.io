@@ -3,6 +3,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<link rel="shortcut icon" href="favicon.ico" />
+	{% if page.noindex %} <meta name="robots" content="noindex,nofollow"> {% endif %}
 	
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -49,9 +50,6 @@
 				rew: {start: -150, end: -50},
 				animation: {type:'fade'} 				
 			});
-			
-			// Set width of navigation bar.
-			$("#main_menu").width( $("#main_menu ul").width() + 40 );
 			
 			// Track the click's events (to links) in Google Analytics.
 			$("a").click(function() {
