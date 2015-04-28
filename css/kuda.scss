@@ -270,6 +270,41 @@ div.moving {
 	}
 }
 
+/* ----- Labels ----- */
+
+span.label {
+	white-space: nowrap;
+	display: inline-block;
+}
+
+span.label.label-primary {
+	height: 19px;
+}
+
+span.label.label-primary a,
+span.label.label-info a {
+    color: white;
+    text-decoration: none;
+}
+
+div.panel.panel-success {
+	span.label.label-primary {
+		background-color: green;
+	}
+	span.label.label-info {
+		background-color: #5BCE5B;
+	}
+}
+
+div.panel.panel-warning {
+	span.label.label-primary {
+		background-color: #a8a800;
+	}
+	span.label.label-info {
+		background-color: #cc5;
+	}
+}
+
 /* ----- Miscellaneous ----- */
 
 h2 a,
@@ -362,28 +397,4 @@ span.foto_no_diponible {
 img.iconito {
     position: relative;
     bottom: 1px;
-}
-
-span.label.label-primary a,
-span.label.label-info a {
-    color: white;
-    text-decoration: none;
-}
-
-div.panel.panel-success {
-	span.label.label-primary {
-		background-color: green;
-	}
-	span.label.label-info {
-		background-color: #5BCE5B;
-	}
-}
-
-div.panel.panel-warning {
-	span.label.label-primary {
-		background-color: #a8a800;
-	}
-	span.label.label-info {
-		background-color: #cc5;
-	}
 }
