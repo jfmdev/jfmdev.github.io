@@ -1,0 +1,63 @@
+[
+    {
+		id: 'tenti',
+		preview: {
+			backColor : "#fff",
+			image: "img/clients/tenti_150.gif",
+		},
+		info: {
+			title: "Biscuissimo",
+			screenshot: "img/clients/tenti_biscuissimo.png",
+			content: '<h2>Biscuissimo</h2><p>&quot;Buiscuissimo&quot; (<a href="http://biscuissimo.com.ar">http://biscuissimo.com.ar</a>) is a web application developed for the <span class="decode">Gragvffvzb</span> Group, a coffee-house chain with more than 120 locals in Buenos Aires (Argentina).</p><h3>The problem</h3><p>All the bakery products sell in the coffee shops are produced by a factory of the <span class="decode">Gragvffvzb</span> Group. Every week, the local&#39;s owners used to send an Excel file indicating which products they needed to replenish stock, and a <span class="decode">Gragvffvzb</span>&#39;s employee responded the e-mail and processed the order. But this approach started to be inefficient, and time consuming, after the number of locals increased.</p><h3>The solution</h3><p>A web application was implemented with the following features:</p><ul><li>Local&#39;s owners can verify which products are available and make and order.</li><li>Every time that a order is submitted, an e-mail is sent to the local&#39;s owner indicating the estimated cost and the delivery date.</li><li><span class="decode">Gragvffvzb</span>&#39;s employees manage the orders, generate reports and calculate the quantity of ingredients need for fulfil all the pending orders.</li></ul><h3>The results</h3><p>The process of submit an order was simplified for both local&#39;s owners and <span class="decode">Gragvffvzb</span>&#39;s employees (several owners called to <span class="decode">Gragvffvzb</span> to thank for the creation of the application), the number of employees assigned to the task of processing the orders was reduced from 4 to 2 and the number of orders rejected (due to demanding unavailable products or due to typing errors) was considerable reduced.</p>',
+			link: 'http://biscuissimo.com.ar',
+		}
+    },
+    {
+		id: 'aon',
+		preview: {
+			backColor : "#800",
+			image: "img/clients/aon_150.png",
+		},
+		info: {
+			title: "Data Consolidator",
+			screenshot: "img/clients/aon_site.png",
+			content: '<h2>Data Consolidator</h2><p>&quot;Data Consolidator&quot; is an intranet web application developed for the Argentinian branch of AON, a multinational corporation that provides risk management, insurance and reinsurance brokerage, human resource solutions and outsourcing services.</p><h3>The problem</h3><p>Every branch of AON must periodically report to headquarters any changes regarding the statuses of their employees (raises, promotions, relocations, etc.).The Argentinian branch used Excel files to keep track of the changes to be reported, but the headquarters required that the changes were submitted using XML files (for later import them using the PeopleSoft application).As consequence, the Human Resources department used to spent several hours per month in manually doing the conversion of format.</p><h3>The solution</h3><p>A web application, accessible for all HR Supervisors and Managers, was implemented with the following features: </p><ul><li>HR Supervisors can submit the Excel files (corresponding to the employees of their regional branch) and verify if the data submitted do not have errors or inconsistency with previous data. </li><li>HR Managers can control the submissions (made by Supervisors), reject or approve them, and download the data in the XML files required by the headquarters.</li><li>If a submission is rejected or none submission has been made until some deadline, the application sends a notification by e-mail to the corresponding Supervisor. </li></ul><h3>The results</h3><p>The application reduced the number of man-hours (destined to the tasks of sending these reports) to a 30%, reduced the number of rejections of the submissions to a 10% (most of the rejections where due to typing errors or due to sending duplicate data) and reduced the latency between the submission of a report and his approval or rejection.</p>',
+		}
+    },
+    {
+		id: 'romi',
+		preview: {
+			backColor : "#fff",
+			image: "img/clients/romi_150.jpg",
+		},
+		info: {
+			title: "Scheduler",
+			screenshot: "img/clients/romi_scheduler.png",
+			content: '<h2>Scheduler</h2><p>&quot;Scheduler&quot; is an intranet web application developed for <span class="decode">EbzvCnpx</span>, one of the main manufacturer of paper bags in Argentina.</p><h3>The problem</h3><p>The fabrication of paper bags is a two step process: first the paper must be printed and then it&#39;s used for build the bags. For the printing process, the company had several industrial printers, capable of print hundred of meters of paper per hour. These printers could only use a limited number of colours at the same same (oldest printers could only print using 1 colour, the newest were able to use up to 4) and if the colours used where changed (for example, after printing paper for red bags it was necessary to print paper for green bags), the printer would need to be stopped for clean it.For the manufacturing process, the company had several bag making machines, capable of make thousand of bag per hour. Depending of their model, each of these machines was capable to make different sizes of bags (some machines made small bags, others made medium and big bags) and if the dimension of the bag was changed (for example, after making bags of 20x10x10 if was necessary to make bags of 20x15x12), the machine would need to be stopped in order to re-configure it and change some of their parts.</p><p>These conditions made the organization of the production very complex, since the work orders needed to be organized in order to minimize the number of times that the printers and the bad making machines were stopped, avoid filling the deposit (with printed paper in the wait for being used) and respecting delivery deadlines.Since their ERP could not automatically organize the production taking in account all these variables, this task was being done manually although it was very time consuming and difficult to optimize.</p><h3>The solution</h3><p>A web application was implemented with the following features:</p><ul><li>Sellers can submit a sell order and get an estimated delivery date.</li><li>Every time that a sell order is submitted, a work order is created and scheduled into a printer and into a bag making machine, using an algorithm that optimizes the production while keeping the delivery dates inferior to three weeks.</li><li>Production managers can verify the work orders, modify manually the schedule of printers and bag making machines and export the work orders into the ERP used by the company.</li></ul><h3>The result</h3><p>The production was improved in a 15% and the number of man-hours required for organize the production was reduce by 80%.</p>',
+		}
+    },
+    {
+		id: 'rojo',
+		preview: {
+			backColor : "#000",
+			image: "img/clients/rojo_150.jpg",
+		},
+		info: {
+			title: "RT Reservations",
+			screenshot: "img/clients/rojo_site.png",
+			content: '<h2>RT Reservations</h2><p>&quot;RT Reservations&quot; is web application developed for <span class="decode">Ebwb Gnatb</span>, a company that organizes tango shows hosted at the 5-stars Faena Hotel, at Buenos Aires (Argentina).</p><h3>The problem</h3><p><span class="decode">Ebwb Gnatb</span> used an intranet web application to manage the reservations (all reservations were made by phone and only the phone operators had access to the application) and wanted to fix several bugs and add more features, in order to also manage part of the countability and provide some integration with their ERP.</p><h3>The solution</h3><p>The application was re-implemented from scratch (by request of the client), including the following features:</p><ul><li>Phone operators can verify the availability of each spectacle and make reservations.</li><li>Accountants can generate several reports and export the reservations to a format compatible with the ERP.</li><li>External users (authorized by <span class="decode">Ebwb Gnatb</span>) can login only to verify the availability of the shows.</li></ul><h3>The result</h3><p>A more stable application web was delivered, the integration with the ERP simplified the work of the accountants and the ability of allow external users increased the numbers of reservations made at the reception of the Faena Hotel.</p>',
+		}
+    },
+    {
+		id: 'cnea',
+		preview: {
+			backColor : "#88f",
+			image: "img/clients/cnea_150.png",
+		},
+		info: {
+			title: "SimCo60",
+			screenshot: "img/clients/cnea_simco60.png",
+			content: '<h2>SimCo60</h2><p>"SimCo60" is a scientific simulator developed for the semi-industrial irradiation plant at the Ezeiza Atomic Center, a facility that provides services of ionizing radiation exposure for sterilization of medical equipment, irradiation of food (for the elimination of micro-organisms and parasites), decontamination of cosmetics, etc.</p><p>The process consist in locating radioactive bars (made of Cobalt-60) in a group of cabinets and then putting the elements (that must be exposed) in a conveyor belt that is going to carry the elements to the proximity of the cabinets for a limited time.</p><h3>The problem</h3><p>The irradiation plant has an algorithm to calculate how much irradiation are going to receive the elements carried by the conveyor belt, depending on: how many radioactive bars are put in the cabinets, which bars are used (some bars are more radioactive than others) and in which position are located each one.</p><p>Every work order requires a different level of exposure (for example, the sterilization of medical equipment requires more radiation that the irradiation of food), so this algorithm used to be executed several times before finding a valid distribution of radioactive bars.</p><p>But the algorithm takes several hours in execute, which sometimes delayed the production or forced employees to work extra hours (waiting to the algorithm to finish his execution).</p><h3>The solution</h3><p>A desktop application with the following features was implemented:</p><ul><li> Users can define distributions of radioactive bars by using an interface which draws the cabinets and allows to select which radioactive bar put in each position.</li><li> After the distribution is created, the user can generate a two dimensional map with the radioactivity level of each point.</li><li> The two dimensional map can be generated by either using the full algorithm (that takes several hours) or a reduced version (which executes in a fraction of time with disadvantage of being less precise).</li><li> All distributions and their results are stored in a database, in order to avoid calculating twice the results of a distribution.</li></ul><h3>The results</h3><p>The application reduced the number of times that the full algorithm must be executed to a 20%.</p>',
+		}
+    },
+]

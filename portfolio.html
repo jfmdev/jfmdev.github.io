@@ -2,7 +2,7 @@
 layout: default
 title: Portfolio
 subtitle: J. F. Maldonado
-caption: J. F. Maldonado<br/>Web developer and code warrior
+caption: J. F. Maldonado<br/><small>Web developer and code warrior</small>
 googleAnalyticsCode: UA-49400910-3
 categories:
   - name: Mobile and web applications
@@ -17,175 +17,208 @@ categories:
 noindex: true
 ---
 
-<div id="intro">
-	<div class="row">
-		<div class="logo col-sm-6">
-			<h1><a name="top">
-				<img src="img/kuda.png" alt="" title="{{ page.title }} - {{ page.subtitle }}"/>
-				{{ page.title }}
-			</a></h1>
+<div id="content">
+	<div id="intro">
+		<div class="row">
+			<div class="logo col-sm-6">
+				<h1><a name="top">
+					<img src="img/kuda.png" alt="" title="{{ page.title }} - {{ page.subtitle }}"/>
+					{{ page.title }}
+				</a></h1>
+			</div>
+			<div class="profiles col-sm-6">
+				<a href="https://github.com/jfmdev" title="KudaLab at GitHub" target="_blank">
+					<img src="img/links/github_48_white.png" class="iconito" alt=""/>
+				</a>
+				<a href="https://code.google.com/u/jfmdev/" title="KudaLab at Google Code" target="_blank">
+					<img src="img/links/google_code_48.png" class="iconito" alt=""/>
+				</a>
+				<a href="https://play.google.com/store/apps/developer?id=KudaLab" title="KudaLab at Google Play" target="_blank">
+					<img src="img/links/google_play_48.png" class="iconito" alt=""/>
+				</a>
+				<a href="https://marketplace.firefox.com/search?author=KudaLab" title="KudaLab at Firefox Marketplace" target="_blank">
+					<img src="img/links/firefox_marketplace_48.png" class="iconito" alt=""/>
+				</a>
+				<a href="http://www.amazon.com/s/ref=bl_sr_mobile-apps/182-9019147-6851629?_encoding=UTF8&field-brandtextbin=KudaLab&node=2350149011" title="KudaLab at Amazon" target="_blank">
+					<img src="img/links/amazon_48_white.png" class="iconito" alt=""/>
+				</a>
+			</div>
 		</div>
-		<div class="profiles col-sm-6">
-			<a href="https://github.com/jfmdev" title="KudaLab at GitHub" target="_blank">
-				<img src="img/github_48_white.png" class="iconito" alt=""/>
-			</a>
-			<a href="https://code.google.com/u/jfmdev/" title="KudaLab at Google Code" target="_blank">
-				<img src="img/google_code_48.png" class="iconito" alt=""/>
-			</a>
-			<a href="https://play.google.com/store/apps/developer?id=KudaLab" title="KudaLab at Google Play" target="_blank">
-				<img src="img/google_play_48.png" class="iconito" alt=""/>
-			</a>
-			<a href="https://marketplace.firefox.com/search?author=KudaLab" title="KudaLab at Firefox Marketplace" target="_blank">
-				<img src="img/firefox_marketplace_48.png" class="iconito" alt=""/>
-			</a>
-			<a href="http://www.amazon.com/s/ref=bl_sr_mobile-apps/182-9019147-6851629?_encoding=UTF8&field-brandtextbin=KudaLab&node=2350149011" title="KudaLab at Amazon" target="_blank">
-				<img src="img/amazon_48_white.png" class="iconito" alt=""/>
-			</a>
-		</div>
+		<div class="slogan">{{ page.caption }}</div>
 	</div>
-	<div class="slogan">{{ page.caption }}</div>
-</div>
 
-<div id="menu_container" style="z-index:40">
-	<div id="main_menu" class="menu_simple">
-		<ul>
-		   <li><a href="#top">Top</a></li>
-		   <!--
-		   <li><a href="#portfolio">Portfolio</a></li>
-		   <li><a href="#codelab">Code lab</a></li>
-		   -->
-		   <li><a href='#apps'>Apps</a></li>
-		   <li><a href='#games'>Games</a></li>
-		   <li><a href='#others'>Others</a></li>
-		   <li><a href="#contact">Contact</a></li>
-		</ul>
+	<div id="menu_container" style="z-index:40">
+		<div id="main_menu" class="menu_simple">
+			<ul>
+			   <li><a href="#top">Top</a></li>
+			   <li><a href="#portfolio">Portfolio</a></li>
+			   <li><a href="#codelab">Code lab</a></li>
+			   <li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
 	</div>
-</div>
-<!--
-<script type="text/javascript">
-	$(document).ready(function() {
-		// Animate portfolio's boxes.
-		$("#portfolio div.row a").hover(function(){
-			$(this).find("img").stop(true, false).animate({ width: "140px", height: "140px" }, 300);
-		}, function() {
-			$(this).find("img").stop(true, false).animate({ width: "128px", height: "128px" }, 300);
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// Animate portfolio's boxes.
+			$("#portfolio div.row a").hover(function(){ // Hover animation.
+				$(this).find("img").stop(true, false).animate({ width: "175px", height: "175px" }, 300);
+			}, function() {
+				$(this).find("img").stop(true, false).animate({ width: "150px", height: "150px" }, 300);
+			}).click(function() { // Click animation.
+				// Get client's id.
+				var id = $(this).attr("data-id");
+				
+				// Open dialog.
+				$("#content").animate({opacity: 0.001}, 300, function(){
+					$("#project-" + id).dialog("open");
+				});
+				
+				// Report event to google analytics.
+				ga('send', 'event', 'link', 'dialog', id, 1);
+				
+				return false;
+			});
+			
+			// Initialize project's dialogs.
+			$( "#dialogs div" ).dialog({
+				autoOpen: false,
+				modal: true,
+				width: '80%',
+				close: function() {
+					$("#content").animate({opacity: 1.0}, 300);
+				},
+				show: {
+					effect: "slide",
+					duration: 400
+				  },
+				open: function(event, ui) {
+					var that = this;
+					$('.ui-widget-overlay').bind('click', function(){ $(that).dialog('close'); });
+				},
+				hide: {
+					effect: "clip",
+					duration: 400
+				  }
+			});
+			
+			// Decode sensitive data.
+			$('span.decode').rot13();
 		});
-	});
-</script>
+	</script>
 
-<div id="portfolio" class="light_back">
-	<h2><a name="portfolio">Portfolio</a></h2>
+	<div id="portfolio" class="light_back">
+		<h2><a name="portfolio">Portfolio</a></h2>
 
-	<p class="nice">Click over the boxes in order to get more information about the projects.</p>
-	
-	<div class="row">
-		<div class="col-md-4">
-			<div class="frame">
-				<a href="#" rel="nofollow">
-					<div class="content">
-						<img src="img/google_code_128.png" />
-					</div>
-				</a>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="frame">
-				<a href="#" rel="nofollow">
-					<div class="content">
-						<img src="img/google_code_128.png" />
-					</div>
-				</a>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="frame">
-				<a href="#" rel="nofollow">
-					<div class="content">
-						<img src="img/google_code_128.png" />
-					</div>
-				</a>
-			</div>
-		</div>
-	</div>
-	
-	<br/>
-	
-	<div class="border_top"></div>
-</div>
--->
-<div id="proyectos">
-	<h2><a name="codelab">Code lab</a></h2>
-	
-	<p class="nice">Here you will find a list of personal projects developed in my free time.</p>
-	<p class="nice">I develop these projects in order to experiment with new technologies, contribute to open source software, and sometimes just for fun.</p>
-
-	{% for category in page.categories %}
-		<h3><a name="{{ category.type }}s">{{ category.name }}</a></h3>
+		<p class="nice">Here you will find a selection of real-world projects in which I have worked.</p>
+		<p class="nice">Click over the boxes in order to get more information about them.</p>
 		
 		<div class="row">
-			{% for proj in site.data.projects %}
-				{% if proj.type == category.type %}					
-					<div class="col-md-4">
-						<div class="proyecto">
-							<div class="panel panel-{{ category.class }}">
-								<div class="panel-heading">
-									<a name="TelemarketingLogs"><strong>{{ proj.name }}</strong></a>
-								</div>
-								<div class="panel-body">
-									<div class="icono">
-										<img src="{{ proj.icon }}" alt=""/>
-										{% if proj.sticker != null %}
-											<img src="{{ proj.sticker }}" class="sticker" alt=""/>
-										{% endif %}
+		{% for client in site.data.portfolio %}
+			<div class="col-md-4">
+				<div class="frame">
+					<a href="#portfolio" rel="nofollow" data-id="{{ client.id }}">
+						<div class="content" style="background-color: {{ client.preview.backColor }};">
+							<img src="{{ client.preview.image }}" />
+						</div>
+					</a>
+				</div>
+			</div>
+			{% cycle nil, nil, '</div><div class="row">' %}
+		{% endfor %}
+		</div>
+		
+		<br/>
+		
+		<div class="border_top"></div>
+	</div>
+
+	<div id="proyectos">
+		<h2><a name="codelab">Code lab</a></h2>
+		
+		<p class="nice">Here you will find a list of personal projects developed in my free time.</p>
+		<p class="nice">I develop these projects in order to experiment with new technologies, contribute to open source software, and sometimes just for fun.</p>
+
+		{% for category in page.categories %}
+			<h3><a name="{{ category.type }}s">{{ category.name }}</a></h3>
+			
+			<div class="row">
+				{% for proj in site.data.projects %}
+					{% if proj.type == category.type %}					
+						<div class="col-md-4">
+							<div class="proyecto">
+								<div class="panel panel-{{ category.class }}">
+									<div class="panel-heading">
+										<a name="TelemarketingLogs"><strong>{{ proj.name }}</strong></a>
 									</div>
-									<div class="descripcion">
-										<div>{{ proj.caption }}</div>
-										<div>
-											<small><strong>Tags:</strong></small>
-											{% for tag in proj.tags %}
-												<span class="label label-info">{{ tag }}</span> 
-											{% endfor %}
+									<div class="panel-body">
+										<div class="icono">
+											<img src="{{ proj.icon }}" alt=""/>
+											{% if proj.sticker != null %}
+												<img src="{{ proj.sticker }}" class="sticker" alt=""/>
+											{% endif %}
 										</div>
-										<div>
-											<small><strong>Links:</strong></small>
-											{% for link in proj.links %}
-												<span class="label label-primary"><a href="{{ link[1] }}" target="_blank">
-												{% for icon in site.data.linkIcons %}
-													{% if icon[0] == link[0] %}
-														<img src="{{ icon[1] }}" class="iconito" alt=""/>
-													{% endif %}
+										<div class="descripcion">
+											<div>{{ proj.caption }}</div>
+											<div>
+												<small><strong>Tags:</strong></small>
+												{% for tag in proj.tags %}
+													<span class="label label-info">{{ tag }}</span> 
 												{% endfor %}
-												{{ link[0] }}</a></span>  
-											{% endfor %}										
+											</div>
+											<div>
+												<small><strong>Links:</strong></small>
+												{% for link in proj.links %}
+													<span class="label label-primary"><a href="{{ link[1] }}" target="_blank">
+													{% for icon in site.data.linkIcons %}
+														{% if icon[0] == link[0] %}
+															<img src="{{ icon[1] }}" class="iconito" alt=""/>
+														{% endif %}
+													{% endfor %}
+													{{ link[0] }}</a></span>  
+												{% endfor %}										
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					
-					{% cycle nil, nil, '</div><div class="row">' %}
-				{% endif %}			
-			{% endfor %}
-		</div>
-	{% endfor %}
-	
-</div> <!-- end proyectos -->
-	
-<br/>
-
-<div id="contacto" class="green_back">
-	<div class="border_bottom"></div>
-	
-	<a name="contact">&nbsp;</a>
-	
+						
+						{% cycle '', '', '</div><div class="row">' %}
+					{% endif %}			
+				{% endfor %}
+			</div>
+		{% endfor %}
+		
+	</div> <!-- end proyectos -->
+		
 	<br/>
-	
-	<iframe height="380" allowTransparency="true" frameborder="0" scrolling="no" src="https://kudalab.wufoo.com/embed/zg46l3l0zvmmrs/">
-		<p class="nice">If you have any doubt about a project or you need a developer, do not hesitate in 
-		<a href="https://kudalab.wufoo.com/forms/zg46l3l0zvmmrs/" title="KudaLab - Contact">send a message.</a><p/>
-	</iframe>
 
-	<br/> &nbsp;
-</div>	
+	<div id="contacto" class="green_back">
+		<div class="border_bottom"></div>
+		
+		<a name="contact">&nbsp;</a>
+		
+		<br/>
+		
+		<iframe height="380" allowTransparency="true" frameborder="0" scrolling="no" src="https://kudalab.wufoo.com/embed/zg46l3l0zvmmrs/">
+			<p class="nice">If you have any doubt about a project or you need a developer, do not hesitate in 
+			<a href="https://kudalab.wufoo.com/forms/zg46l3l0zvmmrs/" title="KudaLab - Contact">send a message.</a><p/>
+		</iframe>
+
+		<br/> &nbsp;
+	</div>
+</div>
+
+<div id="dialogs">
+	{% for client in site.data.portfolio %}
+	<div id="project-{{ client.id }}" title="{{ client.info.title }}" class="project">
+		<img src="{{ client.info.screenshot }}" class="screenshot" />
+		{{ client.info.content }}
+		{% if client.info.link %}
+			<p><strong>Visit site:</strong> <a href="{{ client.info.link }}" target="_blank">{{ client.info.link }}</a></p>
+		{% endif %}
+	</div>
+	{% endfor %}
+</div>
 

@@ -315,6 +315,11 @@ h3 a {
     margin-left: 20px;
 }
 
+h2 a {
+	font-family: 'Ubuntu Mono';
+	font-size: 32px;
+}
+
 h2 a:hover,
 h3 a:hover {
     color: black;
@@ -329,7 +334,7 @@ h3 {
 p.nice {
     margin-left: 40px;
     font-family: Arial, Verdana;
-    font-size: 11pt;
+    font-size: 16px;
 }
 div.row {
     margin-left: 0;
@@ -397,4 +402,21 @@ span.foto_no_diponible {
 img.iconito {
     position: relative;
     bottom: 1px;
+}
+
+/* --- Portfolio --- */
+
+div.project a {
+	color: #0a0;
+}
+
+img.screenshot {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 3px;
+}
+
+.ui-widget-overlay {
+	background-color: white;
+	opacity: 0.001;
 }
