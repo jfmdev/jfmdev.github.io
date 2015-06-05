@@ -411,10 +411,17 @@ div.project a {
 }
 
 img.screenshot {
-	float: left;
-	margin-right: 10px;
+	float: right;
+	margin-left: 10px;
 	margin-bottom: 3px;
-}
+	border: 2px solid black;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 4px 4px 3px 0px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow:    4px 4px 3px 0px rgba(50, 50, 50, 0.25);
+	box-shadow:         4px 4px 3px 0px rgba(50, 50, 50, 0.25);
+	}
 
 .ui-widget-overlay {
 	background-color: white;

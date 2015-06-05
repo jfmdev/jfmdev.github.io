@@ -96,7 +96,7 @@
     },
     {
         "name" : "aFileDialog",
-        "caption" : "A library that implements a simple and easy to use file chooser",
+        "caption" : "A library that implements a simple and easy to use file chooser for Android",
 		"type": "other",
         "icon" : "img/codelab/afiledialog.png",
         "category" : "Library",
@@ -163,7 +163,7 @@
     },
     {
         "name" : "jqJigsawPuzzle",
-        "caption" : "A library that lets to create jigsaw puzzles in web pages",
+        "caption" : "A library for create jigsaw puzzles in web pages",
 		"type": "other",
         "icon" : "img/codelab/library.png",
         "sticker" : "img/codelab/jquery_80.png",

@@ -1,5 +1,39 @@
 [
     {
+		id: 'mobile-reports',
+		preview: {
+			backColor : "#608",
+			image: "img/clients/reports_150.png",
+		},
+		info: {
+			title: "Mobile Reports",
+			screenshot: "img/clients/mobile_reports.png",
+			content: '<h2>Mobile Reports</h2><p>&quot;Mobile Reports&quot; is a mobile web application used for report the daily activities at several African airports.</p><h3>The problem</h3><p>One of the duties of the supervisors of an African airport, was to fill small reports for keep track of the daily activity at the airport. The supervisors filled these reports with paper forms and later, at the end of the day, they typed the information in a computer for submit it to a server.</p><p>The airport&#39;s authorities wanted a to allow the supervisors to fill these reports using mobile devices, since the task of typing the hand witted reports was time consuming and was source of inconsistent data.</p><h3>The solution</h3><p>Two applications were developed:</p><ul><li>A mobile application, developed using HTML5 in order to make it compatible with most smartphones and tablets, which allows supervisors to select the report that they want to complete, to validate the information entered and to send the reports to the server.</li><li>A REST API consumed by the mobile application in order to send the reports and validate the users.</li></ul><h3>The results</h3><p>An stable and easy to use application was delivery to the client, fulfilling all their needs and requests.</p>',
+		}
+    },
+    {
+		id: 'card-system',
+		preview: {
+			backColor : "#04a",
+			image: "img/clients/card_150.png",
+		},
+		info: {
+			title: "Perpro",
+			content: '<h2>Perpro</h2><p>&quot;Perpro&quot; is a software suite for manage the request, approval and printing process of work and residence permits.</p><h3>The problem</h3><p>The client had a request from the government of an African nation to develop a system for issue identify cards with biometric features.</p><h3>The solution</h3><p>Four applications were developed for the system:</p><ul><li>A reception application, used by the government officers to which persons address to make the request of IDs (either a work permit or a residence permit), and that of used the get the personal information, photo and fingerprints of the requester.</li><li>An intranet web application, used by supervisors in order to review all request for ID and approve or reject them.</li><li>A printer application, used for print the ID cards using an advanced RFID card printer.</li><li>A public web application, used by persons to verify the state of their requests.</li></ul><h3>The results</h3><p>An stable and easy to use system was delivery to the client, fulfilling all their needs and requests.</p>',
+		}
+    },
+    {
+		id: 'border-control',
+		preview: {
+			backColor : "#008",
+			image: "img/clients/border_150.png",
+		},
+		info: {
+			title: "Border Control System",
+			content: '<h2>Border Control System</h2><p>&quot;BCS&quot; is a immigration control system used at several African countries.</p><h3>The problem</h3><p>The client had an unfinished software suite for immigration control system (with several critical errors, bugs and unimplemented features), and need it to finish it in order to being able to used it in airports and border checkpoints of several African countries.</p><p>The software suite basically consist on 5 applications:</p><ul><li>An enrolment application, used at checkpoints for enrol travellers.</li><li>A monitor application, used for control the activity of an airport or a border checkpoint.</li><li>A web API, used by the enrolment and monitor applications, for login the users, submit the enrolments, verify if a person is a criminal, and get the last activity in the system, among other features.</li><li>A web application, used for manage the users, the stations, the list of person of interest, and verify the information stored in the database, among other features.</li><li>A reporting application, used for generate several types of reports based on the information gathered by the enrolments applications.</li></ul><h3>The solution</h3><p>The development was divided in several phases according to the priorities and needs of the client:</p><ul><li>All critical errors and major bugs were fixed in order assure the stability of all the applications.</li><li>The enrolment application was updated, adding lacking features such as changing the camera used for get pictures of the travellers and adding support to several fingerprint scanners.</li><li>The web API application was updated, adding lacking features such as adding integration with Interpol (in order to verify if a travellers is a criminal or if is using an stolen passport) and updating the algorithm used for fingerprint comparison (for one more fast and precise).</li><li>Implement all the rest of lacking features.</li></ul><h3>The results</h3><p>After a six month trial in an airport with a low volume of travellers, the new software suit proved to be stable, and superior to the previous immigration control system used. After that, the use of the software expanded to five African countries and helped to arrest several criminals searched by Interpol.</p>',
+		}
+    },
+    {
 		id: 'tenti',
 		preview: {
 			backColor : "#fff",

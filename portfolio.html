@@ -213,8 +213,12 @@ noindex: true
 <div id="dialogs">
 	{% for client in site.data.portfolio %}
 	<div id="project-{{ client.id }}" title="{{ client.info.title }}" class="project">
-		<img src="{{ client.info.screenshot }}" class="screenshot" />
+		{% if client.info.screenshot %}
+			<img src="{{ client.info.screenshot }}" class="screenshot" />
+		{% endif %}
+		
 		{{ client.info.content }}
+		
 		{% if client.info.link %}
 			<p><strong>Visit site:</strong> <a href="{{ client.info.link }}" target="_blank">{{ client.info.link }}</a></p>
 		{% endif %}
