@@ -103,7 +103,7 @@
         "platform" : "Android",
         "tags" : ["Java", "Android", "Open Source"],
         "links" : {
-            "Google Code" : "http://code.google.com/p/afiledialog/",
+            "GitHub" : "https://github.com/jfmdev/afiledialog",
             "Google Play" : "https://play.google.com/store/apps/details?id=ar.com.daidalos.afiledialog.test"
         }
     },
@@ -134,6 +134,18 @@
             "GitHub" : "https://github.com/jfmdev/uStopwatch",
             "Firefox Marketplace" : "https://marketplace.firefox.com/app/%C2%B5stopwatch/",
             "Demo (mobile)" : "http://jfmdev.github.io/uStopwatch/"
+        }
+    },
+    {
+        "name" : "jsfBlackBook",
+        "caption" : "A sample web application developed with Java Server Faces",
+		"type": "app",
+        "icon" : "img/codelab/black_book.png",
+        "category" : "Application",
+        "platform" : "Web",
+        "tags" : ["Java", "JSF", "SQLite", "Bootstrap", "Open Source"],
+        "links" : {
+            "GitHub" : "https://github.com/jfmdev/jsfBlackBook"
         }
     },
     {
@@ -223,7 +235,7 @@
         "platform" : "Web",
         "tags" : ["HTML", "PHP", "XML", "NicEdit", "Wolf CMS", "Open Source"],
         "links" : {
-            "Google Code" : "http://code.google.com/p/loboplugins/"
+            "GitHub" : "https://github.com/jfmdev/LoboPlugins"
         }
     },
     {
@@ -236,7 +248,7 @@
         "platform" : "PC",
         "tags" : ["Python", "GIMP", "Open Source"],
         "links" : {
-            "Google Code" : "http://code.google.com/p/python-fu-samples/",
+            "GitHub" : "https://github.com/jfmdev/PythonFuSamples",
             "GIMP Plugin Registry" : "http://registry.gimp.org/node/28124"
         }
     }
