@@ -139,13 +139,25 @@
     {
         "name" : "jsfBlackBook",
         "caption" : "A sample web application developed with Java Server Faces",
-		"type": "app",
+		"type": "webapp",
         "icon" : "img/codelab/black_book.png",
         "category" : "Application",
         "platform" : "Web",
         "tags" : ["Java", "JSF", "SQLite", "Bootstrap", "Open Source"],
         "links" : {
             "GitHub" : "https://github.com/jfmdev/jsfBlackBook"
+        }
+    },
+    {
+        "name" : "jaxFriends",
+        "caption" : "A sample RESTful web service developed with Java and JAX-RS",
+		"type": "webapp",
+        "icon" : "img/codelab/friends.png",
+        "category" : "Application",
+        "platform" : "Web",
+        "tags" : ["Java", "Jersey", "ORMLite", "Gson", "Open Source"],
+        "links" : {
+            "GitHub" : "https://github.com/jfmdev/jaxFriends"
         }
     },
     {

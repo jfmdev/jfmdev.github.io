@@ -5,15 +5,18 @@ subtitle: J. F. Maldonado
 caption: J. F. Maldonado<br/><small>Web developer and code warrior</small>
 googleAnalyticsCode: UA-49400910-3
 categories:
-  - name: Mobile and web applications
+  - name: Mobile and HTML5 apps
     type: app
     class: info
+  - name: Web applications
+    type: webapp
+    class: success
   - name: Games
     type: game
-    class: success
+    class: warning
   - name: Libraries and plugins
     type: other
-    class: warning
+    class: info
 noindex: true
 ---
 
@@ -184,8 +187,7 @@ noindex: true
 						{% cycle '', '', '</div><div class="row">' %}
 					{% endif %}
 
-					{% if forloop.last and category.type == 'app' %}
-						{% cycle '', '', '</div><div class="row">' %}
+					{% if forloop.last and category.type == 'webapp' %}
 						{% cycle '', '', '</div><div class="row">' %}
 					{% endif %}	
 				{% endfor %}

@@ -4,8 +4,10 @@ title: KudaLab
 subtitle: Development of web, mobile and open source software
 googleAnalyticsCode: UA-49400910-2
 categories:
-  - name: Mobile and web applications
+  - name: Mobile and HTML5 apps
     type: app
+  - name: Web applications
+    type: webapp
   - name: Games
     type: game
   - name: Libraries and plugins
@@ -118,7 +120,7 @@ categories:
 			{% endfor %}
 			
 			<!-- Fix bug when the projects in a category are odd -->
-			{% if category.type != 'app' %}
+			{% if category.type == 'game' or category.type == 'other' %}
 				{% cycle nil, '</div><div class="row">' %}
 			{% endif %}
 		</div>
