@@ -1,27 +1,112 @@
 ---
 layout: default
 title: JFMDev
-subtitle: Personal code lab of web, mobile and open source software
+subtitle: Web developer and code warrior
+caption: Personal code lab of web, mobile and open source software
 googleAnalyticsCode: UA-49400910-2
+categories:
+  - name: Mobile and HTML5 apps
+    type: app
+    class: blue
+  - name: Web applications
+    type: webapp
+    class: green
+  - name: Games
+    type: game
+    class: magenta
+  - name: Libraries and plugins
+    type: other
+    class: cyan
 ---
 
+<script type="text/javascript">
+	$(document).ready(function() {
+		var myBubbles = [];
+	
+		// Show details bubble when clicking a project.
+		$("#proyectos div.row a").click(function() {
+			// Get project's id and href.
+			var href = $(this).attr("href");
+			var id = $(this).attr("data-id");
+			
+			// Verify which type of link is.
+			if(href == "#") {
+				// It's a link for show or hide a bubble. Get project's id.
+				var id = $(this).attr("data-id");
+			
+				// Verify if the bubble is not already being displayed.
+				if(myBubbles.length == 0 || myBubbles[0] != id) {
+					// Hide previous bubbles.
+					for(var i=0; i<myBubbles.length; i++) {
+						$("#bubble-"+myBubbles[i]).fadeOut();
+					}
+					myBubbles = [];
+					
+					// Verify if the id is valid.
+					if(id != null) {
+						// Calculate vertical position of bubble.
+						var frameHeight = $("#frame-" + id).height();
+						var bubbleHeight = $("#bubble-" + id).height();
+						$("#bubble-"+id).css('top', (frameHeight - bubbleHeight + 25)/2 + 'px');
+						
+						// Show bubble.
+						myBubbles.push(id);
+						$("#bubble-"+id).fadeIn();
+					
+						// Report event to google analytics.
+						ga('send', 'event', 'link', 'dialog', id, 1);
+					}
+				}
+				
+				return false;
+			} else {
+				// It's a regular link.
+				return true;
+			}
+		});
+	});
+</script>
+
 <div id="intro">
-	<div class="logo">
-		<h1><a name="top">
-			<img src="img/kuda.png" alt="" title="{{ page.title }} - {{ page.subtitle }}"/>
-			{{ page.title }}
-		</a></h1>
+	<div class="row">
+		<div class="logo col-sm-6">
+			<h1><a name="top">
+				<img src="img/kuda.png" alt="" title="{{ page.title }} - {{ page.subtitle }}"/>
+				{{ page.title }}
+			</a></h1>
+		</div>
+		<div class="profiles col-sm-6">
+			<a href="https://github.com/jfmdev" title="KudaLab at GitHub" target="_blank">
+				<img src="img/links/github_48_white.png" class="iconito" alt=""/>
+			</a>
+			<a href="https://play.google.com/store/apps/developer?id=KudaLab" title="KudaLab at Google Play" target="_blank">
+				<img src="img/links/google_play_48.png" class="iconito" alt=""/>
+			</a>
+			<a href="https://marketplace.firefox.com/search?author=KudaLab" title="KudaLab at Firefox Marketplace" target="_blank">
+				<img src="img/links/firefox_marketplace_48.png" class="iconito" alt=""/>
+			</a>
+			<a href="http://www.amazon.com/s/ref=bl_sr_mobile-apps/182-9019147-6851629?_encoding=UTF8&field-brandtextbin=KudaLab&node=2350149011" title="KudaLab at Amazon" target="_blank">
+				<img src="img/links/amazon_48_white.png" class="iconito" alt=""/>
+			</a>
+		</div>
 	</div>
-	<div class="slogan">{{ page.subtitle }}</div>
+	<div class="slogan">{{ page.caption }}</div>
+	<div class="navigation-tip">
+		Scroll down
+		<br/>to continue
+		<br><img src="img/down-arrow.png" alt="" style="margin-top:5px;"/>
+	</div>
 </div>
 
 <div id="menu_container" style="z-index:40">
 	<div id="main_menu" class="menu_simple">
 		<ul>
-		   <li><a href='#top'>Top</a></li>
-		   <li><a href='#project'>Projects</a></li>
-		   <li><a href='#perfiles'>Profiles</a></li>
-		   <li><a href='#contacto'>Contact</a></li>
+		   <li><a href="#top">Top</a></li>
+		   <li><a href="#apps">Apps</a></li>
+		   <li><a href="#webapps">Webapps</a></li>
+		   <li><a href="#games">Games</a></li>
+		   <li><a href="#others">Others</a></li>
+		   <li><a href="#contact">Contact</a></li>
 		</ul>
 	</div>
 </div>
@@ -29,125 +114,89 @@ googleAnalyticsCode: UA-49400910-2
 <br/>
 
 <div id="proyectos">
-	<h2><a name="project">List of projects</a></h2>
+	{% for category in page.categories %}
+		<h2><a name="{{ category.type }}s">{{ category.name }}</a></h2>
+		
+		<br/>
+		
+		<div class="row">
+			{% for proj in site.data.projects %}
+				{% if proj.type == category.type %}					
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="frame {{ category.class }}" id="frame-{{ proj.id }}">
+							<a href="#" data-id="{{ proj.id }}">
+								<div class="content">
+									<div class="title">
+										<strong>{{ proj.name }}</strong>
+									</div>
+									<div class="body">
+										<div class="icon">
+											<img src="{{ proj.icon }}" alt="" title="{{ proj.name }} - {{ proj.caption }}"/>
+											{% if proj.sticker != null %}
+												<img src="{{ proj.sticker }}" class="sticker" alt=""/>
+											{% endif %}
+										</div>
+										<div class="description">
+											{{ proj.introduction }}
+										</div>
+									</div>
+									<div class="more">
+										+ more info
+									</div>
+								</div>
+							</a>
+							
+							<div id="bubble-{{ proj.id }}" class="bubble">
+								<a href="#" class="close_button">X</a>
+								<div class="name">{{ proj.name }}</div>
+								<div class="text">{{ proj.description }}</div>
+								
+								{% if proj.techs != null %}
+									<div class="techs">
+										<strong>Technologies</strong><br/>
+										{% for tech in proj.techs %}
+											<span class="label {{ tech.type }}">{{ tech.name }}</span> 
+										{% endfor %}
+									</div>
+								{% endif %}
+
+								{% if proj.links != null %}
+									<div class="links">
+										<strong>Links</strong><br/>
+										{% for link in proj.links %}
+											<span class="label {{ link.type }}"><a href="{{ link.href }}" target="_blank">
+											{% for icon in site.data.linkIcons %}
+												{% if icon[0] == link.title %}
+													<img src="{{ icon[1] }}" class="iconito" alt=""/>
+												{% endif %}
+											{% endfor %}
+											{{ link.title }}</a></span>  
+										{% endfor %}
+									</div>
+								{% endif %}
+							
+								<div class="close_text"><a href="#">Close</a></div>
+							</div>
+						</div>
+					</div>
+				{% endif %}			
+			{% endfor %}
+		</div>
+	{% endfor %}
+</div>
+	
+<br/>
+
+<div id="contacto" class="green_back">
+	<div class="border_bottom"></div>
+	
+	<a name="contact">&nbsp;</a>
 	
 	<br/>
 	
-	<div class="row">
-	{% for proj in site.data.projects %}
-		<div class="col-md-6">
-			<div class="proyecto">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<a name="TelemarketingLogs"><strong>{{ proj.name }}</strong><small> - {{ proj.caption }}</small></a>
-					</div>
-					<div class="panel-body">
-						<div class="icono">
-							<img src="{{ proj.icon }}" alt=""/>
-							{% if proj.sticker != null %}
-								<img src="{{ proj.sticker }}" class="sticker" alt=""/>
-							{% endif %}
-						</div>
-						<div class="descripcion">
-							<table>
-								<tr>
-									<td class="first">Category</td>
-									<td class="second">{{ proj.category }}</td>
-								</tr>
-								<tr>
-									<td class="first">Platform</td>
-									<td class="second">{{ proj.platform }}</td>
-								</tr>
-								<tr>
-									<td class="first">Tags</td>
-									<td class="second">
-									{% for tag in proj.tags %}
-										<span class="label label-primary">{{ tag }}</span> 
-									{% endfor %}
-									</td>
-								</tr>
-								<tr>
-									<td class="first">Links</td>
-									<td class="second">
-									{% for link in proj.links %}
-										<span class="label label-info"><a href="{{ link[1] }}" target="_blank">
-										{% for icon in site.data.linkIcons %}
-											{% if icon[0] == link[0] %}
-												<img src="{{ icon[1] }}" class="iconito" alt=""/>
-											{% endif %}
-										{% endfor %}
-										{{ link[0] }}</a></span>  
-									{% endfor %}
-									</td>
-								</tr>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		{% if forloop.last != true %}
-			{% cycle nil, '</div><div class="row">' %}
-		{% endif %}
-		
-	{% endfor %}
-	</div>
-	
-</div> <!-- end proyectos -->
-	
-<br/>
-
-<div id="perfiles" class="green_back">
-	<div class="border_bottom"></div>
-
-	<div class="row">
-		<div class="content col-md-8 col-md-offset-2">
-			<h2><a name="perfiles">Profiles</a></h2>
-			<br/>
-			<div class="row">
-				<div class="col-md-4 col-md-offset-2">
-					<a href="https://github.com/jfmdev" title="KudaLab at GitHub" target="_blank">
-						<img src="img/links/github_96.png" class="iconito" alt=""/>
-						<br/>GitHub
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a href="https://play.google.com/store/apps/developer?id=KudaLab" title="KudaLab at Google Play" target="_blank">
-						<img src="img/links/google_play_96.png" class="iconito" alt=""/>
-						<br/>Google Play
-					</a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4 col-md-offset-2">
-					<a href="https://marketplace.firefox.com/search?author=KudaLab" title="KudaLab at Firefox Marketplace" target="_blank">
-						<img src="img/links/firefox_marketplace_96.png" class="iconito" alt=""/>
-						<br/>Firefox Marketplace
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a href="http://www.amazon.com/s/ref=bl_sr_mobile-apps/182-9019147-6851629?_encoding=UTF8&field-brandtextbin=KudaLab&node=2350149011" title="KudaLab at Amazon" target="_blank">
-						<img src="img/links/amazon_96.png" class="iconito" alt=""/>
-						<br/>Amazon
-					</a>
-				</div>
-			</div>
-			<br/>
-		</div>
-	</div>            
-	<br/> &nbsp;
-	<div class="border_top"></div>
-</div>
-
-<br/>
-
-<div id="contacto">
-	<a name="contacto">&nbsp;</a>
-	
 	<iframe height="380" allowTransparency="true" frameborder="0" scrolling="no" src="https://kudalab.wufoo.com/embed/zg46l3l0zvmmrs/">
 		<p class="nice">If you have any doubt about a project or you need a developer, do not hesitate in 
-		<a href="https://kudalab.wufoo.com/forms/zg46l3l0zvmmrs/" title="KudaLab - Contact">send a message.</a><p/>
+		<a href="https://kudalab.wufoo.com/forms/zg46l3l0zvmmrs/" title="JFMDev - Contact">send a message.</a><p/>
 	</iframe>
 
 	<br/> &nbsp;

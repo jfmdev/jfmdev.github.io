@@ -2,17 +2,70 @@
 layout: default
 title: KudaLab
 subtitle: Development of web, mobile and open source software
+caption: Development of web, mobile and open source software
 googleAnalyticsCode: UA-49400910-2
 categories:
   - name: Mobile and HTML5 apps
     type: app
+    class: blue
   - name: Web applications
     type: webapp
+    class: green
   - name: Games
     type: game
+    class: magenta
   - name: Libraries and plugins
     type: other
+    class: cyan
 ---
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var myBubbles = [];
+	
+		// Show details bubble when clicking a project.
+		$("#proyectos div.row a").click(function() {
+			// Get project's id and href.
+			var href = $(this).attr("href");
+			var id = $(this).attr("data-id");
+			
+			// Verify which type of link is.
+			if(href == "#") {
+				// It's a link for show or hide a bubble. Get project's id.
+				var id = $(this).attr("data-id");
+			
+				// Verify if the bubble is not already being displayed.
+				if(myBubbles.length == 0 || myBubbles[0] != id) {
+					// Hide previous bubbles.
+					for(var i=0; i<myBubbles.length; i++) {
+						$("#bubble-"+myBubbles[i]).fadeOut();
+					}
+					myBubbles = [];
+					
+					// Verify if the id is valid.
+					if(id != null) {
+						// Calculate vertical position of bubble.
+						var frameHeight = $("#frame-" + id).height();
+						var bubbleHeight = $("#bubble-" + id).height();
+						$("#bubble-"+id).css('top', (frameHeight - bubbleHeight + 25)/2 + 'px');
+						
+						// Show bubble.
+						myBubbles.push(id);
+						$("#bubble-"+id).fadeIn();
+					
+						// Report event to google analytics.
+						ga('send', 'event', 'link', 'dialog', id, 1);
+					}
+				}
+				
+				return false;
+			} else {
+				// It's a regular link.
+				return true;
+			}
+		});
+	});
+</script>
 
 <div id="intro">
 	<div class="row">
@@ -37,17 +90,23 @@ categories:
 			</a>
 		</div>
 	</div>
-	<div class="slogan">{{ page.subtitle }}</div>
+	<div class="slogan">{{ page.caption }}</div>
+	<div class="navigation-tip">
+		Scroll down
+		<br/>to continue
+		<br><img src="img/down-arrow.png" alt="" style="margin-top:5px;"/>
+	</div>
 </div>
 
 <div id="menu_container" style="z-index:40">
 	<div id="main_menu" class="menu_simple">
 		<ul>
-		   <li><a href='#top'>Top</a></li>
-		   <li><a href='#apps'>Apps</a></li>
-		   <li><a href='#games'>Games</a></li>
-		   <li><a href='#others'>Others</a></li>
-		   <li><a href='#contact'>Contact</a></li>
+		   <li><a href="#top">Top</a></li>
+		   <li><a href="#apps">Apps</a></li>
+		   <li><a href="#webapps">Webapps</a></li>
+		   <li><a href="#games">Games</a></li>
+		   <li><a href="#others">Others</a></li>
+		   <li><a href="#contact">Contact</a></li>
 		</ul>
 	</div>
 </div>
@@ -63,70 +122,68 @@ categories:
 		<div class="row">
 			{% for proj in site.data.projects %}
 				{% if proj.type == category.type %}					
-					<div class="col-md-6">
-						<div class="proyecto">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<a name="TelemarketingLogs"><strong>{{ proj.name }}</strong><small> - {{ proj.caption }}</small></a>
-								</div>
-								<div class="panel-body">
-									<div class="icono">
-										<img src="{{ proj.icon }}" alt=""/>
-										{% if proj.sticker != null %}
-											<img src="{{ proj.sticker }}" class="sticker" alt=""/>
-										{% endif %}
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="frame {{ category.class }}" id="frame-{{ proj.id }}">
+							<a href="#" data-id="{{ proj.id }}">
+								<div class="content">
+									<div class="title">
+										<strong>{{ proj.name }}</strong>
 									</div>
-									<div class="descripcion">
-										<table>
-											<tr>
-												<td class="first">Category</td>
-												<td class="second">{{ proj.category }}</td>
-											</tr>
-											<tr>
-												<td class="first">Platform</td>
-												<td class="second">{{ proj.platform }}</td>
-											</tr>
-											<tr>
-												<td class="first">Tags</td>
-												<td class="second">
-												{% for tag in proj.tags %}
-													<span class="label label-primary">{{ tag }}</span> 
-												{% endfor %}
-												</td>
-											</tr>
-											<tr>
-												<td class="first">Links</td>
-												<td class="second">
-												{% for link in proj.links %}
-													<span class="label label-info"><a href="{{ link[1] }}" target="_blank">
-													{% for icon in site.data.linkIcons %}
-														{% if icon[0] == link[0] %}
-															<img src="{{ icon[1] }}" class="iconito" alt=""/>
-														{% endif %}
-													{% endfor %}
-													{{ link[0] }}</a></span>  
-												{% endfor %}
-												</td>
-											</tr>
-										</table>
+									<div class="body">
+										<div class="icon">
+											<img src="{{ proj.icon }}" alt="" title="{{ proj.name }} - {{ proj.caption }}"/>
+											{% if proj.sticker != null %}
+												<img src="{{ proj.sticker }}" class="sticker" alt=""/>
+											{% endif %}
+										</div>
+										<div class="description">
+											{{ proj.introduction }}
+										</div>
+									</div>
+									<div class="more">
+										+ more info
 									</div>
 								</div>
+							</a>
+							
+							<div id="bubble-{{ proj.id }}" class="bubble">
+								<a href="#" class="close_button">X</a>
+								<div class="name">{{ proj.name }}</div>
+								<div class="text">{{ proj.description }}</div>
+								
+								{% if proj.techs != null %}
+									<div class="techs">
+										<strong>Technologies</strong><br/>
+										{% for tech in proj.techs %}
+											<span class="label {{ tech.type }}">{{ tech.name }}</span> 
+										{% endfor %}
+									</div>
+								{% endif %}
+
+								{% if proj.links != null %}
+									<div class="links">
+										<strong>Links</strong><br/>
+										{% for link in proj.links %}
+											<span class="label {{ link.type }}"><a href="{{ link.href }}" target="_blank">
+											{% for icon in site.data.linkIcons %}
+												{% if icon[0] == link.title %}
+													<img src="{{ icon[1] }}" class="iconito" alt=""/>
+												{% endif %}
+											{% endfor %}
+											{{ link.title }}</a></span>  
+										{% endfor %}
+									</div>
+								{% endif %}
+							
+								<div class="close_text"><a href="#">Close</a></div>
 							</div>
 						</div>
 					</div>
-					
-					{% cycle nil, '</div><div class="row">' %}
 				{% endif %}			
 			{% endfor %}
-			
-			<!-- Fix bug when the projects in a category are odd -->
-			{% if category.type == 'game' or category.type == 'other' %}
-				{% cycle nil, '</div><div class="row">' %}
-			{% endif %}
 		</div>
 	{% endfor %}
-	
-</div> <!-- end proyectos -->
+</div>
 	
 <br/>
 

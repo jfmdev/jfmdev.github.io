@@ -15,10 +15,6 @@
 		ga('create', '{{ page.googleAnalyticsCode }}', 'auto');
 		ga('send', 'pageview');
 	</script>
-	
-	<!-- Google Fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Sofadi+One' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
 
 	<!-- jQuery -->
 	<script type="text/javascript" src="lib/jquery-1.11.0.min.js"></script>
@@ -28,20 +24,15 @@
 	<link rel="stylesheet" href="lib/bootstrap/bootstrap-theme-3.1.1.min.css">
 	<script type="text/javascript" src="lib/bootstrap/bootstrap-3.1.1.min.js"></script>
 
-	<!-- jQuery UI -->
-	<link rel="stylesheet" href="lib/jquery-ui/jquery-ui.min.css">
-	<script type="text/javascript" src="lib/jquery-ui/jquery-ui.min.js"></script>
-		
 	<!-- Miscellaneous -->
 	<script type="text/javascript" src="lib/jqscrollanim-1.1.min.js"></script>
 	<script type="text/javascript" src="lib/jqscrollfix.js"></script>
-	<script type="text/javascript" src="lib/jquery.rot13.min.js"></script>
 	
 	<!-- App -->
 	<link rel="stylesheet" href="css/kuda.css">
 	<script type="text/javascript">
 		$(document).ready(function() {
-			// Resize intro section to window's height or to her minimum height..
+			// Resize intro section to window's height or to her minimum height.
 			$(window).resize( function(event) {
 				$("#intro").height( MyIntroHeight() );
 			});			
@@ -50,7 +41,7 @@
 			// Add behavior of posiition:fixed to navigation bar.
 			$('#menu_container').scrollFix({fixClass: 'moving'});
 
-			// Add fade animation, triggered by the scroll, to the list of projects and to the contact form.
+			// Add fade animation, triggered by the scroll, to the list of projects.
 			$('div.proyecto').jqScrollAnim({
 				rep: {start: 50, end: 150},
 				rew: {start: -150, end: -50},
@@ -66,7 +57,10 @@
 			
 			// Track the click's events (to links) in Google Analytics.
 			$("a").click(function() {
-				ga('send', 'event', 'link', 'click', $(this).attr("href"), 1);
+				var href = $(this).attr("href");
+				if(href != '#') {
+					ga('send', 'event', 'link', 'click', href, 1);
+				}
 			});
 		});
 		

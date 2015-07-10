@@ -3,9 +3,89 @@
 ---
 @charset "utf-8";
 
+/* --- Google Fonts --- */
+
+@import url(http://fonts.googleapis.com/css?family=Sofadi+One);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
+@import url(http://fonts.googleapis.com/css?family=Architects+Daughter);
+
+/* --- Mixings --- */	
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+    border-radius: $radius;
+}	
+
+@mixin box-shadow($left, $top, $radius, $propagation, $color) {
+	-moz-box-shadow: $left $top $radius $propagation $color; 
+	-webkit-box-shadow: $left $top $radius $propagation $color; 
+	box-shadow: $left $top $radius $propagation $color; 
+}	
+
+@mixin frame-colors($hover, $bodyBack, $titleBack, $border) {
+	&:hover {  background-color: $hover; }
+	div.content { background-color: $bodyBack; }
+	div.title { 
+		background-color: $titleBack; 
+		border-color: $border; 
+	}
+	div.more { color: $border; } 
+	div.bubble { 
+		border-color: $border; 
+		a.close_button { background-color: $border; }
+		div.close_text a { color: $border; }
+	}
+}
+
+@mixin glossy-background($bottom, $top) {
+    background: #94c4fe;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(31%,$top), color-stop(100%,$bottom));
+    background: -webkit-linear-gradient(top,  $top 31%,$bottom 100%);
+    background: -moz-linear-gradient(top,  $top 31%, $bottom 100%);
+    background: -o-linear-gradient(top,  $top 31%,$bottom 100%);
+    background: -ms-linear-gradient(top,  $top 31%,$bottom 100%);
+    background: linear-gradient(to bottom,  $top 31%,$bottom 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$bottom',GradientType=0 );
+}
+
+/* ----- Miscellaneous ----- */
+	
 body {
     padding: 0;
 }
+
+h2 a {
+    color: black;
+    text-decoration: none;
+	font-family: 'Ubuntu Mono';
+	font-size: 32px;
+    margin-left: 20px;
+}
+
+h2 a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+p.nice {
+    margin-left: 40px;
+    font-family: Arial, Verdana;
+    font-size: 16px;
+}
+div.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+img.iconito {
+    position: relative;
+    bottom: 1px;
+}
+
+/* --- Sections --- */
 
 #intro {
     height: 700px;
@@ -19,11 +99,8 @@ body {
 	
 	div.logo {
 		text-align: left;
-
-		h1 {
-			margin-top: 0;
-		}
-
+		
+		h1 { margin-top: 0; }
 		h1 a {
 			color: white;
 			text-decoration: none;
@@ -36,47 +113,55 @@ body {
 		text-align: right;
 		padding: 5px;
 		
-		img {
-			padding: 8px;
-		}
-	}
-	
-	@media (max-width: 780px) {
-		div.profiles {
-			text-align: center;
-		}
+		img { padding: 8px; }
+		
+		@media (max-width: 780px) { text-align: center; }
 	}
 	
 	div.slogan {
-		font-size: 4.5vw;
 		color: white;
-		width: 50%;
 		position: relative;
 		margin: 0 auto;
-		font-family: 'Sofadi One', cursive;
 		top: 40px;
 		padding-bottom: 60px;
+		font-family: 'Sofadi One', cursive;
+		
+		width: 60%;
+		font-size: 40px;
+		@media (max-width: 700px) { font-size: 30px; width: 80%; }
+		@media (min-width: 1000px) { font-size: 40px; width: 60%; }
+		@media (min-width: 1200px) { font-size: 50px; width: 50%; }
+	}
+	
+	div.navigation-tip {
+		position: absolute;
+		left: 20px;
+		bottom: 20px;
+		font-family: 'Architects Daughter', cursive;
+		color: white;
+		font-size: 22px;
+		
+		@media (max-width: 700px) { visibility: hidden; }
 	}
 }
 
-#portfolio {
+#proyectos {
 	h2 {
 		padding-top: 15px;
 		margin-top: 0;
 	}
 	
 	div.frame {
-		width: 300px;
-		height: 250px;
+		height: 200px;
+		width: 90%;
+		min-width: 290px;
+		max-width: 350px;
+		
 		border: 1px solid #888;
 		padding: 10px;
 		margin: 10px auto;
-		-moz-box-shadow: 0px 0px 3px 0px #555; 
-		-webkit-box-shadow: 0px 0px 3px 0px #555; 
-		box-shadow: 0px 0px 3px 0px #555; 	
-		-webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
-		border-radius: 5px;		
+		@include box-shadow(0px, 0px, 3px, 0px, #555);
+		@include border-radius(5px);	
 		
 		background-color: white;
 		-webkit-transition: background 0.7s linear;
@@ -84,102 +169,172 @@ body {
         -ms-transition: background 0.7s linear;
         -o-transition: background 0.7s linear;
         transition: background 0.7s linear;
-	}
-
-	div.frame:hover {
-		background-color: #0f0;
+		
+		&:hover  { background-color: #888; }
+	
+		a {
+			color: black;
+			text-decoration: none;
+		} 
 	}
 	
 	div.content {
 		width: 100%;
 		height: 100%;
 		border: 1px solid black;
-		background-color: #030;
+		background-color: #f6f6f6;
 		text-align: center;
 		position: relative;
 		
-		img {
-		    position: absolute;
-			margin: auto;
-			top: 0;  
-			bottom: 0; 
-			left: 0;  
-			right: 0; 
+		div.title {
+			padding: 6px;
+			background-color: #ccc;
+			border-width: 1px;
+			border-bottom-style: solid;
+			border-color: #888;
+			
+			a { 
+				color: black; 
+				text-decoration: none;
+			}
+		}
+		
+		div.body {
+			padding: 6px;
+			text-align: left;
+			
+			div.icon {
+				float: left;
+				margin: 0 8px 5px 5px; 
+				position: relative;
+				
+				img.sticker {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+				}				
+			}
+		}
+		
+		div.more {
+			position: absolute;
+			right: 5px;
+			bottom: 3px;
+			font-weight: bold;
+			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+			font-size: 13px;
 		}
 	}
-}
-
-#perfiles {
-    text-align: center;
- 
-	div.content {
-		padding: 10px;
-		margin-top: 20px;
-		background-color: white;
-		border-radius: 15px;
-		-moz-border-radius: 15px;
-		-webkit-border-radius: 15px;
-		box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);    
-		-webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-		-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);    
-	}
+		
+	div.bubble {
+		z-index: 50;
+		padding: 6px;
+		display: none; 
+		position: absolute; 
+		border: 2px solid red; 
+		background-color: white; 
+		font-size: 13px;
+		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		@include box-shadow(0px, 0px, 5px, 0px, rgba(0,0,0,0.75));
+		@include border-radius(10px);
+		left: 5%;
+		width: 90%;
+		max-height: 500px;
+		
+		div.name {
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+			font-family: 'Sofadi One', cursive;
+		}
+		
+		div.text p {
+			margin: 0 0 4px;
+		}
+		
+		div.techs,
+		div.links {
+			margin-top: 10px;
+			
+			a,
+			span.label { 
+				color: white; 
+				white-space: nowrap;
+				display: inline-block;
+				font-family: Arial, Helvetica, sans-serif;
+				line-height: 12px;
+			} 
+			
+			span.label { margin-top: 4px; }
+		}
+		
+		div.techs {
+			span.label.first { background-color: #7E60BF; }
+			span.label.second { background-color: #6073BF; }
+			span.label.third { background-color: #6099BF; }
+		}
+		
+		div.links {
+			span.label.first { background-color: #3EB37D; }
+			span.label.second { background-color: #99BF60; }
+			span.label.third { background-color: #BFBF60; }
+		}
+		
+		a.close_button {
+			width: 20px;
+			height: 20px;
+			display: block;
+			
+			color: #fff;
+			float: right;
+			font-size: 16px;
+			text-indent: 1px;
+			font-weight: bold;
+			text-align: center;
+			line-height: 1.2em;
+			text-decoration: none;
+			font-family: "Tahoma", Helvetica, sans-serif;
+			@include box-shadow(0px, 0px, 2px, 0px, #aaa);
+			@include border-radius(5px);
+			background-color: gray;
+		}
+		
+		div.close_text {
+			margin-top: 4px;
+			font-size: 13px;
+			text-align: center;
+			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+			
+			a {
+				font-weight: bold;
+				color: gray;
+			}
+		}
+	}		
 	
-	h2 {
-		padding-top: 0;
-		margin-top: 0;
-	}
+	div.frame.green { @include frame-colors(#0f0, #f6fff6, #dfd, #080); }
+	div.frame.blue { @include frame-colors(#66f, #f6f6ff, #ddf, #008); }
+	div.frame.magenta { @include frame-colors(#f0f, #fff6ff, #fdf, #808); }
+	div.frame.cyan { @include frame-colors(#0ff, #f6ffff, #dff, #088); }
+	div.frame.orange { @include frame-colors(#f80, #fffaf6, #fed, #840); }
 }
 
 #contacto {
     text-align: center;
 	
 	iframe {
-		width: 600px;
 		margin: 0 auto;
 		padding: 5px;
 		background-color: white;
 		border: 1px solid lightgray;
-		border-radius: 15px;
-		-moz-border-radius: 15px;
-		-webkit-border-radius: 15px;
-		box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);    
-		-webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-		-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+		@include box-shadow(5px, 5px, 5px, 0px, rgba(0,0,0,0.75));
+		@include border-radius(15px);		
+		
+		width: 600px;
+		@media (max-width: 600px) { width: 100%; }
 	}
 }
-
-@media (max-width: 600px) {
-    #contacto iframe {
-        width: 100%;
-    }
-}
-
-/* ----- Backgrounds ----- */
-
-div.green_back {
-    color: #fff;
-    background-color: #080;
-    background: url(muffet-green.jpg) repeat top center;   
-}
-
-div.light_back {
-    color: #000;
-    background-color: #e4ffe4;
-}
-
-div.border_top {
-	height: 13px;				
-	width: 100%;
-	position: relative;
-	background: url(border_top.png) repeat top center; 
-}
-
-div.border_bottom {
-	height: 13px;
-	width: 100%;
-	position: relative;
-	background: url(border_bottom.png) repeat top center; 
-}	
 
 /* ----- Navigation menu ----- */
 
@@ -191,7 +346,7 @@ div.border_bottom {
 #main_menu {
     position: absolute;
     right: 0;
-	width: 430px;
+	width: 540px;
 	text-align: center;
     border-top-left-radius: 15px;
     -moz-top-radius-bottomleft: 15px;
@@ -234,7 +389,7 @@ div.border_bottom {
 	}	
 }
  
-@media (max-width: 430px) {
+@media (max-width: 580px) {
     #main_menu {
         width: 100%;
         border-top-left-radius: 0;
@@ -270,160 +425,30 @@ div.moving {
 	}
 }
 
-/* ----- Labels ----- */
+/* ----- Backgrounds ----- */
 
-span.label {
-	white-space: nowrap;
-	display: inline-block;
+div.green_back {
+    color: #fff;
+    background-color: #080;
+    background: url(muffet-green.jpg) repeat top center;   
 }
 
-span.label.label-primary {
-	height: 19px;
+div.light_back {
+    color: #000;
+    background-color: #e4ffe4;
 }
 
-span.label.label-primary a,
-span.label.label-info a {
-    color: white;
-    text-decoration: none;
-}
-
-div.panel.panel-success {
-	span.label.label-primary {
-		background-color: green;
-	}
-	span.label.label-info {
-		background-color: #5BCE5B;
-	}
-}
-
-div.panel.panel-warning {
-	span.label.label-primary {
-		background-color: #a8a800;
-	}
-	span.label.label-info {
-		background-color: #cc5;
-	}
-}
-
-/* ----- Miscellaneous ----- */
-
-h2 a,
-h3 a {
-    color: black;
-    text-decoration: none;
-    font-family: 'Sofadi One', cursive;
-    margin-left: 20px;
-}
-
-h2 a {
-	font-family: 'Ubuntu Mono';
-	font-size: 32px;
-}
-
-h2 a:hover,
-h3 a:hover {
-    color: black;
-    text-decoration: none;
-}
-
-h3 {
-	margin-top: 20px;
-	margin-bottom: 10px;
-}
-
-p.nice {
-    margin-left: 40px;
-    font-family: Arial, Verdana;
-    font-size: 16px;
-}
-div.row {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-div.proyecto {
-    font-family: Arial, Verdana;
-    font-size: 11pt;
-    position: relative;
-	
-	td {
-		vertical-align: top;
-	}
-	
-	td.first {
-		font-weight: bold;
-		text-align: right;
-		padding-right: 5px;
-	}
-	
-	div.panel-heading {
-		padding-top: 3px;
-		padding-bottom: 3px;
-	}
-
-	div.panel-heading a {
-		color: black;
-		text-decoration: none;
-		padding-top: 3px;
-	}
-}
-
-div.proyecto > div {
-    line-height: 25px;
-}
-
-div.icono {
-    float: left;
-    margin-right: 10px;
+div.border_top {
+	height: 13px;				
+	width: 100%;
 	position: relative;
+	background: url(border_top.png) repeat top center; 
 }
 
-div.icono img.sticker {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-}
+div.border_bottom {
+	height: 13px;
+	width: 100%;
+	position: relative;
+	background: url(border_bottom.png) repeat top center; 
+}	
 
-div.contact {
-    float: right;
-    text-align: center;
-    font-size: 11pt;
-    margin-right: 5px;
-    margin-top: 5px;
-}
-
-span.foto_no_diponible {
-    width: 96px;
-    height: 96px;
-    border: 1px solid gray;
-    display: block;
-}
-
-img.iconito {
-    position: relative;
-    bottom: 1px;
-}
-
-/* --- Portfolio --- */
-
-div.project a {
-	color: #0a0;
-}
-
-img.screenshot {
-	float: right;
-	margin-left: 10px;
-	margin-bottom: 3px;
-	border: 2px solid black;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	-webkit-box-shadow: 4px 4px 3px 0px rgba(50, 50, 50, 0.25);
-	-moz-box-shadow:    4px 4px 3px 0px rgba(50, 50, 50, 0.25);
-	box-shadow:         4px 4px 3px 0px rgba(50, 50, 50, 0.25);
-	}
-
-.ui-widget-overlay {
-	background-color: white;
-	opacity: 0.001;
-}
