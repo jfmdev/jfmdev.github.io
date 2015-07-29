@@ -4,6 +4,9 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="shortcut icon" href="favicon.ico" />
 	{% if page.noindex %} <meta name="robots" content="noindex,nofollow"> {% endif %}
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="lib/jquery-1.11.0.min.js"></script>
 	
 	<!-- Google Analytics -->
 	<script>
@@ -15,9 +18,11 @@
 		ga('create', '{{ page.googleAnalyticsCode }}', 'auto');
 		ga('send', 'pageview');
 	</script>
-
-	<!-- jQuery -->
-	<script type="text/javascript" src="lib/jquery-1.11.0.min.js"></script>
+	<!-- Scroll Depth plugin for Google Analytics -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrolldepth/0.6/jquery.scrolldepth.min.js"></script>
+	<script type="text/javascript">
+		jQuery(function() { jQuery.scrollDepth(); });
+	</script>
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="lib/bootstrap/bootstrap-3.1.1.min.css">
