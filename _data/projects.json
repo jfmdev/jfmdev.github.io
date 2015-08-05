@@ -138,7 +138,7 @@
         "icon" : "img/codelab/afiledialog.png",
         "links" : [
 			{"title" : "GitHub", "href": "https://github.com/jfmdev/afiledialog", "type": "first"},
-			{"title" : "Google Play", "https://play.google.com/store/apps/details?id=ar.com.daidalos.afiledialog.test", "type": "third"}
+			{"title" : "Google Play", "href": "https://play.google.com/store/apps/details?id=ar.com.daidalos.afiledialog.test", "type": "third"}
         ],
 		"techs" : [
 			{"name": "Java", "type": "first"},
