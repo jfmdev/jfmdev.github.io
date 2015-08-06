@@ -20,6 +20,7 @@
         "description" : "<p>SaVaGe is a library of web widgets implemented with SVG (using D3.js).</p><p>Why SVG? Because using vector graphics you can easily change the size and colors of the widgets, and you don't need to include image or stylesheet files.</p>",
 		"type": "other",
         "icon" : "img/codelab/savage.png",
+        "sticker" : "img/codelab/d3_48.png",
         "links" : [
 			{"title" : "GitHub", "href": "https://github.com/jfmdev/SaVaGe", "type": "first"},
 			{"title" : "Demo", "href": "http://jfmdev.github.io/SaVaGe/", "type": "second"}
@@ -136,6 +137,7 @@
         "description" : "<p>aFileDialog is an Android library, developed with Java, which implements a simple and easy to use file chooser.</p>",
 		"type": "other",
         "icon" : "img/codelab/afiledialog.png",
+        "sticker" : "img/codelab/android_48.png",
         "links" : [
 			{"title" : "GitHub", "href": "https://github.com/jfmdev/afiledialog", "type": "first"},
 			{"title" : "Google Play", "href": "https://play.google.com/store/apps/details?id=ar.com.daidalos.afiledialog.test", "type": "third"}
