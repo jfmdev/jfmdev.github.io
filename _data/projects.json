@@ -284,7 +284,7 @@
         "name" : "jqEye",
         "caption" : "A library which allows to create eyes that follow the mouse",
         "introduction" : "A jQuery plugin that allows to define elements that behaves as eyes that follow the mouse",
-        "description" : "<p>A jQuery plugin that allows to define a behaviour in which a HTML element moves, within the boundaries of an imaginary eye, in order to follow the mouse.</p>",
+        "description" : "<p>jqEye is a jQuery plugin that allows to define a behaviour in which a HTML element moves, within the boundaries of an imaginary eye, in order to follow the mouse.</p>",
 		"type": "other",
         "icon" : "img/codelab/eye-open.png",
         "sticker" : "img/codelab/jquery_80.png",
@@ -364,6 +364,27 @@
 		"techs": [
 			{"name": "Python", "type": "first"},
 			{"name": "GIMP", "type": "second"}
+		]
+    },
+    {
+		"id": "attendance-taker",
+        "name" : "AttendanceTaker",
+        "caption" : "A web application for take attendance using mobile devices",
+        "introduction" : "A web application for take attendance using mobile devices",
+        "description" : "<p>AttendanceTaker is a web application for take attendance using mobile devices.</p>",
+		"type": "webapp",
+        "icon" : "img/codelab/lists.png",
+        "links" : [
+			{"title" : "GitHub", "href": "https://github.com/jfmdev/AttendanceTaker", "type": "first"},
+        ],
+		"techs": [
+			{"name": "PHP", "type": "first"},
+			{"name": "Slim Framework", "type": "first"},
+			{"name": "ActiveRecord", "type": "first"},
+			{"name": "JavaScript", "type": "second"},
+			{"name": "AngularJS", "type": "second"},
+			{"name": "Bootstrap", "type": "second"},
+			{"name": "PostgreSQL", "type": "third"}
 		]
     }
 ]
