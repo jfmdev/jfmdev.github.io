@@ -147,9 +147,28 @@
 		]	
     },
     {
+		"id": "levenshtein",
+        "name" : "Levenshtein Challenge",
+        "caption" : "A simple game in which you must calculate the edit distance between two words",
+        "introduction" : "A simple game in which you must calculate the edit distance between two words",
+        "description" : "<p>Leveshtein Challenge is a HTML5 game in which you must calculate the edit distance between two words. The more you guess, more points you get!</p>",
+		"type": "game",
+        "icon" : "img/codelab/levenshtein.png",
+        "links" : [
+			{"title" : "GitHub", "href": "https://github.com/jfmdev/Levenshtein", "type": "first"},
+			{"title" : "Demo", "href": "http://jfmdev.github.io/Levenshtein/", "type": "second"}
+        ],
+		"techs" : [
+			{"name": "JavaScript", "type": "first"},
+			{"name": "Apache Cordova", "type": "second"},
+			{"name": "Angular", "type": "second"},
+			{"name": "Bootstrap", "type": "third"}
+		]	
+    },
+    {
 		"id": "flappy",
         "name" : "Flappy Clone",
-        "caption" : "A HTML5 game, clone of Flappy Bird, developed for test the \"Phaser\" framework",
+        "caption" : "A HTML5 game, clone of Flappy Bird, developed for test the 'Phaser' framework",
         "introduction" : "A clone of the Flappy Bird game, developed with HTML5 and Phaser",
         "description" : "<p>Flappy Clone is a copy of the classic Flappy Bird game, decorated with an Star Wars theme.</p><p>Developed with JavaScript, HTML5 and Phaser</p>",
 		"type": "game",
@@ -298,6 +317,25 @@
 		"techs": [
 			{"name": "JavaScript", "type": "first"},
 			{"name": "Angular", "type": "second"}
+		]
+    },
+    {
+		"id": "web-fonts-comparator",
+        "name" : "Web Fonts Comparator",
+        "caption" : "A simple tool for compare web fonts",
+        "introduction" : "A simple tool for compare web fonts",
+        "description" : "<p>Web Font Comparator is a simple tool for compare web fonts (in particular, the fonts that are considered safe for web use)</p>",
+		"type": "other",
+        "icon" : "img/codelab/font.png",
+        "links" : [
+			{"title" : "GitHub", "href": "https://github.com/jfmdev/WebFontsComparator", "type": "first"},
+			{"title" : "Demo", "href": "http://jfmdev.github.io/WebFontsComparator/", "type": "second"}
+        ],
+		"techs": [
+			{"name": "JavaScript", "type": "first"},
+			{"name": "Angular", "type": "second"},
+			{"name": "jQuery", "type": "second"},
+			{"name": "Bootstrap", "type": "third"}
 		]
     },
     {
