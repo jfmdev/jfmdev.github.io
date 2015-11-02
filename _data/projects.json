@@ -156,7 +156,9 @@
         "icon" : "img/codelab/levenshtein.png",
         "links" : [
 			{"title" : "GitHub", "href": "https://github.com/jfmdev/Levenshtein", "type": "first"},
-			{"title" : "Demo", "href": "http://jfmdev.github.io/Levenshtein/", "type": "second"}
+			{"title" : "Demo", "href": "http://jfmdev.github.io/Levenshtein/", "type": "second"},
+			{"title" : "Google Play", "href": "https://play.google.com/store/apps/details?id=levenshtein.jfmdev.github.io", "type": "third"},
+			{"title" : "Chrome Web Store", "href": "https://chrome.google.com/webstore/detail/levenshtein-challenge/efblchkhkmngnhljaajncidplenjllmd", "type": "third"},
         ],
 		"techs" : [
 			{"name": "JavaScript", "type": "first"},
