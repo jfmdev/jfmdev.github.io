@@ -311,7 +311,7 @@
         "name" : "ngComboDatePicker",
         "caption" : "An Angular directive for select dates with combo boxes",
         "introduction" : "An Angular directive for select dates with combo boxes",
-        "description" : "<p>jqJigsawPuzzle is an Angular directive that implements date pickers using combo boxes.</p>",
+        "description" : "<p>ngComboDatePicker is an Angular directive that implements date pickers using combo boxes.</p>",
 		"type": "other",
         "icon" : "img/codelab/calendar.png",
         "links" : [
