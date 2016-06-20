@@ -1,449 +1,456 @@
 [
     {
-		"id": "turing",
+        "id": "turing",
         "name" : "TuringFonts",
-        "caption" : "A way to publish uncrawable and uncopiable texts to the web",
         "introduction" : "A hack for publish uncrawable and uncopiable texts to the web, by using substitution methods and custom fonts",
         "description" : "<p>TuringFonts is a simple technique for generate content (for websites or PDF files) that can't we crawled by bots or copied using the clipboard.</p><p>It's useful in situations in which you want to publish some sensitive content that you don't want to be indexed by search engines like Google or Bing (such as e-mail addresses, telephone numbers or personal names) or when you don't want to allow the user to copy and paste your text (to avoid plagiarism or unauthorized modifications).</p>",
-		"type": "other",
+        "type": "other",
         "icon" : "img/codelab/turingfonts.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/TuringFonts", "type": "first"},
-			{"title" : "Demo", "href": "http://jfmdev.github.io/TuringFonts/", "type": "second"}
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/TuringFonts", "type": "first"},
+            {"title" : "Demo", "href": "http://jfmdev.github.io/TuringFonts/", "type": "second"}
         ]
     },
     {
-		"id": "savage",
+        "id": "savage",
         "name" : "SaVaGe",
-        "caption" : "A library of web widgets implemented with SVG",
         "introduction" : "A library of web widgets, developed with JavaScript and D3, whose components are draw with SVG elements",
         "description" : "<p>SaVaGe is a library of web widgets implemented with SVG (using D3.js).</p><p>Why SVG? Because using vector graphics you can easily change the size and colors of the widgets, and you don't need to include image or stylesheet files.</p>",
-		"type": "other",
+        "type": "other",
         "icon" : "img/codelab/savage.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/SaVaGe", "type": "first"},
-			{"title" : "Demo", "href": "http://jfmdev.github.io/SaVaGe/", "type": "second"}
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/SaVaGe", "type": "first"},
+            {"title" : "Demo", "href": "http://jfmdev.github.io/SaVaGe/", "type": "second"}
         ],
-		"techs" : [
-			{"name": "JavaScript", "type": "first"},
-			{"name": "D3.js", "type": "second"}
-		]	
+        "techs" : [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "D3.js", "type": "second"}
+        ]    
     },
     {
-		"id": "neon",
+        "id": "neon",
         "name" : "NeonCamera",
-        "caption" : "A camera app that allows to take photos with a neon lights effect",
         "introduction" : "A camera app for Android, developed with Java, that allows to take photos with a neon lights effect",
         "description" : "<p>Neon Camera is an Android app that allows you to take pictures as if the world were made of neon lights.</p>",
-		"type": "app",
+        "type": "app",
         "icon" : "img/codelab/neon_camera.png",
         "links" : [
-			{"title" : "Google Play", "href": "https://play.google.com/store/apps/details?id=ar.com.jfmdev.neoncamera", "type": "third"},
-			{"title" : "Amazon", "href": "http://www.amazon.com/KudaLab-NeonCamera/dp/B00UXKG8WG/ref=sr_1_1?ie=UTF8&qid=1426841509&sr=8-1&keywords=neoncamera", "type": "third"}
+            {"title" : "Google Play", "href": "https://play.google.com/store/apps/details?id=ar.com.jfmdev.neoncamera", "type": "third"},
+            {"title" : "Amazon", "href": "http://www.amazon.com/KudaLab-NeonCamera/dp/B00UXKG8WG/ref=sr_1_1?ie=UTF8&qid=1426841509&sr=8-1&keywords=neoncamera", "type": "third"}
         ],
-		"techs" : [
-			{"name": "Java", "type": "first"},
-			{"name": "Android", "type": "first"},
-			{"name": "BoofCV", "type": "second"}
-		]	
+        "techs" : [
+            {"name": "Java", "type": "first"},
+            {"name": "Android", "type": "first"},
+            {"name": "BoofCV", "type": "second"}
+        ]    
     },
     {
-		"id": "telelogs",
+        "id": "telelogs",
         "name" : "TelemarketingLogs",
-        "caption" : "A HTML5 app for track marketing calls",
         "introduction" : "A HTML5 app, developed with AngularJS and Foundation, for track marketing calls",
         "description" : "<p>TelemarketingLogs is a simple telemarketing HTML5 application, that allows to keep track of the calls that you made to your clients or contacts.</p>",
-		"type": "app",
+        "type": "app",
         "icon" : "img/codelab/call_logs.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/TelemarketingLogs", "type": "first"},
-			{"title" : "Demo", "href": "http://jfmdev.github.io/TelemarketingLogs/", "type": "second"}
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/TelemarketingLogs", "type": "first"},
+            {"title" : "Demo", "href": "http://jfmdev.github.io/TelemarketingLogs/", "type": "second"}
         ],
-		"techs" : [
-			{"name": "JavaScript", "type": "first"},
-			{"name": "AngularJS", "type": "first"},
-			{"name": "Foundation", "type": "second"},
-			{"name": "TaffyDB", "type": "third"}
-		]	
+        "techs" : [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "AngularJS", "type": "first"},
+            {"name": "Foundation", "type": "second"},
+            {"name": "TaffyDB", "type": "third"}
+        ]    
     },
     {
-		"id": "just-to-do",
+        "id": "just-to-do",
         "name" : "Just To Do",
-        "caption" : "An application for manage to-do lists",
         "introduction" : "An Android app, developed with Java and CouchBase, for manage to-do lists",
         "description" : "<p>Just To Do is a easy and simple way of use and manage to do lists. Just write it and then do it!</p>",
-		"type": "app",
+        "type": "app",
         "icon" : "img/codelab/just_to_do.png",
         "links" : [
-			{"title" : "Google Play", "href": "https://play.google.com/store/apps/details?id=ar.com.jfmdev.justtodo", "type": "third"},
-			{"title" : "Amazon", "href": "http://www.amazon.com/KudaLab-Just-To-Do/dp/B00UXL1GCW/ref=sr_1_1?ie=UTF8&qid=1426841575&sr=8-1&keywords=justtodo", "type": "third"}
+            {"title" : "Google Play", "href": "https://play.google.com/store/apps/details?id=ar.com.jfmdev.justtodo", "type": "third"},
+            {"title" : "Amazon", "href": "http://www.amazon.com/KudaLab-Just-To-Do/dp/B00UXL1GCW/ref=sr_1_1?ie=UTF8&qid=1426841575&sr=8-1&keywords=justtodo", "type": "third"}
         ],
-		"techs" : [
-			{"name": "Java", "type": "first"},
-			{"name": "Android", "type": "first"},
-			{"name": "CouchBase", "type": "third"}
-		]	
+        "techs" : [
+            {"name": "Java", "type": "first"},
+            {"name": "Android", "type": "first"},
+            {"name": "CouchBase", "type": "third"}
+        ]    
     },
     {
-		"id": "ng-addressbook",
+        "id": "ng-addressbook",
         "name" : "ngAddressBook",
-        "caption" : "A HTML5 sample app for learning AngularJS, Bootstrap and PouchDB",
         "introduction" : "A HTML5 sample app, developed with AngularJS, Bootstrap and PouchDB",
         "description" : "<p>ngAddressBook is an address book application, developed as a sample for developers which want to learn how to code HTML5 apps.</p>",
-		"type": "app",
+        "type": "app",
         "icon" : "img/codelab/address_book.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/ngAddressBook", "type": "first"},
-			{"title" : "Demo", "href": "http://jfmdev.github.io/ngAddressBook/", "type": "second"}
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/ngAddressBook", "type": "first"},
+            {"title" : "Demo", "href": "http://jfmdev.github.io/ngAddressBook/", "type": "second"}
         ],
-		"techs" : [
-			{"name": "JavaScript", "type": "first"},
-			{"name": "AngularJS", "type": "first"},
-			{"name": "Bootstrap", "type": "second"},
-			{"name": "PouchDB", "type": "second"},
-			{"name": "QUnit", "type": "third"},
-			{"name": "Selenium", "type": "third"}
-		]	
+        "techs" : [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "AngularJS", "type": "first"},
+            {"name": "Bootstrap", "type": "second"},
+            {"name": "PouchDB", "type": "second"},
+            {"name": "QUnit", "type": "third"},
+            {"name": "Selenium", "type": "third"}
+        ]    
     },
     {
-		"id": "histrix",
+        "id": "histrix",
         "name" : "Histrix Calculator",
-        "caption" : "A JavaScript calculator with the same functionalities that the calculator from Windows XP / Vista",
         "introduction" : "A calculator, developed with HTML5 and jQuery, with the same functionalities that the calculator from Windows XP",
         "description" : "<p>Histrix is a JavaScript calculator with the same functionalities that the classic calculator from Windows XP / Windows Vista and it comes in two flavours: one for desktop computers and another for mobiles devices. </p>",
-		"type": "app",
+        "type": "app",
         "icon" : "img/codelab/histrix_calculator.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/histrix", "type": "first"},
-			{"title" : "Demo (mobile)", "href": "https://googledrive.com/host/0B4_1sNUgxqKBbFlXOEVfQi11bFE/index.html", "type": "second"},
-			{"title" : "Demo (desktop)", "href": "https://googledrive.com/host/0B4_1sNUgxqKBZkVOWTkyTWJaUHM/index.html", "type": "second"},
-			{"title" : "Google Play", "href": "https://play.google.com/store/apps/details?id=ar.com.daidalos.histrix", "type": "third"},
-			{"title" : "Chrome Web Store", "href": "https://chrome.google.com/webstore/detail/histrix-calculator/lgdfflejppjaglpjmkigldlpmkhfppcc", "type": "third"},
-			{"title" : "Firefox Marketplace", "href": "https://marketplace.firefox.com/app/histrix-calculator/", "type": "third"}
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/histrix", "type": "first"},
+            {"title" : "Demo (mobile)", "href": "https://googledrive.com/host/0B4_1sNUgxqKBbFlXOEVfQi11bFE/index.html", "type": "second"},
+            {"title" : "Demo (desktop)", "href": "https://googledrive.com/host/0B4_1sNUgxqKBZkVOWTkyTWJaUHM/index.html", "type": "second"},
+            {"title" : "Google Play", "href": "https://play.google.com/store/apps/details?id=ar.com.daidalos.histrix", "type": "third"},
+            {"title" : "Chrome Web Store", "href": "https://chrome.google.com/webstore/detail/histrix-calculator/lgdfflejppjaglpjmkigldlpmkhfppcc", "type": "third"},
+            {"title" : "Firefox Marketplace", "href": "https://marketplace.firefox.com/app/histrix-calculator/", "type": "third"}
         ],
-		"techs" : [
-			{"name": "JavaScript", "type": "first"},
-			{"name": "Apache Cordova", "type": "first"},
-			{"name": "jQuery", "type": "second"},
-			{"name": "jQuery Mobile", "type": "second"}
-		]	
+        "techs" : [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "Apache Cordova", "type": "first"},
+            {"name": "jQuery", "type": "second"},
+            {"name": "jQuery Mobile", "type": "second"}
+        ]    
     },
     {
-		"id": "afiledialog",
+        "id": "afiledialog",
         "name" : "aFileDialog",
-        "caption" : "A library that implements a simple and easy to use file chooser for Android",
         "introduction" : "An Android library, developed with Java, that implements a simple and easy to use file chooser",
         "description" : "<p>aFileDialog is an Android library, developed with Java, which implements a simple and easy to use file chooser.</p>",
-		"type": "other",
+        "type": "other",
         "icon" : "img/codelab/afiledialog.png",
         "sticker" : "img/codelab/android_48.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/afiledialog", "type": "first"},
-			{"title" : "Google Play", "href": "https://play.google.com/store/apps/details?id=ar.com.daidalos.afiledialog.test", "type": "third"}
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/afiledialog", "type": "first"},
+            {"title" : "Google Play", "href": "https://play.google.com/store/apps/details?id=ar.com.daidalos.afiledialog.test", "type": "third"}
         ],
-		"techs" : [
-			{"name": "Java", "type": "first"},
-			{"name": "Android", "type": "second"}
-		]	
+        "techs" : [
+            {"name": "Java", "type": "first"},
+            {"name": "Android", "type": "second"}
+        ]    
     },
     {
-		"id": "levenshtein",
+        "id": "levenshtein",
         "name" : "Levenshtein Challenge",
-        "caption" : "A simple game in which you must calculate the edit distance between two words",
         "introduction" : "A simple game in which you must calculate the edit distance between two words",
         "description" : "<p>Leveshtein Challenge is a HTML5 game in which you must calculate the edit distance between two words. The more you guess, more points you get!</p>",
-		"type": "game",
+        "type": "game",
         "icon" : "img/codelab/levenshtein.png",
         "links" : [
-			{"title" : "GitHub", href: "https://github.com/jfmdev/Levenshtein", "type": "first"},
-			{"title" : "Demo", href: "http://jfmdev.github.io/Levenshtein/", "type": "second"},
-			{"title" : "Google Play", href: "https://play.google.com/store/apps/details?id=levenshtein.jfmdev.github.io", "type": "third"},
-			{"title" : "Chrome Web Store", href: "https://chrome.google.com/webstore/detail/levenshtein-challenge/efblchkhkmngnhljaajncidplenjllmd", "type": "third"},
-			{"title" : "Amazon", href: "http://www.amazon.com/KudaLab-Levenshtein-Challenge/dp/B017H6D6O6/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1446541024&sr=1-1&keywords=levenshtein+challenge", "type": "third"},
-			{"title" : "Firefox Marketplace", href: "https://marketplace.firefox.com/app/levenshteinchallenge/", "type": "third"},
+            {"title" : "GitHub", href: "https://github.com/jfmdev/Levenshtein", "type": "first"},
+            {"title" : "Demo", href: "http://jfmdev.github.io/Levenshtein/", "type": "second"},
+            {"title" : "Google Play", href: "https://play.google.com/store/apps/details?id=levenshtein.jfmdev.github.io", "type": "third"},
+            {"title" : "Chrome Web Store", href: "https://chrome.google.com/webstore/detail/levenshtein-challenge/efblchkhkmngnhljaajncidplenjllmd", "type": "third"},
+            {"title" : "Amazon", href: "http://www.amazon.com/KudaLab-Levenshtein-Challenge/dp/B017H6D6O6/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1446541024&sr=1-1&keywords=levenshtein+challenge", "type": "third"},
+            {"title" : "Firefox Marketplace", href: "https://marketplace.firefox.com/app/levenshteinchallenge/", "type": "third"},
         ],
-		"techs" : [
-			{"name": "JavaScript", "type": "first"},
-			{"name": "Apache Cordova", "type": "second"},
-			{"name": "Angular", "type": "second"},
-			{"name": "Bootstrap", "type": "third"}
-		]	
+        "techs" : [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "Apache Cordova", "type": "second"},
+            {"name": "Angular", "type": "second"},
+            {"name": "Bootstrap", "type": "third"}
+        ]    
     },
     {
-		"id": "flappy",
+        "id": "flappy",
         "name" : "Flappy Clone",
-        "caption" : "A HTML5 game, clone of Flappy Bird, developed for test the 'Phaser' framework",
         "introduction" : "A clone of the Flappy Bird game, developed with HTML5 and Phaser",
         "description" : "<p>Flappy Clone is a copy of the classic Flappy Bird game, decorated with an Star Wars theme.</p><p>Developed with JavaScript, HTML5 and Phaser</p>",
-		"type": "game",
+        "type": "game",
         "icon" : "img/codelab/flappy_clone.png",
         "links" : [
-			{"title" : "Demo (mobile)", "href": "https://googledrive.com/host/0B4_1sNUgxqKBM3llLTJPblQ3WlU/flappyclone.html", "type": "second"},
-			{"title" : "Demo (desktop)", "href": "https://googledrive.com/host/0B4_1sNUgxqKBM3llLTJPblQ3WlU/flappyclone-landscape.html", "type": "second"},
-			{"title" : "Chrome Web Store", "href": "https://chrome.google.com/webstore/detail/flappy-clone/epmgkgpllfpninngnlbhccijogfaihgm", "type": "third"},
-			{"title" : "Firefox Marketplace", "href": "https://marketplace.firefox.com/app/flappy-clone/", "type": "third"},
+            {"title" : "Demo (mobile)", "href": "https://googledrive.com/host/0B4_1sNUgxqKBM3llLTJPblQ3WlU/flappyclone.html", "type": "second"},
+            {"title" : "Demo (desktop)", "href": "https://googledrive.com/host/0B4_1sNUgxqKBM3llLTJPblQ3WlU/flappyclone-landscape.html", "type": "second"},
+            {"title" : "Chrome Web Store", "href": "https://chrome.google.com/webstore/detail/flappy-clone/epmgkgpllfpninngnlbhccijogfaihgm", "type": "third"}
         ],
-		"techs" : [
-			{"name": "JavaScript", "type": "first"},
-			{"name": "Phaser", "type": "second"}
-		]	
+        "techs" : [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "Phaser", "type": "second"}
+        ]    
     },
     {
-		"id": "ustopwatch",
+        "id": "ustopwatch",
         "name" : "&mu;Stopwatch",
-        "caption" : "A HTML5 stopwatch designed as a sample app for Firefox OS",
         "introduction" : "A stopwatch app for Firefox OS, developed with AngularJS and OnsenUI",
         "description" : "<p>µStopwatch is a simple stopwatch, developed as a sample application for learn how to develop HTML5 apps for Firefox OS.</p>",
-		"type": "app",
+        "type": "app",
         "icon" : "img/codelab/ustopwatch.png",
         "category" : "Application",
         "platform" : "Web & Mobile",
         "tags" : ["HTML5", "JavaScript", "OnsenUI", "AngularJS", "Open Source"],
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/uStopwatch", "type": "first"},
-			{"title" : "Demo (mobile)", "href": "http://jfmdev.github.io/uStopwatch/", "type": "second"},
-			{"title" : "Firefox Marketplace", "href": "https://marketplace.firefox.com/app/%C2%B5stopwatch/", "type": "third"},
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/uStopwatch", "type": "first"},
+            {"title" : "Demo (mobile)", "href": "http://jfmdev.github.io/uStopwatch/", "type": "second"},
+            {"title" : "Firefox Marketplace", "href": "https://marketplace.firefox.com/app/%C2%B5stopwatch/", "type": "third"},
         ],
-		"techs" : [
-			{"name": "JavaScript", "type": "first"},
-			{"name": "AngularJS", "type": "first"},
-			{"name": "OnsenUI", "type": "second"}
-		]	
+        "techs" : [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "AngularJS", "type": "first"},
+            {"name": "OnsenUI", "type": "second"}
+        ]    
     },
     {
-		"id": "attendance-taker",
+        "id": "attendance-taker",
         "name" : "AttendanceTaker",
-        "caption" : "A web application for take attendance using mobile devices",
         "introduction" : "A web application for take attendance using mobile devices",
         "description" : "<p>AttendanceTaker is a web application for take attendance using mobile devices.</p>",
-		"type": "webapp",
+        "type": "webapp",
         "icon" : "img/codelab/lists.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/AttendanceTaker", "type": "first"},
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/AttendanceTaker", "type": "first"},
         ],
-		"techs": [
-			{"name": "PHP", "type": "first"},
-			{"name": "Slim Framework", "type": "first"},
-			{"name": "ActiveRecord", "type": "first"},
-			{"name": "JavaScript", "type": "second"},
-			{"name": "AngularJS", "type": "second"},
-			{"name": "Bootstrap", "type": "second"},
-			{"name": "PostgreSQL", "type": "third"}
-		]
+        "techs": [
+            {"name": "PHP", "type": "first"},
+            {"name": "Slim Framework", "type": "first"},
+            {"name": "ActiveRecord", "type": "first"},
+            {"name": "JavaScript", "type": "second"},
+            {"name": "AngularJS", "type": "second"},
+            {"name": "Bootstrap", "type": "second"},
+            {"name": "PostgreSQL", "type": "third"}
+        ]
     },
     {
-		"id": "jsf-blackbook",
+        "id": "jsf-blackbook",
         "name" : "jsfBlackBook",
-        "caption" : "A sample web application developed with Java Server Faces",
         "introduction" : "A sample web application, developed with Java, SQLite and Bootstrap",
         "description" : "<p>jsfBlackBook is a sample web application (developed with Java EE and Java Server Faces) that allows user to manage a list of contacts.</p>",
-		"type": "webapp",
+        "type": "webapp",
         "icon" : "img/codelab/black_book.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/jsfBlackBook", "type": "first"}
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/jsfBlackBook", "type": "first"}
         ],
-		"stack": {
-			"magenta": "Bootstrap",
-			"green": "Java | JSF",
-			"blue": "SQLite"
-		},
-		"techs" : [
-			{"name": "Java", "type": "first"},
-			{"name": "JSF", "type": "first"},
-			{"name": "Bootstrap", "type": "second"},
-			{"name": "SQLite", "type": "third"}
-		]	
+        "stack": {
+            "magenta": "Bootstrap",
+            "green": "Java | JSF",
+            "blue": "SQLite"
+        },
+        "techs" : [
+            {"name": "Java", "type": "first"},
+            {"name": "JSF", "type": "first"},
+            {"name": "Bootstrap", "type": "second"},
+            {"name": "SQLite", "type": "third"}
+        ]    
     },
     {
-		"id": "jax-friends",
+        "id": "jax-friends",
         "name" : "jaxFriends",
-        "caption" : "A sample RESTful web service developed with Java and JAX-RS",
         "introduction" : "A sample RESTful web service, developed with Java, Jersey and ORMLite",
         "description" : "<p>jaxFriends is a Contact REST API, developed as an example for learning how to develop RESTful web services using Java and JAX-RS.</p>",
-		"type": "webapp",
+        "type": "webapp",
         "icon" : "img/codelab/friends.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/jaxFriends", "type": "first"}
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/jaxFriends", "type": "first"}
         ],
-		"techs": [
-			{"name": "Java", "type": "first"},
-			{"name": "Jersey", "type": "first"},
-			{"name": "ORMLite", "type": "second"},
-			{"name": "Gson", "type": "second"},
-			{"name": "MySQL", "type": "third"}
-		]
+        "techs": [
+            {"name": "Java", "type": "first"},
+            {"name": "Jersey", "type": "first"},
+            {"name": "ORMLite", "type": "second"},
+            {"name": "Gson", "type": "second"},
+            {"name": "MySQL", "type": "third"}
+        ]
     },
     {
-		"id": "sliding-puzzles",
+        "id": "sliding-puzzles",
         "name" : "Landscape Sliding Puzzles",
-        "caption" : "A HTML5 puzzle game",
         "introduction" : "A game of sliding puzzles, developed with HTML5 and jQuery",
         "description" : "<p>Landscape Sliding Puzzles is a classic sliding puzzle game. You can play using a selection of beautiful landscapes or using images from your computer.</p>",
-		"type": "game",
+        "type": "game",
         "icon" : "img/codelab/sliding_puzzles.png",
         "links" : [
-			{"title" : "Chrome Web Store", "href": "https://chrome.google.com/webstore/detail/landscape-sliding-puzzles/beifpgdjlnpfinmngokhdjmpokbeacfi", "type": "third"},
-			{"title" : "Firefox Marketplace", "href": "https://marketplace.firefox.com/app/landscape-sliding-puzzles/", "type": "third"}
+            {"title" : "Chrome Web Store", "href": "https://chrome.google.com/webstore/detail/landscape-sliding-puzzles/beifpgdjlnpfinmngokhdjmpokbeacfi", "type": "third"}
         ],
-		"techs": [
-			{"name": "JavaScript", "type": "first"},
-			{"name": "jQuery", "type": "second"}
-		]
+        "techs": [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "jQuery", "type": "second"}
+        ]
     },
     {
-		"id": "jigsaw-puzzles",
+        "id": "jigsaw-puzzles",
         "name" : "Landscape Jigsaw Puzzles",
-        "caption" : "A HTML5 puzzle game",
         "introduction" : "A game of jigsaw puzzles, developed with HTML5 and jQuery",
         "description" : "<p>Landscape Jigsaw Puzzles is a classic jigsaw puzzle game. You can play using a selection of beautiful landscapes or using images from your computer.</p>",
-		"type": "game",
+        "type": "game",
         "icon" : "img/codelab/jigsaw_puzzles.png",
         "links" : [
-			{"title" : "Chrome Web Store", "href": "https://chrome.google.com/webstore/detail/landscape-jigsaw-puzzles/lpkjfbacnmennednnkmlfahhoiefeaif", "type": "third"}
+            {"title" : "Chrome Web Store", "href": "https://chrome.google.com/webstore/detail/landscape-jigsaw-puzzles/lpkjfbacnmennednnkmlfahhoiefeaif", "type": "third"}
         ],
-		"techs": [
-			{"name": "JavaScript", "type": "first"},
-			{"name": "jQuery", "type": "second"}
-		]
+        "techs": [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "jQuery", "type": "second"}
+        ]
     },
     {
-		"id": "ng-combo-date-picker",
+        "id": "ng-combo-date-picker",
         "name" : "ngComboDatePicker",
-        "caption" : "An Angular directive for select dates with combo boxes",
         "introduction" : "An Angular directive for select dates with combo boxes",
         "description" : "<p>ngComboDatePicker is an Angular directive that implements date pickers using combo boxes.</p>",
-		"type": "other",
+        "type": "other",
         "icon" : "img/codelab/calendar.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/ngComboDatePicker", "type": "first"},
-			{"title" : "Demo", "href": "http://jfmdev.github.io/ngComboDatePicker/", "type": "second"}
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/ngComboDatePicker", "type": "first"},
+            {"title" : "Demo", "href": "http://jfmdev.github.io/ngComboDatePicker/", "type": "second"}
         ],
-		"techs": [
-			{"name": "JavaScript", "type": "first"},
-			{"name": "Angular", "type": "second"}
-		]
+        "techs": [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "Angular", "type": "second"}
+        ]
     },
     {
-		"id": "web-fonts-comparator",
+        "id": "simple-spellchecker",
+        "name" : "Simple Spellchecker",
+        "introduction" : " A simple and fast spellchecker for Node.js with spelling suggestions and Electron's integration ",
+        "description" : "<p>Simple Spellchecker is a spellchecker module for Node.js, that allows to check if a word is misspelled and to get spelling suggestions.</p><p>It comes with dictionaries for English, Spanish, French, German and Dutch, but you can easily add more languages by simply defining a text file with a list of valid words.</p>",
+        "type": "other",
+        "icon" : "img/codelab/spellcheck.png",
+        "sticker" : "img/codelab/node_80.png",
+        "links" : [
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/simple-spellchecker", "type": "first"}
+        ],
+        "techs": [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "Node.js", "type": "second"},
+            {"name": "Electron", "type": "second"}
+        ]
+    },
+    {
+        "id": "web-fonts-comparator",
         "name" : "Web Fonts Comparator",
-        "caption" : "A simple tool for compare web fonts",
         "introduction" : "A simple tool for compare web fonts",
         "description" : "<p>Web Font Comparator is a simple tool for compare web fonts (in particular, the fonts that are considered safe for web use)</p>",
-		"type": "other",
+        "type": "other",
         "icon" : "img/codelab/font.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/WebFontsComparator", "type": "first"},
-			{"title" : "Demo", "href": "http://jfmdev.github.io/WebFontsComparator/", "type": "second"}
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/WebFontsComparator", "type": "first"},
+            {"title" : "Demo", "href": "http://jfmdev.github.io/WebFontsComparator/", "type": "second"}
         ],
-		"techs": [
-			{"name": "JavaScript", "type": "first"},
-			{"name": "Angular", "type": "second"},
-			{"name": "jQuery", "type": "second"},
-			{"name": "Bootstrap", "type": "third"}
-		]
+        "techs": [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "Angular", "type": "second"},
+            {"name": "jQuery", "type": "second"},
+            {"name": "Bootstrap", "type": "third"}
+        ]
     },
     {
-		"id": "jq-jigsaw",
+        "id": "jq-jigsaw",
         "name" : "jqJigsawPuzzle",
-        "caption" : "A library for create jigsaw puzzles in web pages",
         "introduction" : "A jQuery plugin for create jigsaw puzzles (from images) in web pages",
         "description" : "<p>jqJigsawPuzzle is a javascript library that lets you create jigsaw puzzles in your web pages.</p>",
-		"type": "other",
+        "type": "other",
         "icon" : "img/codelab/puzzle.png",
         "sticker" : "img/codelab/jquery_80.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/jqJigsawPuzzle", "type": "first"}
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/jqJigsawPuzzle", "type": "first"}
         ],
-		"techs": [
-			{"name": "JavaScript", "type": "first"},
-			{"name": "jQuery", "type": "second"}
-		]
+        "techs": [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "jQuery", "type": "second"}
+        ]
     },
     {
-		"id": "jq-eye",
+        "id": "jq-eye",
         "name" : "jqEye",
-        "caption" : "A library which allows to create eyes that follow the mouse",
         "introduction" : "A jQuery plugin that allows to define elements that behaves as eyes that follow the mouse",
         "description" : "<p>jqEye is a jQuery plugin that allows to define a behaviour in which a HTML element moves, within the boundaries of an imaginary eye, in order to follow the mouse.</p>",
-		"type": "other",
+        "type": "other",
         "icon" : "img/codelab/eye-open.png",
         "sticker" : "img/codelab/jquery_80.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/jqEye", "type": "first"}
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/jqEye", "type": "first"}
         ],
-		"techs": [
-			{"name": "JavaScript", "type": "first"},
-			{"name": "jQuery", "type": "second"}
-		]
+        "techs": [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "jQuery", "type": "second"}
+        ]
     },
     {
-		"id": "jq-scrollanim",
+        "id": "jq-scrollanim",
         "name" : "jqScrollAnim",
-        "caption" : "A library that allows to define animations that triggered by the vertical scroll",
         "introduction" : "A jQuery plugin that allows to define animations that are triggered by the position of the vertical scroll bar",
         "description" : "<p>jqScrollAnim is a jQuery plugin that allows to define animations whose reproduction depends on the position of the vertical scroll.</p>",
-		"type": "other",
+        "type": "other",
         "icon" : "img/codelab/one_finger_scroll.png",
         "sticker" : "img/codelab/jquery_80.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/jqScrollAnim", "type": "first"}
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/jqScrollAnim", "type": "first"}
         ],
-		"techs": [
-			{"name": "JavaScript", "type": "first"},
-			{"name": "jQuery", "type": "first"}
-		]
+        "techs": [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "jQuery", "type": "first"}
+        ]
     },
     {
-		"id": "jq-simpleconnect",
+        "id": "jq-simpleconnect",
         "name" : "jqSimpleConnect",
-        "caption" : "A lightweight library which allows to visually connect elements in a web page",
         "introduction" : "A jQuery plugin that allows to connect elements (from a web page) with lines",
         "description" : "<p>jqSimpleConnect is a lightweight javascript library which provides the functionality for visually connect elements in a web page. It uses &lt;div&gt; elements to draw the connectors, in order to avoid dependencies with SVG and Canvas and in order to be more fast and simple. </p>",
-		"type": "other",
+        "type": "other",
         "icon" : "img/codelab/binary-tree.png",
         "sticker" : "img/codelab/jquery_80.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/jqSimpleConnect", "type": "first"}
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/jqSimpleConnect", "type": "first"}
         ],
-		"techs": [
-			{"name": "JavaScript", "type": "first"},
-			{"name": "jQuery", "type": "second"}
-		]
+        "techs": [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "jQuery", "type": "second"}
+        ]
     },
     {
-		"id": "lobo-plugins",
+        "id": "lobo-plugins",
         "name" : "Lobo plugins",
-        "caption" : "A collections of plugins for the content management system WolfCMS",
         "introduction" : "A collections of plugins for the content management system WolfCMS, developed with PHP",
         "description" : "<p>Lobo plugins is a collections of plugins for the content management system Wolf CMS.</p><p>Currently, it has three plugins: 'Robots.txt' (that allows to create and edit the file robots.txt), 'Sitemaps XML' (that allows to generate and edit the sitemap file) and 'NicEdit for Wolf' (that adds NicEdit to the list of content editors availables).</p>",
-		"type": "other",
+        "type": "other",
         "icon" : "img/codelab/wolf.png",
         "sticker" : "img/codelab/wolfcms_48.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/LoboPlugins", "type": "first"}
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/LoboPlugins", "type": "first"}
         ],
-		"techs": [
-			{"name": "PHP", "type": "first"},
-			{"name": "NicEdit", "type": "second"},
-			{"name": "XML", "type": "third"}
-		]
+        "techs": [
+            {"name": "PHP", "type": "first"},
+            {"name": "NicEdit", "type": "second"},
+            {"name": "XML", "type": "third"}
+        ]
     },
     {
-		"id": "python-fu",
+        "id": "python-fu",
         "name" : "Python-Fu samples",
-        "caption" : "A group of scripts whose objective is to serve as templates and code samples for scripting in GIMP",
         "introduction" : "A group of scripts for GIMP, whose objective is to serve as templates and code samples of scripting with Python",
         "description" : "<p>Python-Fu samples is a package that contains 12 scripts, developed using Python and GIMP 2.8, which objective is to serve as templates and as code samples to programmers that are new in Python-Fu scripting.</p>",
-		"type": "other",
+        "type": "other",
         "icon" : "img/codelab/application-x-python.png",
         "sticker" : "img/codelab/gimp_48.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/PythonFuSamples", "type": "first"},
-			{"title" : "GIMP Plugin Registry", "href": "http://registry.gimp.org/node/28124", "type": "third"}
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/PythonFuSamples", "type": "first"},
+            {"title" : "GIMP Plugin Registry", "href": "http://registry.gimp.org/node/28124", "type": "third"}
         ],
-		"techs": [
-			{"name": "Python", "type": "first"},
-			{"name": "GIMP", "type": "second"}
-		]
+        "techs": [
+            {"name": "Python", "type": "first"},
+            {"name": "GIMP", "type": "second"}
+        ]
+    },
+    {
+        "id": "grunt-vs-gulp",
+        "name" : "Grunt vs Gulp",
+        "introduction" : "A sample project that allows to compare Gulp and Grunt for executing simple tasks",
+        "description" : "<p>Grunt vs Gulp is a sample project that allows to compare Gulp and Grunt for executing simple tasks.</p>",
+        "type": "other",
+        "icon" : "img/codelab/grunt_gulp.png",
+        "links" : [
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/grunt-vs-gulp", "type": "first"}
+        ],
+        "techs": [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "Grunt", "type": "second"},
+            {"name": "Gulp", "type": "second"}
+        ]
     }
 ]
