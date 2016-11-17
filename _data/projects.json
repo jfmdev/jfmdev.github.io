@@ -85,16 +85,16 @@
 		]	
     },
     {
-		"id": "ng-addressbook",
-        "name" : "ngAddressBook",
+		"id": "my-addressbook",
+        "name" : "myAddressBook",
         "caption" : "A HTML5 sample app for learning AngularJS, Bootstrap and PouchDB",
         "introduction" : "A HTML5 sample app, developed with AngularJS, Bootstrap and PouchDB",
-        "description" : "<p>ngAddressBook is an address book application, developed as a sample for developers which want to learn how to code HTML5 apps.</p>",
+        "description" : "<p>myAddressBook is an address book application, developed as a sample for developers which want to learn how to code HTML5 apps.</p>",
 		"type": "app",
         "icon" : "img/codelab/address_book.png",
         "links" : [
-			{"title" : "GitHub", "href": "https://github.com/jfmdev/ngAddressBook", "type": "first"},
-			{"title" : "Demo", "href": "http://jfmdev.github.io/ngAddressBook/", "type": "second"}
+			{"title" : "GitHub", "href": "https://github.com/jfmdev/myAddressBook", "type": "first"},
+			{"title" : "Demo", "href": "http://jfmdev.github.io/myAddressBook/", "type": "second"}
         ],
 		"techs" : [
 			{"name": "JavaScript", "type": "first"},
