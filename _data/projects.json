@@ -304,6 +304,23 @@
         ]
     },
     {
+        "id": "react-combo-date-picker",
+        "name" : "reactComboDatePicker",
+        "introduction" : "A React component for select dates with combo boxes",
+        "description" : "<p>reactComboDatePicker is a React component that implements date pickers using combo boxes.</p>",
+        "type": "other",
+        "icon" : "img/codelab/calendar_bis.png",
+        "links" : [
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/reactComboDatePicker", "type": "first"},
+            {"title" : "Demo", "href": "http://jfmdev.github.io/reactComboDatePicker/", "type": "second"}
+        ],
+        "techs": [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "React", "type": "second"},
+            {"name": "ES6", "type": "third"}
+        ]
+    },
+    {
         "id": "simple-spellchecker",
         "name" : "Simple Spellchecker",
         "introduction" : " A simple and fast spellchecker for Node.js with spelling suggestions and Electron's integration ",
