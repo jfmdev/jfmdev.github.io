@@ -334,7 +334,9 @@
         "techs": [
             {"name": "JavaScript", "type": "first"},
             {"name": "Node.js", "type": "second"},
-            {"name": "Electron", "type": "second"}
+            {"name": "Electron", "type": "second"},
+            {"name": "Mocha", "type": "third"},
+            {"name": "Chai", "type": "third"}
         ]
     },
     {
