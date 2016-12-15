@@ -82,7 +82,7 @@
     {
         "id": "my-addressbook",
         "name" : "myAddressBook",
-        "introduction" : "A HTML5 sample app, developed with AngularJS, Bootstrap and PouchDB",
+        "introduction" : "A HTML5 sample app, developed with AngularJS/React, Bootstrap and PouchDB",
         "description" : "<p>myAddressBook is an address book application, developed as a sample for developers which want to learn how to code HTML5 apps.</p>",
         "type": "app",
         "icon" : "img/codelab/address_book.png",
