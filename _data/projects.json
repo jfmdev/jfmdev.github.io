@@ -1,10 +1,30 @@
 [
     {
+        "id": "attendance-taker",
+        "name" : "AttendanceTaker",
+        "introduction" : "A web application for take attendance using mobile devices",
+        "description" : "<p>AttendanceTaker is a web application for take attendance using mobile devices.</p>",
+        "type": "main",
+        "icon" : "img/codelab/lists.png",
+        "links" : [
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/AttendanceTaker", "type": "first"},
+        ],
+        "techs": [
+            {"name": "PHP", "type": "first"},
+            {"name": "Slim Framework", "type": "first"},
+            {"name": "ActiveRecord", "type": "first"},
+            {"name": "JavaScript", "type": "second"},
+            {"name": "AngularJS", "type": "second"},
+            {"name": "Bootstrap", "type": "second"},
+            {"name": "PostgreSQL", "type": "third"}
+        ]
+    },
+    {
         "id": "turing",
         "name" : "TuringFonts",
         "introduction" : "A hack for publish uncrawable and uncopiable texts to the web, by using substitution methods and custom fonts",
         "description" : "<p>TuringFonts is a simple technique for generate content (for websites or PDF files) that can't we crawled by bots or copied using the clipboard.</p><p>It's useful in situations in which you want to publish some sensitive content that you don't want to be indexed by search engines like Google or Bing (such as e-mail addresses, telephone numbers or personal names) or when you don't want to allow the user to copy and paste your text (to avoid plagiarism or unauthorized modifications).</p>",
-        "type": "other",
+        "type": "misc",
         "icon" : "img/codelab/turingfonts.png",
         "links" : [
             {"title" : "GitHub", "href": "https://github.com/jfmdev/TuringFonts", "type": "first"},
@@ -12,11 +32,69 @@
         ]
     },
     {
+        "id": "web-fonts-comparator",
+        "name" : "Web Fonts Comparator",
+        "introduction" : "A simple tool for compare web fonts",
+        "description" : "<p>Web Font Comparator is a simple tool for compare web fonts (in particular, the fonts that are considered safe for web use)</p>",
+        "type": "misc",
+        "icon" : "img/codelab/font.png",
+        "links" : [
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/WebFontsComparator", "type": "first"},
+            {"title" : "Demo", "href": "http://jfmdev.github.io/WebFontsComparator/", "type": "second"}
+        ],
+        "techs": [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "Angular", "type": "second"},
+            {"name": "jQuery", "type": "second"},
+            {"name": "Bootstrap", "type": "third"}
+        ]
+    },
+    {
+        "id": "jsf-blackbook",
+        "name" : "jsfBlackBook",
+        "introduction" : "A sample web application, developed with Java, SQLite and Bootstrap",
+        "description" : "<p>jsfBlackBook is a sample web application (developed with Java EE and Java Server Faces) that allows user to manage a list of contacts.</p>",
+        "type": "misc",
+        "icon" : "img/codelab/black_book.png",
+        "links" : [
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/jsfBlackBook", "type": "first"}
+        ],
+        "stack": {
+            "magenta": "Bootstrap",
+            "green": "Java | JSF",
+            "blue": "SQLite"
+        },
+        "techs" : [
+            {"name": "Java", "type": "first"},
+            {"name": "JSF", "type": "first"},
+            {"name": "Bootstrap", "type": "second"},
+            {"name": "SQLite", "type": "third"}
+        ]    
+    },
+    {
+        "id": "jax-friends",
+        "name" : "jaxFriends",
+        "introduction" : "A sample RESTful web service, developed with Java, Jersey and ORMLite",
+        "description" : "<p>jaxFriends is a Contact REST API, developed as an example for learning how to develop RESTful web services using Java and JAX-RS.</p>",
+        "type": "misc",
+        "icon" : "img/codelab/friends.png",
+        "links" : [
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/jaxFriends", "type": "first"}
+        ],
+        "techs": [
+            {"name": "Java", "type": "first"},
+            {"name": "Jersey", "type": "first"},
+            {"name": "ORMLite", "type": "second"},
+            {"name": "Gson", "type": "second"},
+            {"name": "MySQL", "type": "third"}
+        ]
+    },
+    {
         "id": "savage",
         "name" : "SaVaGe",
         "introduction" : "A library of web widgets, developed with JavaScript and D3, whose components are draw with SVG elements",
         "description" : "<p>SaVaGe is a library of web widgets implemented with SVG (using D3.js).</p><p>Why SVG? Because using vector graphics you can easily change the size and colors of the widgets, and you don't need to include image or stylesheet files.</p>",
-        "type": "other",
+        "type": "lib",
         "icon" : "img/codelab/savage.png",
         "links" : [
             {"title" : "GitHub", "href": "https://github.com/jfmdev/SaVaGe", "type": "first"},
@@ -32,7 +110,7 @@
         "name" : "NeonCamera",
         "introduction" : "A camera app for Android, developed with Java, that allows to take photos with a neon lights effect",
         "description" : "<p>Neon Camera is an Android app that allows you to take pictures as if the world were made of neon lights.</p>",
-        "type": "app",
+        "type": "main",
         "icon" : "img/codelab/neon_camera.png",
         "links" : [
             {"title" : "Google Play", "href": "https://play.google.com/store/apps/details?id=ar.com.jfmdev.neoncamera", "type": "third"},
@@ -49,7 +127,7 @@
         "name" : "TelemarketingLogs",
         "introduction" : "A HTML5 app, developed with AngularJS and Foundation, for track marketing calls",
         "description" : "<p>TelemarketingLogs is a simple telemarketing HTML5 application, that allows to keep track of the calls that you made to your clients or contacts.</p>",
-        "type": "app",
+        "type": "main",
         "icon" : "img/codelab/call_logs.png",
         "links" : [
             {"title" : "GitHub", "href": "https://github.com/jfmdev/TelemarketingLogs", "type": "first"},
@@ -67,7 +145,7 @@
         "name" : "Just To Do",
         "introduction" : "An Android app, developed with Java and CouchBase, for manage to-do lists",
         "description" : "<p>Just To Do is a easy and simple way of use and manage to do lists. Just write it and then do it!</p>",
-        "type": "app",
+        "type": "main",
         "icon" : "img/codelab/just_to_do.png",
         "links" : [
             {"title" : "Google Play", "href": "https://play.google.com/store/apps/details?id=ar.com.jfmdev.justtodo", "type": "third"},
@@ -80,11 +158,32 @@
         ]    
     },
     {
+        "id": "ustopwatch",
+        "name" : "&mu;Stopwatch",
+        "introduction" : "A stopwatch app for Firefox OS, developed with AngularJS and OnsenUI",
+        "description" : "<p>µStopwatch is a simple stopwatch, developed as a sample application for learn how to develop HTML5 apps for Firefox OS.</p>",
+        "type": "misc",
+        "icon" : "img/codelab/ustopwatch.png",
+        "category" : "Application",
+        "platform" : "Web & Mobile",
+        "tags" : ["HTML5", "JavaScript", "OnsenUI", "AngularJS", "Open Source"],
+        "links" : [
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/uStopwatch", "type": "first"},
+            {"title" : "Demo (mobile)", "href": "http://jfmdev.github.io/uStopwatch/", "type": "second"},
+            {"title" : "Firefox Marketplace", "href": "https://marketplace.firefox.com/app/%C2%B5stopwatch/", "type": "third"},
+        ],
+        "techs" : [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "AngularJS", "type": "first"},
+            {"name": "OnsenUI", "type": "second"}
+        ]    
+    },
+    {
         "id": "my-addressbook",
         "name" : "myAddressBook",
         "introduction" : "A HTML5 sample app, developed with AngularJS/React, Bootstrap and PouchDB",
         "description" : "<p>myAddressBook is an address book application, developed as a sample for developers which want to learn how to code HTML5 apps.</p>",
-        "type": "app",
+        "type": "misc",
         "icon" : "img/codelab/address_book.png",
         "links" : [
             {"title" : "GitHub", "href": "https://github.com/jfmdev/myAddressBook", "type": "first"},
@@ -103,7 +202,7 @@
         "name" : "Histrix Calculator",
         "introduction" : "A calculator, developed with HTML5 and jQuery, with the same functionalities that the calculator from Windows XP",
         "description" : "<p>Histrix is a JavaScript calculator with the same functionalities that the classic calculator from Windows XP / Windows Vista and it comes in two flavours: one for desktop computers and another for mobiles devices. </p>",
-        "type": "app",
+        "type": "main",
         "icon" : "img/codelab/histrix_calculator.png",
         "links" : [
             {"title" : "GitHub", "href": "https://github.com/jfmdev/histrix", "type": "first"},
@@ -125,7 +224,7 @@
         "name" : "aFileDialog",
         "introduction" : "An Android library, developed with Java, that implements a simple and easy to use file chooser",
         "description" : "<p>aFileDialog is an Android library, developed with Java, which implements a simple and easy to use file chooser.</p>",
-        "type": "other",
+        "type": "lib",
         "icon" : "img/codelab/afiledialog.png",
         "sticker" : "img/codelab/android_48.png",
         "links" : [
@@ -177,87 +276,6 @@
         ]    
     },
     {
-        "id": "ustopwatch",
-        "name" : "&mu;Stopwatch",
-        "introduction" : "A stopwatch app for Firefox OS, developed with AngularJS and OnsenUI",
-        "description" : "<p>µStopwatch is a simple stopwatch, developed as a sample application for learn how to develop HTML5 apps for Firefox OS.</p>",
-        "type": "app",
-        "icon" : "img/codelab/ustopwatch.png",
-        "category" : "Application",
-        "platform" : "Web & Mobile",
-        "tags" : ["HTML5", "JavaScript", "OnsenUI", "AngularJS", "Open Source"],
-        "links" : [
-            {"title" : "GitHub", "href": "https://github.com/jfmdev/uStopwatch", "type": "first"},
-            {"title" : "Demo (mobile)", "href": "http://jfmdev.github.io/uStopwatch/", "type": "second"},
-            {"title" : "Firefox Marketplace", "href": "https://marketplace.firefox.com/app/%C2%B5stopwatch/", "type": "third"},
-        ],
-        "techs" : [
-            {"name": "JavaScript", "type": "first"},
-            {"name": "AngularJS", "type": "first"},
-            {"name": "OnsenUI", "type": "second"}
-        ]    
-    },
-    {
-        "id": "attendance-taker",
-        "name" : "AttendanceTaker",
-        "introduction" : "A web application for take attendance using mobile devices",
-        "description" : "<p>AttendanceTaker is a web application for take attendance using mobile devices.</p>",
-        "type": "webapp",
-        "icon" : "img/codelab/lists.png",
-        "links" : [
-            {"title" : "GitHub", "href": "https://github.com/jfmdev/AttendanceTaker", "type": "first"},
-        ],
-        "techs": [
-            {"name": "PHP", "type": "first"},
-            {"name": "Slim Framework", "type": "first"},
-            {"name": "ActiveRecord", "type": "first"},
-            {"name": "JavaScript", "type": "second"},
-            {"name": "AngularJS", "type": "second"},
-            {"name": "Bootstrap", "type": "second"},
-            {"name": "PostgreSQL", "type": "third"}
-        ]
-    },
-    {
-        "id": "jsf-blackbook",
-        "name" : "jsfBlackBook",
-        "introduction" : "A sample web application, developed with Java, SQLite and Bootstrap",
-        "description" : "<p>jsfBlackBook is a sample web application (developed with Java EE and Java Server Faces) that allows user to manage a list of contacts.</p>",
-        "type": "webapp",
-        "icon" : "img/codelab/black_book.png",
-        "links" : [
-            {"title" : "GitHub", "href": "https://github.com/jfmdev/jsfBlackBook", "type": "first"}
-        ],
-        "stack": {
-            "magenta": "Bootstrap",
-            "green": "Java | JSF",
-            "blue": "SQLite"
-        },
-        "techs" : [
-            {"name": "Java", "type": "first"},
-            {"name": "JSF", "type": "first"},
-            {"name": "Bootstrap", "type": "second"},
-            {"name": "SQLite", "type": "third"}
-        ]    
-    },
-    {
-        "id": "jax-friends",
-        "name" : "jaxFriends",
-        "introduction" : "A sample RESTful web service, developed with Java, Jersey and ORMLite",
-        "description" : "<p>jaxFriends is a Contact REST API, developed as an example for learning how to develop RESTful web services using Java and JAX-RS.</p>",
-        "type": "webapp",
-        "icon" : "img/codelab/friends.png",
-        "links" : [
-            {"title" : "GitHub", "href": "https://github.com/jfmdev/jaxFriends", "type": "first"}
-        ],
-        "techs": [
-            {"name": "Java", "type": "first"},
-            {"name": "Jersey", "type": "first"},
-            {"name": "ORMLite", "type": "second"},
-            {"name": "Gson", "type": "second"},
-            {"name": "MySQL", "type": "third"}
-        ]
-    },
-    {
         "id": "sliding-puzzles",
         "name" : "Landscape Sliding Puzzles",
         "introduction" : "A game of sliding puzzles, developed with HTML5 and jQuery",
@@ -292,7 +310,7 @@
         "name" : "ngComboDatePicker",
         "introduction" : "An Angular directive for select dates with combo boxes",
         "description" : "<p>ngComboDatePicker is an Angular directive that implements date pickers using combo boxes.</p>",
-        "type": "other",
+        "type": "lib",
         "icon" : "img/codelab/calendar.png",
         "links" : [
             {"title" : "GitHub", "href": "https://github.com/jfmdev/ngComboDatePicker", "type": "first"},
@@ -308,7 +326,7 @@
         "name" : "reactComboDatePicker",
         "introduction" : "A React component for select dates with combo boxes",
         "description" : "<p>reactComboDatePicker is a React component that implements date pickers using combo boxes.</p>",
-        "type": "other",
+        "type": "lib",
         "icon" : "img/codelab/calendar_bis.png",
         "links" : [
             {"title" : "GitHub", "href": "https://github.com/jfmdev/reactComboDatePicker", "type": "first"},
@@ -325,7 +343,7 @@
         "name" : "Simple Spellchecker",
         "introduction" : " A simple and fast spellchecker for Node.js with spelling suggestions and Electron's integration ",
         "description" : "<p>Simple Spellchecker is a spellchecker module for Node.js, that allows to check if a word is misspelled and to get spelling suggestions.</p><p>It comes with dictionaries for English, Spanish, French, German and Dutch, but you can easily add more languages by simply defining a text file with a list of valid words.</p>",
-        "type": "other",
+        "type": "lib",
         "icon" : "img/codelab/spellcheck.png",
         "sticker" : "img/codelab/node_80.png",
         "links" : [
@@ -340,29 +358,11 @@
         ]
     },
     {
-        "id": "web-fonts-comparator",
-        "name" : "Web Fonts Comparator",
-        "introduction" : "A simple tool for compare web fonts",
-        "description" : "<p>Web Font Comparator is a simple tool for compare web fonts (in particular, the fonts that are considered safe for web use)</p>",
-        "type": "other",
-        "icon" : "img/codelab/font.png",
-        "links" : [
-            {"title" : "GitHub", "href": "https://github.com/jfmdev/WebFontsComparator", "type": "first"},
-            {"title" : "Demo", "href": "http://jfmdev.github.io/WebFontsComparator/", "type": "second"}
-        ],
-        "techs": [
-            {"name": "JavaScript", "type": "first"},
-            {"name": "Angular", "type": "second"},
-            {"name": "jQuery", "type": "second"},
-            {"name": "Bootstrap", "type": "third"}
-        ]
-    },
-    {
         "id": "jq-jigsaw",
         "name" : "jqJigsawPuzzle",
         "introduction" : "A jQuery plugin for create jigsaw puzzles (from images) in web pages",
         "description" : "<p>jqJigsawPuzzle is a javascript library that lets you create jigsaw puzzles in your web pages.</p>",
-        "type": "other",
+        "type": "lib",
         "icon" : "img/codelab/puzzle.png",
         "sticker" : "img/codelab/jquery_80.png",
         "links" : [
@@ -378,7 +378,7 @@
         "name" : "jqEye",
         "introduction" : "A jQuery plugin that allows to define elements that behaves as eyes that follow the mouse",
         "description" : "<p>jqEye is a jQuery plugin that allows to define a behaviour in which a HTML element moves, within the boundaries of an imaginary eye, in order to follow the mouse.</p>",
-        "type": "other",
+        "type": "lib",
         "icon" : "img/codelab/eye-open.png",
         "sticker" : "img/codelab/jquery_80.png",
         "links" : [
@@ -394,7 +394,7 @@
         "name" : "jqScrollAnim",
         "introduction" : "A jQuery plugin that allows to define animations that are triggered by the position of the vertical scroll bar",
         "description" : "<p>jqScrollAnim is a jQuery plugin that allows to define animations whose reproduction depends on the position of the vertical scroll.</p>",
-        "type": "other",
+        "type": "lib",
         "icon" : "img/codelab/one_finger_scroll.png",
         "sticker" : "img/codelab/jquery_80.png",
         "links" : [
@@ -410,7 +410,7 @@
         "name" : "jqSimpleConnect",
         "introduction" : "A jQuery plugin that allows to connect elements (from a web page) with lines",
         "description" : "<p>jqSimpleConnect is a lightweight javascript library which provides the functionality for visually connect elements in a web page. It uses &lt;div&gt; elements to draw the connectors, in order to avoid dependencies with SVG and Canvas and in order to be more fast and simple. </p>",
-        "type": "other",
+        "type": "lib",
         "icon" : "img/codelab/binary-tree.png",
         "sticker" : "img/codelab/jquery_80.png",
         "links" : [
@@ -426,7 +426,7 @@
         "name" : "Lobo plugins",
         "introduction" : "A collections of plugins for the content management system WolfCMS, developed with PHP",
         "description" : "<p>Lobo plugins is a collections of plugins for the content management system Wolf CMS.</p><p>Currently, it has three plugins: 'Robots.txt' (that allows to create and edit the file robots.txt), 'Sitemaps XML' (that allows to generate and edit the sitemap file) and 'NicEdit for Wolf' (that adds NicEdit to the list of content editors availables).</p>",
-        "type": "other",
+        "type": "misc",
         "icon" : "img/codelab/wolf.png",
         "sticker" : "img/codelab/wolfcms_48.png",
         "links" : [
@@ -443,7 +443,7 @@
         "name" : "Python-Fu samples",
         "introduction" : "A group of scripts for GIMP, whose objective is to serve as templates and code samples of scripting with Python",
         "description" : "<p>Python-Fu samples is a package that contains 12 scripts, developed using Python and GIMP 2.8, which objective is to serve as templates and as code samples to programmers that are new in Python-Fu scripting.</p>",
-        "type": "other",
+        "type": "misc",
         "icon" : "img/codelab/application-x-python.png",
         "sticker" : "img/codelab/gimp_48.png",
         "links" : [
@@ -460,7 +460,7 @@
         "name" : "Grunt vs Gulp",
         "introduction" : "A sample project that allows to compare Gulp and Grunt for executing simple tasks",
         "description" : "<p>Grunt vs Gulp is a sample project that allows to compare Gulp and Grunt for executing simple tasks.</p>",
-        "type": "other",
+        "type": "misc",
         "icon" : "img/codelab/grunt_gulp.png",
         "links" : [
             {"title" : "GitHub", "href": "https://github.com/jfmdev/grunt-vs-gulp", "type": "first"}
