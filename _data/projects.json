@@ -69,7 +69,7 @@
             {"name": "JSF", "type": "first"},
             {"name": "Bootstrap", "type": "second"},
             {"name": "SQLite", "type": "third"}
-        ]    
+        ]
     },
     {
         "id": "jax-friends",
@@ -103,7 +103,7 @@
         "techs" : [
             {"name": "JavaScript", "type": "first"},
             {"name": "D3.js", "type": "second"}
-        ]    
+        ]
     },
     {
         "id": "neon",
@@ -120,7 +120,7 @@
             {"name": "Java", "type": "first"},
             {"name": "Android", "type": "first"},
             {"name": "BoofCV", "type": "second"}
-        ]    
+        ]
     },
     {
         "id": "telelogs",
@@ -138,7 +138,7 @@
             {"name": "AngularJS", "type": "first"},
             {"name": "Foundation", "type": "second"},
             {"name": "TaffyDB", "type": "third"}
-        ]    
+        ]
     },
     {
         "id": "just-to-do",
@@ -155,7 +155,7 @@
             {"name": "Java", "type": "first"},
             {"name": "Android", "type": "first"},
             {"name": "CouchBase", "type": "third"}
-        ]    
+        ]
     },
     {
         "id": "ustopwatch",
@@ -176,7 +176,7 @@
             {"name": "JavaScript", "type": "first"},
             {"name": "AngularJS", "type": "first"},
             {"name": "OnsenUI", "type": "second"}
-        ]    
+        ]
     },
     {
         "id": "my-addressbook",
@@ -195,7 +195,7 @@
             {"name": "React", "type": "first"},
             {"name": "Bootstrap", "type": "second"},
             {"name": "PouchDB", "type": "second"}
-        ]    
+        ]
     },
     {
         "id": "histrix",
@@ -217,7 +217,7 @@
             {"name": "Apache Cordova", "type": "first"},
             {"name": "jQuery", "type": "second"},
             {"name": "jQuery Mobile", "type": "second"}
-        ]    
+        ]
     },
     {
         "id": "afiledialog",
@@ -234,7 +234,7 @@
         "techs" : [
             {"name": "Java", "type": "first"},
             {"name": "Android", "type": "second"}
-        ]    
+        ]
     },
     {
         "id": "levenshtein",
@@ -256,7 +256,24 @@
             {"name": "Apache Cordova", "type": "second"},
             {"name": "Angular", "type": "second"},
             {"name": "Bootstrap", "type": "third"}
-        ]    
+        ]
+    },
+    {
+        "id": "windup-rps",
+        "name" : "Wind-up RPS",
+        "introduction" : "A Rock Paper Scissors game in which you must defeat evil wind-up robots",
+        "description" : "<p>Wind-up Rock Paper Scissors is a HTML5 game in which you defeat a group of (not very smart) AI powered enemies.</p>",
+        "type": "game",
+        "icon" : "img/codelab/windup-rps.png",
+        "links" : [
+            {"title" : "Demo", href: "https://wind-up-rock-paper-scissors.firebaseapp.com/", "type": "second"},
+            {"title" : "Google Play", href: "https://play.google.com/store/apps/details?id=jfmdev.github.io.winduprps", "type": "third"}
+        ],
+        "techs" : [
+            {"name": "JavaScript", "type": "first"},
+            {"name": "Phaser", "type": "first"},
+            {"name": "Apache Cordova", "type": "second"}
+        ]
     },
     {
         "id": "flappy",
@@ -273,7 +290,7 @@
         "techs" : [
             {"name": "JavaScript", "type": "first"},
             {"name": "Phaser", "type": "second"}
-        ]    
+        ]
     },
     {
         "id": "sliding-puzzles",
