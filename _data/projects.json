@@ -198,6 +198,24 @@
         ]
     },
     {
+        "id": "simple-rest",
+        "name" : "Simple REST",
+        "introduction" : "A REST API sample, developed with Python / JavaScript and Flask / CherryPy / Express",
+        "description" : "<p>Simple REST is a sample web application, developed as a sample for developers which want to learn how to code REST APIs.</p>",
+        "type": "misc",
+        "icon" : "img/codelab/api.png",
+        "links" : [
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/SimpleREST", "type": "first"}
+        ],
+        "techs" : [
+            {"name": "Python", "type": "first"},
+            {"name": "JavaScript", "type": "first"},
+            {"name": "Flask", "type": "second"},
+            {"name": "CherryPy", "type": "second"},
+            {"name": "Express", "type": "second"}
+        ]
+    },
+    {
         "id": "histrix",
         "name" : "Histrix Calculator",
         "introduction" : "A calculator, developed with HTML5 and jQuery, with the same functionalities that the calculator from Windows XP",
