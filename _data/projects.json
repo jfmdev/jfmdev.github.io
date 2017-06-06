@@ -181,7 +181,7 @@
     {
         "id": "my-addressbook",
         "name" : "myAddressBook",
-        "introduction" : "A HTML5 sample app, developed with AngularJS/React, Bootstrap and PouchDB",
+        "introduction" : "A HTML5 sample app, developed with different technologies (for comparison purposes)",
         "description" : "<p>myAddressBook is an address book application, developed as a sample for developers which want to learn how to code HTML5 apps.</p>",
         "type": "misc",
         "icon" : "img/codelab/address_book.png",
@@ -200,8 +200,8 @@
     {
         "id": "simple-rest",
         "name" : "Simple REST",
-        "introduction" : "A REST API sample, developed with Python / JavaScript and Flask / CherryPy / Express",
-        "description" : "<p>Simple REST is a sample web application, developed as a sample for developers which want to learn how to code REST APIs.</p>",
+        "introduction" : "A sample RESTful web service, developed with different technologies (for comparison purposes)",
+        "description" : "<p>Simple REST is a web application, developed as a sample for developers which want to learn how to code REST APIs.</p>",
         "type": "misc",
         "icon" : "img/codelab/api.png",
         "links" : [
@@ -212,6 +212,7 @@
             {"name": "JavaScript", "type": "first"},
             {"name": "Flask", "type": "second"},
             {"name": "CherryPy", "type": "second"},
+            {"name": "NodeJS", "type": "second"},
             {"name": "Express", "type": "second"}
         ]
     },
