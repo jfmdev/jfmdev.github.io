@@ -1,5 +1,24 @@
 [
     {
+        "id": "plaincat",
+        "name" : "PlainCAT",
+        "introduction" : "A simple Computer Assisted Translation tool for translate plain text files",
+        "description" : "<p>PlainCAT is a simple Computer Assisted Translation tool for translate plain text files, with help of automatic translation services.</p>",
+        "type": "main",
+        "icon" : "img/codelab/plaincat.png",
+        "links" : [
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/PlainCAT", "type": "first"},
+        ],
+        "techs": [
+            {"name": "Electron", "type": "first"},
+            {"name": "NodeJS", "type": "first"},
+            {"name": "JavaScript", "type": "second"},
+            {"name": "AngularJS", "type": "second"},
+            {"name": "jQuery", "type": "second"},
+            {"name": "Bootstrap", "type": "second"}
+        ]
+    },
+    {
         "id": "attendance-taker",
         "name" : "AttendanceTaker",
         "introduction" : "A web application for take attendance using mobile devices",
