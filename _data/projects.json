@@ -54,7 +54,7 @@
         "id": "web-fonts-comparator",
         "name" : "Web Fonts Comparator",
         "introduction" : "A simple tool for compare web fonts",
-        "description" : "<p>Web Font Comparator is a simple tool for compare web fonts (in particular, the fonts that are considered safe for web use)</p>",
+        "description" : "<p>Web Font Comparator is a simple PWA for compare web fonts (in particular, the fonts that are considered safe for web use)</p>",
         "type": "misc",
         "icon" : "img/codelab/font.png",
         "links" : [
@@ -65,7 +65,8 @@
             {"name": "JavaScript", "type": "first"},
             {"name": "Angular", "type": "second"},
             {"name": "jQuery", "type": "second"},
-            {"name": "Bootstrap", "type": "third"}
+            {"name": "Bootstrap", "type": "third"},
+            {"name": "PWA", "type": "third"}
         ]
     },
     {
