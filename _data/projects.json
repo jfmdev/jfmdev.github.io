@@ -1,5 +1,23 @@
 [
     {
+        "id": "body-fat-calc",
+        "name" : "Body Fat Calculator",
+        "introduction" : "A simple PWA for body fat calculation",
+        "description" : "<p>Body Fat Calculator is a simple Progressive Web App for calculate (or more precisely, estimate) the body fat percentage of bodies.</p>",
+        "type": "main",
+        "icon" : "img/codelab/body-fat-calc.png",
+        "links" : [
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/body-fat-calc", "type": "first"},
+        ],
+        "techs": [
+            {"name": "Vue", "type": "first"},
+            {"name": "Vuex", "type": "first"},
+            {"name": "JavaScript", "type": "second"},
+            {"name": "Bootstrap", "type": "second"},
+            {"name": "PWA", "type": "third"}
+        ]
+    },
+    {
         "id": "plaincat",
         "name" : "PlainCAT",
         "introduction" : "A simple Computer Assisted Translation tool for translate plain text files",
@@ -189,8 +207,7 @@
         "tags" : ["HTML5", "JavaScript", "OnsenUI", "AngularJS", "Open Source"],
         "links" : [
             {"title" : "GitHub", "href": "https://github.com/jfmdev/uStopwatch", "type": "first"},
-            {"title" : "Demo (mobile)", "href": "http://jfmdev.github.io/uStopwatch/", "type": "second"},
-            {"title" : "Firefox Marketplace", "href": "https://marketplace.firefox.com/app/%C2%B5stopwatch/", "type": "third"},
+            {"title" : "Demo (mobile)", "href": "http://jfmdev.github.io/uStopwatch/", "type": "second"}
         ],
         "techs" : [
             {"name": "JavaScript", "type": "first"},
@@ -248,8 +265,7 @@
             {"title" : "Demo (mobile)", "href": "https://googledrive.com/host/0B4_1sNUgxqKBbFlXOEVfQi11bFE/index.html", "type": "second"},
             {"title" : "Demo (desktop)", "href": "https://googledrive.com/host/0B4_1sNUgxqKBZkVOWTkyTWJaUHM/index.html", "type": "second"},
             {"title" : "Google Play", "href": "https://play.google.com/store/apps/details?id=ar.com.daidalos.histrix", "type": "third"},
-            {"title" : "Chrome Web Store", "href": "https://chrome.google.com/webstore/detail/histrix-calculator/lgdfflejppjaglpjmkigldlpmkhfppcc", "type": "third"},
-            {"title" : "Firefox Marketplace", "href": "https://marketplace.firefox.com/app/histrix-calculator/", "type": "third"}
+            {"title" : "Chrome Web Store", "href": "https://chrome.google.com/webstore/detail/histrix-calculator/lgdfflejppjaglpjmkigldlpmkhfppcc", "type": "third"}
         ],
         "techs" : [
             {"name": "JavaScript", "type": "first"},
@@ -283,12 +299,11 @@
         "type": "game",
         "icon" : "img/codelab/levenshtein.png",
         "links" : [
-            {"title" : "GitHub", href: "https://github.com/jfmdev/Levenshtein", "type": "first"},
-            {"title" : "Demo", href: "http://jfmdev.github.io/Levenshtein/", "type": "second"},
-            {"title" : "Google Play", href: "https://play.google.com/store/apps/details?id=levenshtein.jfmdev.github.io", "type": "third"},
-            {"title" : "Chrome Web Store", href: "https://chrome.google.com/webstore/detail/levenshtein-challenge/efblchkhkmngnhljaajncidplenjllmd", "type": "third"},
-            {"title" : "Amazon", href: "http://www.amazon.com/KudaLab-Levenshtein-Challenge/dp/B017H6D6O6/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1446541024&sr=1-1&keywords=levenshtein+challenge", "type": "third"},
-            {"title" : "Firefox Marketplace", href: "https://marketplace.firefox.com/app/levenshteinchallenge/", "type": "third"},
+            {"title" : "GitHub", "href": "https://github.com/jfmdev/Levenshtein", "type": "first"},
+            {"title" : "Demo", "href": "http://jfmdev.github.io/Levenshtein/", "type": "second"},
+            {"title" : "Google Play", "href": "https://play.google.com/store/apps/details?id=levenshtein.jfmdev.github.io", "type": "third"},
+            {"title" : "Chrome Web Store", "href": "https://chrome.google.com/webstore/detail/levenshtein-challenge/efblchkhkmngnhljaajncidplenjllmd", "type": "third"},
+            {"title" : "Amazon", "href": "http://www.amazon.com/KudaLab-Levenshtein-Challenge/dp/B017H6D6O6/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1446541024&sr=1-1&keywords=levenshtein+challenge", "type": "third"}
         ],
         "techs" : [
             {"name": "JavaScript", "type": "first"},
@@ -305,8 +320,8 @@
         "type": "game",
         "icon" : "img/codelab/windup-rps.png",
         "links" : [
-            {"title" : "Demo", href: "https://wind-up-rock-paper-scissors.firebaseapp.com/", "type": "second"},
-            {"title" : "Google Play", href: "https://play.google.com/store/apps/details?id=jfmdev.github.io.winduprps", "type": "third"}
+            {"title" : "Demo", "href": "https://wind-up-rock-paper-scissors.firebaseapp.com/", "type": "second"},
+            {"title" : "Google Play", "href": "https://play.google.com/store/apps/details?id=jfmdev.github.io.winduprps", "type": "third"}
         ],
         "techs" : [
             {"name": "JavaScript", "type": "first"},
