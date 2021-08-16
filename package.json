@@ -1,0 +1,26 @@
+{
+  "name": "jfmdev.github.io",
+  "version": "2.0.0",
+  "description": "Simple personal portfolio site",
+  "main": "index.html",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ejs": "^3.1.6"
+  },
+  "scripts": {
+    "compile": "ejs ./src/index.ejs -f src/data.json -o ./index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfmdev/jfmdev.github.io.git"
+  },
+  "author": "JFMDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jfmdev/jfmdev.github.io/issues"
+  },
+  "homepage": "https://github.com/jfmdev/jfmdev.github.io#readme"
+}

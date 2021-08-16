@@ -1,206 +1,1658 @@
----
-layout: default
-title: JFMDev
-subtitle: Web developer and code warrior
-caption: Personal code lab of web, mobile and open source software
-googleAnalyticsCode: UA-49400910-2
-categories:
-  - name: Applications
-    type: main
-    class: blue
-  - name: Libraries and plugins
-    type: lib
-    class: green
-  - name: Games
-    type: game
-    class: magenta
-  - name: Miscellaneous
-    type: misc
-    class: cyan
----
+<!DOCTYPE html>
+<html>
 
-<script type="text/javascript">
-	$(document).ready(function() {
-		var myBubbles = [];
-	
-		// Show details bubble when clicking a project.
-		$("#proyectos div.row a").click(function() {
-			// Get project's id and href.
-			var href = $(this).attr("href");
-			var id = $(this).attr("data-id");
-			
-			// Verify which type of link is.
-			if(href == "#") {
-				// It's a link for show or hide a bubble. Get project's id.
-				var id = $(this).attr("data-id");
-			
-				// Verify if the bubble is not already being displayed.
-				if(myBubbles.length == 0 || myBubbles[0] != id) {
-					// Hide previous bubbles.
-					for(var i=0; i<myBubbles.length; i++) {
-						$("#bubble-"+myBubbles[i]).fadeOut();
-					}
-					myBubbles = [];
-					
-					// Verify if the id is valid.
-					if(id != null) {
-						// Calculate vertical position of bubble.
-						var frameHeight = $("#frame-" + id).height();
-						var bubbleHeight = $("#bubble-" + id).height();
-						$("#bubble-"+id).css('top', (frameHeight - bubbleHeight + 25)/2 + 'px');
-						
-						// Show bubble.
-						myBubbles.push(id);
-						$("#bubble-"+id).fadeIn();
-					
-						// Report event to google analytics.
-						ga('send', 'event', 'link', 'dialog', id, 1);
-					}
-				}
-				
-				return false;
-			} else {
-				// It's a regular link.
-				return true;
-			}
-		});
-	});
-</script>
+  <head>
+    <title>JFMDev</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta name="robots" content="noindex,nofollow">
 
-<div id="intro">
-	<div class="row">
-		<div class="logo col-sm-6">
-			<h1><a name="top">
-				<img src="img/kuda.png" alt="" title="{{ page.title }} - {{ page.subtitle }}"/>
-				{{ page.title }}
-			</a></h1>
-		</div>
-		<div class="profiles col-sm-6">
-			<a href="https://www.toptal.com/resume/jose-f-maldonado" title="Hire JFMDev at Toptal" target="_blank">
-				<img src="img/links/toptal_48.png" class="iconito" alt=""/>
-			</a>
-			<a href="https://github.com/jfmdev" title="JFMDev at GitHub" target="_blank">
-				<img src="img/links/github_48_white.png" class="iconito" alt=""/>
-			</a>
-			<a href="https://play.google.com/store/apps/developer?id=KudaLab" title="JFMDev at Google Play" target="_blank">
-				<img src="img/links/google_play_48.png" class="iconito" alt=""/>
-			</a>
-			<a href="http://www.amazon.com/s/ref=bl_sr_mobile-apps/182-9019147-6851629?_encoding=UTF8&field-brandtextbin=KudaLab&node=2350149011" title="JFMDev at Amazon" target="_blank">
-				<img src="img/links/amazon_48_white.png" class="iconito" alt=""/>
-			</a>
-			<a href="https://vimeo.com/user27819004" title="JFMDev at Vimeo" target="_blank">
-				<img src="img/links/vimeo_48.png" class="iconito" alt=""/>
-			</a>
-		</div>
-	</div>
-	<div class="slogan">{{ page.caption }}</div>
-	<div class="navigation-tip">
-		Scroll down
-		<br/>to continue
-		<br><img src="img/down-arrow.png" alt="" style="margin-top:5px;"/>
-	</div>
-</div>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap-5.1.0/bootstrap.min.css">
 
-<div id="menu_container" style="z-index:40">
-	<div id="main_menu" class="menu_simple">
-		<ul>
-		   <li><a href="#top">Top</a></li>
-		   <li><a href="#mains">Apps</a></li>
-		   <li><a href="#libs">Libraries</a></li>
-		   <li><a href="#games">Games</a></li>
-		   <li><a href="#miscs">Others</a></li>
-		   <li><a href="#contact">Contact</a></li>
-		</ul>
-	</div>
-</div>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="lib/fontawesome-free-5.15.4/css/all.min.css">
 
-<br/>
+    <!-- App -->
+    <link rel="stylesheet" href="css/main.css">
 
-<div id="proyectos">
-	{% for category in page.categories %}
-		<h2><a name="{{ category.type }}s">{{ category.name }}</a></h2>
-		
-		<br/>
-		
-		<div class="row">
-			{% for proj in site.data.projects %}
-				{% if proj.type == category.type %}					
-					<div class="col-lg-3 col-md-4 col-sm-6">
-						<div class="frame {{ category.class }}" id="frame-{{ proj.id }}">
-							<a href="#" data-id="{{ proj.id }}">
-								<div class="content">
-									<div class="title">
-										<strong>{{ proj.name }}</strong>
-									</div>
-									<div class="body">
-										<div class="icon">
-											<img src="{{ proj.icon }}" alt="" title="{{ proj.name }} - {{ proj.introduction }}"/>
-											{% if proj.sticker != null %}
-												<img src="{{ proj.sticker }}" class="sticker" alt=""/>
-											{% endif %}
-										</div>
-										<div class="description">
-											{{ proj.introduction }}
-										</div>
-									</div>
-									<div class="more">
-										+ more info
-									</div>
-								</div>
-							</a>
-							
-							<div id="bubble-{{ proj.id }}" class="bubble">
-								<a href="#" class="close_button">X</a>
-								<div class="name">{{ proj.name }}</div>
-								<div class="text">{{ proj.description }}</div>
-								
-								{% if proj.techs != null %}
-									<div class="techs">
-										<strong>Technologies</strong><br/>
-										{% for tech in proj.techs %}
-											<span class="label {{ tech.type }}">{{ tech.name }}</span> 
-										{% endfor %}
-									</div>
-								{% endif %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-49400910-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-								{% if proj.links != null %}
-									<div class="links">
-										<strong>Links</strong><br/>
-										{% for link in proj.links %}
-											<span class="label {{ link.type }}"><a href="{{ link.href }}" target="_blank">
-											{% for icon in site.data.linkIcons %}
-												{% if icon[0] == link.title %}
-													<img src="{{ icon[1] }}" class="iconito" alt=""/>
-												{% endif %}
-											{% endfor %}
-											{{ link.title }}</a></span>  
-										{% endfor %}
-									</div>
-								{% endif %}
-							
-								<div class="close_text"><a href="#">Close</a></div>
-							</div>
-						</div>
-					</div>
-				{% endif %}			
-			{% endfor %}
-		</div>
-	{% endfor %}
-</div>
-	
-<br/>
+      gtag('config', 'UA-49400910-2');
+    </script>
+  </head>
 
-<div id="contacto" class="green_back">
-	<div class="border_bottom"></div>
-	
-	<a name="contact">&nbsp;</a>
-	
-	<br/>
-	
-	<iframe height="380" allowTransparency="true" frameborder="0" scrolling="no" src="https://kudalab.wufoo.com/embed/zg46l3l0zvmmrs/">
-		<p class="nice">If you have any doubt about a project or you need a developer, do not hesitate in 
-		<a href="https://kudalab.wufoo.com/forms/zg46l3l0zvmmrs/" title="JFMDev - Contact">send a message.</a><p/>
-	</iframe>
+  <body>
 
-	<br/> &nbsp;
-</div>	
+    <!-- Intro -->
+
+    <div class="back-leafs position-relative">
+      <header class="pt-2 text-end">
+        
+          <a
+            class="mx-2"
+            target="_blank"
+            href="https://www.toptal.com/resume/jose-f-maldonado"
+            title="Hire JFMDev at Toptal"
+          ><img src="img/links/toptal_48.png" alt="TT"/></a>
+        
+          <a
+            class="mx-2"
+            target="_blank"
+            href="https://github.com/jfmdev"
+            title="JFMDev at GitHub"
+          ><img src="img/links/github_48_white.png" alt="GH"/></a>
+        
+          <a
+            class="mx-2"
+            target="_blank"
+            href="https://play.google.com/store/apps/developer?id=KudaLab"
+            title="JFMDev at Google Play"
+          ><img src="img/links/google_play_48.png" alt="GP"/></a>
+        
+          <a
+            class="mx-2"
+            target="_blank"
+            href="http://www.amazon.com/s/ref=bl_sr_mobile-apps/182-9019147-6851629?_encoding=UTF8&amp;field-brandtextbin=KudaLab&amp;node=2350149011"
+            title="Hire JFMDev at Amazon"
+          ><img src="img/links/amazon_48_white.png" alt="AM"/></a>
+        
+          <a
+            class="mx-2"
+            target="_blank"
+            href="https://vimeo.com/user27819004"
+            title="JFMDev at Vimeo"
+          ><img src="img/links/vimeo_48.png" alt="VI"/></a>
+        
+      </header>
+
+      <div class="text-white text-center mt-5">
+        <h1 class="fs-0">JFMDev</h1>
+        <div class="fs-3 font-monospace">Freelancer developer &amp; Code warrior</div>
+      </div>
+
+      <div class="position-absolute bottom-0 start-0 text-center pb-2 px-3">
+        <div class="font-cursive fs-5 text-white">Scroll down<br>to continue</div>
+        <img src="img/down-arrow.png" alt="DOWN" class="mt-2"/>
+      </div>
+    </div>
+
+    <!-- Projects -->
+
+    <div class="container">
+
+      
+        <h2 class="my-4" id="main">Applications</h2>
+      
+        <div class="row">
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #eef;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/body-fat-calc.png"
+                          title="Body Fat Calculator"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="body-fat-calc">Body Fat Calculator</h5>
+                        <p class="card-text">A simple Progressive Web App for calculate (or more precisely, estimate) the body fat percentage of bodies.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">Vue</span>
+                      
+                        <span class="badge rounded-pill bg-success">Bootstrap</span>
+                      
+                        <span class="badge rounded-pill bg-primary">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">CSS</span>
+                      
+                        <span class="badge rounded-pill bg-secondary">PWA</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://jfmdev.github.io/body-fat-calc/"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fas fa-play-circle mx-2" aria-hidden="true"></i>Demo</a>
+                      
+                      <a
+                        href="https://github.com/jfmdev/body-fat-calc"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #eef;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/plaincat.png"
+                          title="PlainCAT"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="plaincat">PlainCAT</h5>
+                        <p class="card-text">A simple Computer Assisted Translation tool for translate plain text files, with help of automatic translation services.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">Electron</span>
+                      
+                        <span class="badge rounded-pill bg-success">NodeJS</span>
+                      
+                        <span class="badge rounded-pill bg-primary">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">AngularJS</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Bootstrap</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://github.com/jfmdev/PlainCAT"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #eef;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/lists.png"
+                          title="AttendanceTaker"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="attendance-taker">AttendanceTaker</h5>
+                        <p class="card-text">A web application for take attendance using mobile devices.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">PHP</span>
+                      
+                        <span class="badge rounded-pill bg-success">Slim Framework</span>
+                      
+                        <span class="badge rounded-pill bg-success">ActiveRecord</span>
+                      
+                        <span class="badge rounded-pill bg-primary">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">AngularJS</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Bootstrap</span>
+                      
+                        <span class="badge rounded-pill bg-secondary">PostgreSQL</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://github.com/jfmdev/AttendanceTaker"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #eef;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/neon_camera.png"
+                          title="NeonCamera"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="neon">NeonCamera</h5>
+                        <p class="card-text">An Android app that allows you to take pictures as if the world were made of neon lights.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">Java</span>
+                      
+                        <span class="badge rounded-pill bg-success">Android</span>
+                      
+                        <span class="badge rounded-pill bg-primary">BoofCV</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://play.google.com/store/apps/details?id=ar.com.jfmdev.neoncamera"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-google-play mx-2" aria-hidden="true"></i>Google Play</a>
+                      
+                      <a
+                        href="http://www.amazon.com/KudaLab-NeonCamera/dp/B00UXKG8WG/ref=sr_1_1?ie=UTF8&amp;qid=1426841509&amp;sr=8-1&amp;keywords=neoncamera"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-amazon mx-2" aria-hidden="true"></i>Amazon</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #eef;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/call_logs.png"
+                          title="TelemarketingLogs"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="telelogs">TelemarketingLogs</h5>
+                        <p class="card-text">A simple telemarketing HTML5 application, that allows to keep track of the calls that you made to your clients or contacts.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-success">AngularJS</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Foundation</span>
+                      
+                        <span class="badge rounded-pill bg-secondary">TaffyDB</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="http://jfmdev.github.io/TelemarketingLogs/"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fas fa-play-circle mx-2" aria-hidden="true"></i>Demo</a>
+                      
+                      <a
+                        href="https://github.com/jfmdev/TelemarketingLogs"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #eef;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/just_to_do.png"
+                          title="Just To Do"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="just-to-do">Just To Do</h5>
+                        <p class="card-text">An easy and simple way of use and manage to do lists. Just write it and then do it!</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">Java</span>
+                      
+                        <span class="badge rounded-pill bg-success">Android</span>
+                      
+                        <span class="badge rounded-pill bg-secondary">CouchBase</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://play.google.com/store/apps/details?id=ar.com.jfmdev.justtodo"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-google-play mx-2" aria-hidden="true"></i>Google Play</a>
+                      
+                      <a
+                        href="http://www.amazon.com/KudaLab-Just-To-Do/dp/B00UXL1GCW/ref=sr_1_1?ie=UTF8&amp;qid=1426841575&amp;sr=8-1&amp;keywords=justtodo"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-amazon mx-2" aria-hidden="true"></i>Amazon</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #eef;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/histrix_calculator.png"
+                          title="Histrix Calculator"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="histrix">Histrix Calculator</h5>
+                        <p class="card-text">A JavaScript calculator with the same functionalities that the classic calculator from Windows XP / Windows Vista.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-success">Apache Cordova</span>
+                      
+                        <span class="badge rounded-pill bg-primary">jQuery</span>
+                      
+                        <span class="badge rounded-pill bg-primary">jQuery Mobile</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://jfmdev.github.io/histrix/mobile/index.html"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fas fa-mobile-alt mx-2" aria-hidden="true"></i>Demo (mobile)</a>
+                      
+                      <a
+                        href="https://jfmdev.github.io/histrix/desktop/index.html"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fas fa-play-circle mx-2" aria-hidden="true"></i>Demo (desktop)</a>
+                      
+                      <a
+                        href="https://play.google.com/store/apps/details?id=ar.com.daidalos.histrix"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-google-play mx-2" aria-hidden="true"></i>Google Play</a>
+                      
+                      <a
+                        href="https://chrome.google.com/webstore/detail/histrix-calculator/lgdfflejppjaglpjmkigldlpmkhfppcc"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-chrome mx-2" aria-hidden="true"></i>Chrome Web Store</a>
+                      
+                      <a
+                        href="https://github.com/jfmdev/histrix"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+        <h2 class="my-4" id="lib">Libraries and plugins</h2>
+      
+        <div class="row">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #eff;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/savage.png"
+                          title="SaVaGe"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="savage">SaVaGe</h5>
+                        <p class="card-text">A library of web widgets implemented with SVG, using D3.js.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">D3.js</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="http://jfmdev.github.io/SaVaGe/"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fas fa-play-circle mx-2" aria-hidden="true"></i>Demo</a>
+                      
+                      <a
+                        href="https://github.com/jfmdev/SaVaGe"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #eff;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/afiledialog.png"
+                          title="aFileDialog"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="afiledialog">aFileDialog</h5>
+                        <p class="card-text">An Android library, developed with Java, which implements a simple and easy to use file chooser.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">Java</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Android</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://play.google.com/store/apps/details?id=ar.com.daidalos.afiledialog.test"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-google-play mx-2" aria-hidden="true"></i>Google Play</a>
+                      
+                      <a
+                        href="https://github.com/jfmdev/afiledialog"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #eff;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/calendar.png"
+                          title="ngComboDatePicker"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="ng-combo-date-picker">ngComboDatePicker</h5>
+                        <p class="card-text">An AngularJS directive that implements date pickers using combo boxes.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">AngularJS</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="http://jfmdev.github.io/ngComboDatePicker/"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fas fa-play-circle mx-2" aria-hidden="true"></i>Demo</a>
+                      
+                      <a
+                        href="https://github.com/jfmdev/ngComboDatePicker"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #eff;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/calendar_bis.png"
+                          title="reactComboDatePicker"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="react-combo-date-picker">reactComboDatePicker</h5>
+                        <p class="card-text">A React component that implements date pickers using combo boxes.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">React</span>
+                      
+                        <span class="badge rounded-pill bg-secondary">ES6</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="http://jfmdev.github.io/reactComboDatePicker/"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fas fa-play-circle mx-2" aria-hidden="true"></i>Demo</a>
+                      
+                      <a
+                        href="https://github.com/jfmdev/reactComboDatePicker"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #eff;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/spellcheck.png"
+                          title="Simple Spellchecker"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="simple-spellchecker">Simple Spellchecker</h5>
+                        <p class="card-text">A spellchecker module for Node.js, that allows to check if a word is misspelled and to get spelling suggestions.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Node.js</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Electron</span>
+                      
+                        <span class="badge rounded-pill bg-secondary">Mocha</span>
+                      
+                        <span class="badge rounded-pill bg-secondary">Chai</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://github.com/jfmdev/simple-spellchecker"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #eff;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/puzzle.png"
+                          title="jqJigsawPuzzle"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="jq-jigsaw">jqJigsawPuzzle</h5>
+                        <p class="card-text">A javascript library that lets you create jigsaw puzzles in your web pages.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">jQuery</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://github.com/jfmdev/jqJigsawPuzzle"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #eff;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/eye-open.png"
+                          title="jqEye"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="jq-eye">jqEye</h5>
+                        <p class="card-text">A jQuery plugin that allows to define a behaviour in which a HTML element moves, within the boundaries of an imaginary eye, in order to follow the mouse.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">jQuery</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://github.com/jfmdev/jqEye"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #eff;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/one_finger_scroll.png"
+                          title="jqScrollAnim"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="jq-scrollanim">jqScrollAnim</h5>
+                        <p class="card-text">A jQuery plugin that allows to define animations whose reproduction depends on the position of the vertical scroll.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-success">jQuery</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://github.com/jfmdev/jqScrollAnim"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #eff;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/binary-tree.png"
+                          title="jqSimpleConnect"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="jq-simpleconnect">jqSimpleConnect</h5>
+                        <p class="card-text">A lightweight javascript library which provides the functionality for visually connect elements in a web page.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">jQuery</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://github.com/jfmdev/jqSimpleConnect"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+        <h2 class="my-4" id="game">Games</h2>
+      
+        <div class="row">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #f0fff0;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/levenshtein.png"
+                          title="Levenshtein Challenge"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="levenshtein">Levenshtein Challenge</h5>
+                        <p class="card-text">A HTML5 game in which you must calculate the edit distance between two words. The more you guess, more points you get!</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Apache Cordova</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Angular</span>
+                      
+                        <span class="badge rounded-pill bg-secondary">Bootstrap</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="http://jfmdev.github.io/Levenshtein/"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fas fa-play-circle mx-2" aria-hidden="true"></i>Demo</a>
+                      
+                      <a
+                        href="https://play.google.com/store/apps/details?id=levenshtein.jfmdev.github.io"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-google-play mx-2" aria-hidden="true"></i>Google Play</a>
+                      
+                      <a
+                        href="http://www.amazon.com/KudaLab-Levenshtein-Challenge/dp/B017H6D6O6/ref=sr_1_1?s=mobile-apps&amp;ie=UTF8&amp;qid=1446541024&amp;sr=1-1&amp;keywords=levenshtein+challenge"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-amazon mx-2" aria-hidden="true"></i>Amazon</a>
+                      
+                      <a
+                        href="https://chrome.google.com/webstore/detail/levenshtein-challenge/efblchkhkmngnhljaajncidplenjllmd"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-chrome mx-2" aria-hidden="true"></i>Chrome Web Store</a>
+                      
+                      <a
+                        href="https://github.com/jfmdev/Levenshtein"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #f0fff0;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/windup-rps.png"
+                          title="Wind-up RPS"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="windup-rps">Wind-up RPS</h5>
+                        <p class="card-text">A HTML5 game in which you defeat a group of (not very smart) AI powered enemies.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-success">Phaser</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Apache Cordova</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://wind-up-rock-paper-scissors.firebaseapp.com/"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fas fa-play-circle mx-2" aria-hidden="true"></i>Demo</a>
+                      
+                      <a
+                        href="https://play.google.com/store/apps/details?id=jfmdev.github.io.winduprps"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-google-play mx-2" aria-hidden="true"></i>Google Play</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #f0fff0;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/flappy_clone.png"
+                          title="Flappy Clone"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="flappy">Flappy Clone</h5>
+                        <p class="card-text">A copy of the classic Flappy Bird game, decorated with an Star Wars theme.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Phaser</span>
+                      
+                        <span class="badge rounded-pill bg-secondary">HTML5</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://chrome.google.com/webstore/detail/flappy-clone/epmgkgpllfpninngnlbhccijogfaihgm"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-chrome mx-2" aria-hidden="true"></i>Chrome Web Store</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #f0fff0;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/sliding_puzzles.png"
+                          title="Landscape Sliding Puzzles"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="sliding-puzzles">Landscape Sliding Puzzles</h5>
+                        <p class="card-text">A classic sliding puzzle game. You can play using a selection of beautiful landscapes or using images from your computer.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">jQuery</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://chrome.google.com/webstore/detail/landscape-sliding-puzzles/beifpgdjlnpfinmngokhdjmpokbeacfi"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-chrome mx-2" aria-hidden="true"></i>Chrome Web Store</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #f0fff0;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/jigsaw_puzzles.png"
+                          title="Landscape Jigsaw Puzzles"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="jigsaw-puzzles">Landscape Jigsaw Puzzles</h5>
+                        <p class="card-text">A classic jigsaw puzzle game. You can play using a selection of beautiful landscapes or using images from your computer.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">jQuery</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://chrome.google.com/webstore/detail/landscape-jigsaw-puzzles/lpkjfbacnmennednnkmlfahhoiefeaif"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-chrome mx-2" aria-hidden="true"></i>Chrome Web Store</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+        <h2 class="my-4" id="misc">Miscellaneous</h2>
+      
+        <div class="row">
+          
+            
+          
+            
+          
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #f6f6f6;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/turingfonts.png"
+                          title="TuringFonts"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="turing">TuringFonts</h5>
+                        <p class="card-text">A simple technique for generate content (for websites or PDF files) that can&#39;t we crawled by bots or copied using the clipboard.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="http://jfmdev.github.io/TuringFonts/"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fas fa-play-circle mx-2" aria-hidden="true"></i>Demo</a>
+                      
+                      <a
+                        href="https://github.com/jfmdev/TuringFonts"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #f6f6f6;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/font.png"
+                          title="Web Fonts Comparator"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="web-fonts-comparator">Web Fonts Comparator</h5>
+                        <p class="card-text">A simple PWA for compare web fonts (in particular, the fonts that are considered safe for web use).</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Angular</span>
+                      
+                        <span class="badge rounded-pill bg-primary">jQuery</span>
+                      
+                        <span class="badge rounded-pill bg-secondary">Bootstrap</span>
+                      
+                        <span class="badge rounded-pill bg-secondary">PWA</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="http://jfmdev.github.io/WebFontsComparator/"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fas fa-play-circle mx-2" aria-hidden="true"></i>Demo</a>
+                      
+                      <a
+                        href="https://github.com/jfmdev/WebFontsComparator"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #f6f6f6;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/black_book.png"
+                          title="jsfBlackBook"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="jsf-blackbook">jsfBlackBook</h5>
+                        <p class="card-text">A sample web application (developed with Java EE and Java Server Faces) that allows user to manage a list of contacts.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">Java</span>
+                      
+                        <span class="badge rounded-pill bg-success">JSF</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Bootstrap</span>
+                      
+                        <span class="badge rounded-pill bg-secondary">SQLite</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://github.com/jfmdev/jsfBlackBook"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #f6f6f6;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/friends.png"
+                          title="jaxFriends"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="jax-friends">jaxFriends</h5>
+                        <p class="card-text">A Contact REST API, developed as an example for learning how to develop RESTful web services using Java and JAX-RS.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">Java</span>
+                      
+                        <span class="badge rounded-pill bg-success">Jersey</span>
+                      
+                        <span class="badge rounded-pill bg-primary">ORMLite</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Gson</span>
+                      
+                        <span class="badge rounded-pill bg-secondary">MySQL</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://github.com/jfmdev/jaxFriends"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #f6f6f6;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/ustopwatch.png"
+                          title="μStopwatch"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="ustopwatch">μStopwatch</h5>
+                        <p class="card-text">A simple stopwatch, developed as a sample application for learn how to develop HTML5 apps for Firefox OS.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-success">AngularJS</span>
+                      
+                        <span class="badge rounded-pill bg-primary">OnsenUI</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="http://jfmdev.github.io/uStopwatch/"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fas fa-play-circle mx-2" aria-hidden="true"></i>Demo</a>
+                      
+                      <a
+                        href="https://github.com/jfmdev/uStopwatch"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #f6f6f6;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/address_book.png"
+                          title="myAddressBook"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="my-addressbook">myAddressBook</h5>
+                        <p class="card-text">An address book application, developed as a sample for developers which want to learn how to code HTML5 apps.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-success">AngularJS</span>
+                      
+                        <span class="badge rounded-pill bg-success">React</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Bootstrap</span>
+                      
+                        <span class="badge rounded-pill bg-primary">PouchDB</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="http://jfmdev.github.io/myAddressBook/"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fas fa-play-circle mx-2" aria-hidden="true"></i>Demo</a>
+                      
+                      <a
+                        href="https://github.com/jfmdev/myAddressBook"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #f6f6f6;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/api.png"
+                          title="Simple REST"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="simple-rest">Simple REST</h5>
+                        <p class="card-text">A web application, developed as a sample for developers which want to learn how to code REST APIs.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">Python</span>
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Flask</span>
+                      
+                        <span class="badge rounded-pill bg-primary">CherryPy</span>
+                      
+                        <span class="badge rounded-pill bg-primary">NodeJS</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Express</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://github.com/jfmdev/SimpleREST"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #f6f6f6;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/wolf.png"
+                          title="Lobo plugins"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="lobo-plugins">Lobo plugins</h5>
+                        <p class="card-text">A collections of plugins for the content management system Wolf CMS (&#39;Robots.txt&#39;, &#39;Sitemaps XML&#39; and &#39;NicEdit for Wolf&#39;).</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">PHP</span>
+                      
+                        <span class="badge rounded-pill bg-primary">NicEdit</span>
+                      
+                        <span class="badge rounded-pill bg-secondary">XML</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://github.com/jfmdev/LoboPlugins"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #f6f6f6;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/application-x-python.png"
+                          title="Python-Fu samples"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="python-fu">Python-Fu samples</h5>
+                        <p class="card-text">A package that contains 12 scripts, developed using Python and GIMP 2.8, to serve as code samples of Python-Fu scripting.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">Python</span>
+                      
+                        <span class="badge rounded-pill bg-primary">GIMP</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://github.com/jfmdev/PythonFuSamples"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+            
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #f6f6f6;">
+                  <div class="card-body py-2 px-0">
+                    <div class="d-flex align-items-center px-2">
+                      <div class="pe-3">
+                        <img
+                          src="img/codelab/grunt_gulp.png"
+                          title="Grunt vs Gulp"
+                          alt="" />
+                      </div>
+                      <div class="align-items-center">
+                        <h5 class="card-title fw-bold" id="grunt-vs-gulp">Grunt vs Gulp</h5>
+                        <p class="card-text">A sample project that allows to compare Gulp and Grunt for executing simple tasks.</p>
+                      </div>
+                    </div>
+                    <div class="mt-2 text-center font-monospace">
+                      
+                        <span class="badge rounded-pill bg-success">JavaScript</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Grunt</span>
+                      
+                        <span class="badge rounded-pill bg-primary">Gulp</span>
+                      
+                    </div>
+                    <div class="mt-2 text-center font-monospace-alt">
+                      
+                      <a
+                        href="https://github.com/jfmdev/grunt-vs-gulp"
+                        class="link-dark text-decoration-none text-nowrap"
+                        target="_blank"
+                      ><i class="fab fa-github mx-2" aria-hidden="true"></i>GitHub</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          
+        </div>
+      
+
+  </body>
+</html>
