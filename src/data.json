@@ -35,25 +35,86 @@
     {
       "name":"Applications",
       "type":"main",
-      "backColor": "#eef"
+      "backColor":"#eef"
     },
     {
       "name":"Libraries and plugins",
       "type":"lib",
-      "backColor": "#eff"
+      "backColor":"#eff"
     },
     {
       "name":"Games",
       "type":"game",
-      "backColor": "#f0fff0"
+      "backColor":"#f0fff0"
     },
     {
       "name":"Miscellaneous",
       "type":"misc",
-      "backColor": "#f6f6f6"
+      "backColor":"#f6f6f6"
     }
   ],
   "projects":[
+    {
+      "id":"flutter-melange",
+      "name":"Flutter Melange",
+      "description":"A proof-of-concept mobile and web application developed with Flutter.",
+      "type":"misc",
+      "icon":"img/codelab/flutter-melange.png",
+      "links":[
+        {
+          "title":"GitHub",
+          "href":"https://github.com/jfmdev/flutter_melange",
+          "icon":"fab fa-github"
+        }
+      ],
+      "badges":[
+        {
+          "name":"Flutter",
+          "background":"bg-success"
+        },
+        {
+          "name":"Dart",
+          "background":"bg-primary"
+        }
+      ]
+    },
+    {
+      "id":"chrome-extension-popurri",
+      "name":"Chrome Extension Popurri",
+      "description":"A proof-of-concept Chrome Extension developed with Webpack and Svelte.",
+      "type":"misc",
+      "icon":"img/codelab/chrome-extension-popurri.png",
+      "links":[
+        {
+          "title":"Chrome Web Store",
+          "href":"https://chrome.google.com/webstore/detail/ogfjggmceijfibolfmiikbkhaolmodep/",
+          "icon":"fab fa-chrome"
+        },
+        {
+          "title":"GitHub",
+          "href":"https://github.com/jfmdev/chrome-extension-popurri",
+          "icon":"fab fa-github"
+        }
+      ],
+      "badges":[
+        {
+          "name":"Svelte",
+          "background":"bg-success"
+        },
+        {
+          "name":"JavaScript",
+          "background":"bg-success"
+        },
+        {
+          "name":"Webpack",
+          "background":"bg-primary"
+        },
+        {
+          "name":"Bulma",
+          "background":"bg-primary"
+        }
+      ]
+    },
     {
       "id":"body-fat-calc",
       "name":"Body Fat Calculator",
@@ -193,7 +254,9 @@
           "icon":"fab fa-github"
         }
       ],
-      "badges": []
+      "badges":[
+        
+      ]
     },
     {
       "id":"web-fonts-comparator",
