@@ -810,6 +810,40 @@
       ]
     },
     {
+      "id":"dodge_survival",
+      "name":"Dodge Survival",
+      "description":"A simple game implemented with Godot (by following the official docs).",
+      "type":"game",
+      "icon":"img/codelab/dodge_survival.jpg",
+      "links":[
+        {
+          "title":"Demo",
+          "href":"https://jfmdev.github.io/dodge-survival/",
+          "icon":"fas fa-play-circle"
+        },
+        {
+          "title":"Google Play",
+          "href":"https://play.google.com/store/apps/details?id=org.godotengine.dodgesurvival",
+          "icon":"fab fa-google-play"
+        },
+        {
+          "title":"GitHub",
+          "href":"https://github.com/jfmdev/dodge-survival",
+          "icon":"fab fa-github"
+        }
+      ],
+      "badges":[
+        {
+          "name":"GDScript",
+          "background":"bg-success"
+        },
+        {
+          "name":"Godot",
+          "background":"bg-primary"
+        }
+      ]
+    },
+    {
       "id":"sliding-puzzles",
       "name":"Landscape Sliding Puzzles",
       "description":"A classic sliding puzzle game. You can play using a selection of beautiful landscapes or using images from your computer.",
